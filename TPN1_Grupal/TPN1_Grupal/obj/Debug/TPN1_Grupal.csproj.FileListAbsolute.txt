@@ -1,0 +1,12 @@
+C:\Users\enzon\Desktop\TP1_ForoGrupal_ProgIII\TPN1_Grupal\TPN1_Grupal\bin\Debug\TPN1_Grupal.exe.config
+C:\Users\enzon\Desktop\TP1_ForoGrupal_ProgIII\TPN1_Grupal\TPN1_Grupal\bin\Debug\TPN1_Grupal.exe
+C:\Users\enzon\Desktop\TP1_ForoGrupal_ProgIII\TPN1_Grupal\TPN1_Grupal\bin\Debug\TPN1_Grupal.pdb
+C:\Users\enzon\Desktop\TP1_ForoGrupal_ProgIII\TPN1_Grupal\TPN1_Grupal\obj\Debug\TPN1_Grupal.frmVentanaPrincipal.resources
+C:\Users\enzon\Desktop\TP1_ForoGrupal_ProgIII\TPN1_Grupal\TPN1_Grupal\obj\Debug\TPN1_Grupal.FormEjercicio1.resources
+C:\Users\enzon\Desktop\TP1_ForoGrupal_ProgIII\TPN1_Grupal\TPN1_Grupal\obj\Debug\TPN1_Grupal.FormEjercicio2.resources
+C:\Users\enzon\Desktop\TP1_ForoGrupal_ProgIII\TPN1_Grupal\TPN1_Grupal\obj\Debug\TPN1_Grupal.FormEjercicio3.resources
+C:\Users\enzon\Desktop\TP1_ForoGrupal_ProgIII\TPN1_Grupal\TPN1_Grupal\obj\Debug\TPN1_Grupal.Properties.Resources.resources
+C:\Users\enzon\Desktop\TP1_ForoGrupal_ProgIII\TPN1_Grupal\TPN1_Grupal\obj\Debug\TPN1_Grupal.csproj.GenerateResource.cache
+C:\Users\enzon\Desktop\TP1_ForoGrupal_ProgIII\TPN1_Grupal\TPN1_Grupal\obj\Debug\TPN1_Grupal.csproj.CoreCompileInputs.cache
+C:\Users\enzon\Desktop\TP1_ForoGrupal_ProgIII\TPN1_Grupal\TPN1_Grupal\obj\Debug\TPN1_Grupal.exe
+C:\Users\enzon\Desktop\TP1_ForoGrupal_ProgIII\TPN1_Grupal\TPN1_Grupal\obj\Debug\TPN1_Grupal.pdb
