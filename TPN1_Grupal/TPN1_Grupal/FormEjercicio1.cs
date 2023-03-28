@@ -83,8 +83,15 @@ namespace TPN1_Grupal
 
         private void btnFechitaTodo_Click(object sender, EventArgs e)
         {
-            listNombreAgregado.Items.AddRange(listNombre.Items);
-            listNombre.Items.Clear();
+            if(listNombre.Items.Count > 0)
+            {
+                 listNombreAgregado.Items.AddRange(listNombre.Items);
+                 listNombre.Items.Clear();
+            }
+            else
+            {
+                MessageBox.Show("No hay ningun nombre en la lista izquierda para transferirlo a la derecha, Por favor ingrese un nombre!", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
     }
 }
