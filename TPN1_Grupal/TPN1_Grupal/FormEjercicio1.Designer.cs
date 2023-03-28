@@ -29,37 +29,75 @@ namespace TPN1_Grupal
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lblAgregarNombre = new System.Windows.Forms.Label();
+            this.txtBoxAgregar = new System.Windows.Forms.TextBox();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.listNombre = new System.Windows.Forms.ListBox();
+            this.listNombreAgregado = new System.Windows.Forms.ListBox();
+            this.btnFlechita = new System.Windows.Forms.Button();
+            this.btnFechitaTodo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lblAgregarNombre
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(101, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ingrese un Nombre:";
+            this.lblAgregarNombre.AutoSize = true;
+            this.lblAgregarNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgregarNombre.Location = new System.Drawing.Point(127, 42);
+            this.lblAgregarNombre.Name = "lblAgregarNombre";
+            this.lblAgregarNombre.Size = new System.Drawing.Size(143, 16);
+            this.lblAgregarNombre.TabIndex = 0;
+            this.lblAgregarNombre.Text = "Ingrese un Nombre:";
             // 
-            // textBox1
+            // txtBoxAgregar
             // 
-            this.textBox1.Location = new System.Drawing.Point(263, 41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(208, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtBoxAgregar.Location = new System.Drawing.Point(272, 41);
+            this.txtBoxAgregar.Name = "txtBoxAgregar";
+            this.txtBoxAgregar.Size = new System.Drawing.Size(352, 20);
+            this.txtBoxAgregar.TabIndex = 1;
             // 
-            // button1
+            // btnAgregar
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(488, 37);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 27);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Location = new System.Drawing.Point(630, 37);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 27);
+            this.btnAgregar.TabIndex = 2;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            // 
+            // listNombre
+            // 
+            this.listNombre.FormattingEnabled = true;
+            this.listNombre.Location = new System.Drawing.Point(130, 129);
+            this.listNombre.Name = "listNombre";
+            this.listNombre.Size = new System.Drawing.Size(217, 264);
+            this.listNombre.TabIndex = 3;
+            // 
+            // listNombreAgregado
+            // 
+            this.listNombreAgregado.FormattingEnabled = true;
+            this.listNombreAgregado.Location = new System.Drawing.Point(488, 129);
+            this.listNombreAgregado.Name = "listNombreAgregado";
+            this.listNombreAgregado.Size = new System.Drawing.Size(217, 264);
+            this.listNombreAgregado.TabIndex = 4;
+            // 
+            // btnFlechita
+            // 
+            this.btnFlechita.Location = new System.Drawing.Point(379, 193);
+            this.btnFlechita.Name = "btnFlechita";
+            this.btnFlechita.Size = new System.Drawing.Size(75, 39);
+            this.btnFlechita.TabIndex = 5;
+            this.btnFlechita.Text = ">";
+            this.btnFlechita.UseVisualStyleBackColor = true;
+            // 
+            // btnFechitaTodo
+            // 
+            this.btnFechitaTodo.Location = new System.Drawing.Point(379, 268);
+            this.btnFechitaTodo.Name = "btnFechitaTodo";
+            this.btnFechitaTodo.Size = new System.Drawing.Size(75, 38);
+            this.btnFechitaTodo.TabIndex = 6;
+            this.btnFechitaTodo.Text = ">>";
+            this.btnFechitaTodo.UseVisualStyleBackColor = true;
             // 
             // FormEjercicio1
             // 
@@ -67,9 +105,13 @@ namespace TPN1_Grupal
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnFechitaTodo);
+            this.Controls.Add(this.btnFlechita);
+            this.Controls.Add(this.listNombreAgregado);
+            this.Controls.Add(this.listNombre);
+            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.txtBoxAgregar);
+            this.Controls.Add(this.lblAgregarNombre);
             this.Name = "FormEjercicio1";
             this.Text = "Nombres";
             this.ResumeLayout(false);
@@ -79,8 +121,12 @@ namespace TPN1_Grupal
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblAgregarNombre;
+        private System.Windows.Forms.TextBox txtBoxAgregar;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.ListBox listNombre;
+        private System.Windows.Forms.ListBox listNombreAgregado;
+        private System.Windows.Forms.Button btnFlechita;
+        private System.Windows.Forms.Button btnFechitaTodo;
     }
 }

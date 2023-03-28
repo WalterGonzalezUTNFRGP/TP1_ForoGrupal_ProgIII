@@ -34,10 +34,10 @@ namespace TPN1_Grupal
             this.btnEjercicio3 = new System.Windows.Forms.Button();
             this.lblIntegrantes = new System.Windows.Forms.Label();
             this.lblNombre1 = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblNombre2 = new System.Windows.Forms.Label();
+            this.lblnombre3 = new System.Windows.Forms.Label();
+            this.lblNombre4 = new System.Windows.Forms.Label();
+            this.lblNombre5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnEjercicio1
@@ -89,45 +89,45 @@ namespace TPN1_Grupal
             this.lblNombre1.TabIndex = 4;
             this.lblNombre1.Text = "Enzo Matías Nieto";
             // 
-            // lblNombre
+            // lblNombre2
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(157, 174);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(154, 24);
-            this.lblNombre.TabIndex = 5;
-            this.lblNombre.Text = "Nahuel Sandoval";
+            this.lblNombre2.AutoSize = true;
+            this.lblNombre2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre2.Location = new System.Drawing.Point(157, 174);
+            this.lblNombre2.Name = "lblNombre2";
+            this.lblNombre2.Size = new System.Drawing.Size(154, 24);
+            this.lblNombre2.TabIndex = 5;
+            this.lblNombre2.Text = "Nahuel Sandoval";
             // 
-            // label3
+            // lblnombre3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(157, 201);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 24);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Axel Mazo";
+            this.lblnombre3.AutoSize = true;
+            this.lblnombre3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnombre3.Location = new System.Drawing.Point(157, 201);
+            this.lblnombre3.Name = "lblnombre3";
+            this.lblnombre3.Size = new System.Drawing.Size(99, 24);
+            this.lblnombre3.TabIndex = 6;
+            this.lblnombre3.Text = "Axel Mazo";
             // 
-            // label4
+            // lblNombre4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(157, 229);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(233, 24);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Walter Alejandro González";
+            this.lblNombre4.AutoSize = true;
+            this.lblNombre4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre4.Location = new System.Drawing.Point(157, 229);
+            this.lblNombre4.Name = "lblNombre4";
+            this.lblNombre4.Size = new System.Drawing.Size(233, 24);
+            this.lblNombre4.TabIndex = 7;
+            this.lblNombre4.Text = "Walter Alejandro González";
             // 
-            // label5
+            // lblNombre5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(157, 256);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(123, 24);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Matías Rocha";
+            this.lblNombre5.AutoSize = true;
+            this.lblNombre5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre5.Location = new System.Drawing.Point(157, 256);
+            this.lblNombre5.Name = "lblNombre5";
+            this.lblNombre5.Size = new System.Drawing.Size(123, 24);
+            this.lblNombre5.TabIndex = 8;
+            this.lblNombre5.Text = "Matías Rocha";
             // 
             // frmVentanaPrincipal
             // 
@@ -135,10 +135,10 @@ namespace TPN1_Grupal
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(595, 300);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.lblNombre5);
+            this.Controls.Add(this.lblNombre4);
+            this.Controls.Add(this.lblnombre3);
+            this.Controls.Add(this.lblNombre2);
             this.Controls.Add(this.lblNombre1);
             this.Controls.Add(this.lblIntegrantes);
             this.Controls.Add(this.btnEjercicio3);
@@ -158,10 +158,10 @@ namespace TPN1_Grupal
         private System.Windows.Forms.Button btnEjercicio3;
         private System.Windows.Forms.Label lblIntegrantes;
         private System.Windows.Forms.Label lblNombre1;
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblNombre2;
+        private System.Windows.Forms.Label lblnombre3;
+        private System.Windows.Forms.Label lblNombre4;
+        private System.Windows.Forms.Label lblNombre5;
     }
 }
 
