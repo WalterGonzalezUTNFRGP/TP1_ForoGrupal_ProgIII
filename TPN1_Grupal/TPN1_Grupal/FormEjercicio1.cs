@@ -60,5 +60,15 @@ namespace TPN1_Grupal
                 e.Handled = true;
             }
         }
+
+        private void btnFlechita_Click(object sender, EventArgs e)
+        {
+            if (listNombre.Items.Count > 0)
+            {
+                int index = listNombre.SelectedIndex;
+                listNombreAgregado.Items.Add(listNombre.SelectedItem);
+                listNombre.Items.RemoveAt(index);
+            }
+        }
     }
 }

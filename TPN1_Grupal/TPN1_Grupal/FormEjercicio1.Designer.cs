@@ -91,6 +91,7 @@ namespace TPN1_Grupal
             this.btnFlechita.TabIndex = 5;
             this.btnFlechita.Text = ">";
             this.btnFlechita.UseVisualStyleBackColor = true;
+            this.btnFlechita.Click += new System.EventHandler(this.btnFlechita_Click);
             // 
             // btnFechitaTodo
             // 
