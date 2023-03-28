@@ -145,6 +145,7 @@ namespace TPN1_Grupal
             this.Controls.Add(this.btnEjercicio2);
             this.Controls.Add(this.btnEjercicio1);
             this.Name = "frmVentanaPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario Principal";
             this.ResumeLayout(false);
             this.PerformLayout();

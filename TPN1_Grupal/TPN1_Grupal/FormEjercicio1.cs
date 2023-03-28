@@ -16,5 +16,18 @@ namespace TPN1_Grupal
         {
             InitializeComponent();
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtBoxAgregar.Text))
+            {
+                MessageBox.Show("Debe ingresar un nombre!");
+            }
+            else
+            {
+                txtBoxAgregar.Text.Trim();
+                listNombre.Items.Add(txtBoxAgregar.Text);
+            }    
+        }
     }
 }

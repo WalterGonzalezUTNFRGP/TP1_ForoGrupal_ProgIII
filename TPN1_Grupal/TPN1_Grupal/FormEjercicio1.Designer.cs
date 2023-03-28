@@ -64,6 +64,7 @@ namespace TPN1_Grupal
             this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // listNombre
             // 
@@ -113,6 +114,7 @@ namespace TPN1_Grupal
             this.Controls.Add(this.txtBoxAgregar);
             this.Controls.Add(this.lblAgregarNombre);
             this.Name = "FormEjercicio1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nombres";
             this.ResumeLayout(false);
             this.PerformLayout();
