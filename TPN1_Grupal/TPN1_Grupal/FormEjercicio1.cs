@@ -54,11 +54,14 @@ namespace TPN1_Grupal
 
         private void txtBoxAgregar_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
-            {
-                MessageBox.Show("SOLO LETRAS", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-            }
+                if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+                {
+                    if (e.KeyChar != 32)
+                    {
+                        MessageBox.Show("SOLO LETRAS", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        e.Handled = true;
+                    }
+                }
         }
 
         private void btnFlechita_Click(object sender, EventArgs e)
