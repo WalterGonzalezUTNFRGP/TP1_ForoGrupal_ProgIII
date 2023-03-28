@@ -23,7 +23,9 @@ namespace TPN1_Grupal
             {
                 MessageBox.Show("Debe ingresar un nombre!");
                 txtBoxAgregar.Text = "";        /// Después de mostrar cartel deja vacío el Text Box).
-                                                /// Más que nada cuando se ingresan sólo espacios en blanco. 
+                                                /// Más que nada cuando se ingresan sólo espacios en blanco.
+
+                txtBoxAgregar.BackColor = Color.Red;
             }
             else
             {
@@ -48,6 +50,8 @@ namespace TPN1_Grupal
                                                                         /// al momento de agregar el nombre al List Box.
                     txtBoxAgregar.Text = "";                            /// Vuelve a poner en blanco el Text Box
                 }
+
+                txtBoxAgregar.BackColor = System.Drawing.SystemColors.Control;
             }
 
         }
