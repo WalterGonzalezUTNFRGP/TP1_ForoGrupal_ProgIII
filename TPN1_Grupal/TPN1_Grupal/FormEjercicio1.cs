@@ -65,9 +65,16 @@ namespace TPN1_Grupal
         {
             if (listNombre.Items.Count > 0)
             {
-                int index = listNombre.SelectedIndex;
-                listNombreAgregado.Items.Add(listNombre.SelectedItem);
-                listNombre.Items.RemoveAt(index);
+                if (listNombre.SelectedItem == null)
+                {
+                    MessageBox.Show("Seleccione un nombre de la lista izquierda para transferirlo a la derecha!", "ATENCIÓN");
+                }
+                else
+                {
+                    int index = listNombre.SelectedIndex;
+                    listNombreAgregado.Items.Add(listNombre.SelectedItem);
+                    listNombre.Items.RemoveAt(index);
+                }
             }
         }
     }
