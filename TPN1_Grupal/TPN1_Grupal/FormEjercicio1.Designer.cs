@@ -54,6 +54,7 @@ namespace TPN1_Grupal
             this.txtBoxAgregar.Name = "txtBoxAgregar";
             this.txtBoxAgregar.Size = new System.Drawing.Size(352, 20);
             this.txtBoxAgregar.TabIndex = 1;
+            this.txtBoxAgregar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxAgregar_KeyPress);
             // 
             // btnAgregar
             // 
