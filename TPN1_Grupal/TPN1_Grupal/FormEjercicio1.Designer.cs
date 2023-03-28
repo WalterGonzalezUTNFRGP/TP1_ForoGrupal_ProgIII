@@ -101,6 +101,7 @@ namespace TPN1_Grupal
             this.btnFechitaTodo.TabIndex = 6;
             this.btnFechitaTodo.Text = ">>";
             this.btnFechitaTodo.UseVisualStyleBackColor = true;
+            this.btnFechitaTodo.Click += new System.EventHandler(this.btnFechitaTodo_Click);
             // 
             // FormEjercicio1
             // 

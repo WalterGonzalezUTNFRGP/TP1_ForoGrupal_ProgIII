@@ -80,5 +80,11 @@ namespace TPN1_Grupal
                 }
             }
         }
+
+        private void btnFechitaTodo_Click(object sender, EventArgs e)
+        {
+            listNombreAgregado.Items.AddRange(listNombre.Items);
+            listNombre.Items.Clear();
+        }
     }
 }
