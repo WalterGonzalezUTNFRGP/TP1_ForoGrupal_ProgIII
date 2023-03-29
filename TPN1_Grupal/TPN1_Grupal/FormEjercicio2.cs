@@ -16,5 +16,15 @@ namespace TPN1_Grupal
         {
             InitializeComponent();
         }
+
+        private void LblApellidoEj2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblNombreEj2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

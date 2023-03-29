@@ -75,7 +75,7 @@ namespace TPN1_Grupal
                 }
         }*/
 
-        private void btnFlechita_Click(object sender, EventArgs e)
+        private void BtnFlechita_Click(object sender, EventArgs e)
         {
             if (listNombre.Items.Count > 0)
             {
@@ -111,7 +111,7 @@ namespace TPN1_Grupal
 
         
 
-        private void txtBoxAgregar_KeyUp(object sender, KeyEventArgs e)
+        private void TxtBoxAgregar_KeyUp(object sender, KeyEventArgs e)
         {
             if (Regex.IsMatch(txtBoxAgregar.Text.Trim(), "[^a-zA-ZáéíóúÁÉÍÓÚü ]"))
             {

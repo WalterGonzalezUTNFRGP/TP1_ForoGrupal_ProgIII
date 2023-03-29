@@ -57,7 +57,7 @@ namespace TPN1_Grupal
             this.txtBoxAgregar.Name = "txtBoxAgregar";
             this.txtBoxAgregar.Size = new System.Drawing.Size(352, 20);
             this.txtBoxAgregar.TabIndex = 1;
-            this.txtBoxAgregar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBoxAgregar_KeyUp);
+            this.txtBoxAgregar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtBoxAgregar_KeyUp);
             // 
             // btnAgregar
             // 
@@ -94,7 +94,7 @@ namespace TPN1_Grupal
             this.btnFlechita.TabIndex = 5;
             this.btnFlechita.Text = ">";
             this.btnFlechita.UseVisualStyleBackColor = true;
-            this.btnFlechita.Click += new System.EventHandler(this.btnFlechita_Click);
+            this.btnFlechita.Click += new System.EventHandler(this.BtnFlechita_Click);
             // 
             // btnFechitaTodo
             // 
