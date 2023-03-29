@@ -20,7 +20,6 @@ namespace TPN1_Grupal
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             if (string.IsNullOrEmpty(txtBoxAgregar.Text.Trim()))
             {
                 //txtBoxAgregar.BackColor = Color.Red;
@@ -32,15 +31,6 @@ namespace TPN1_Grupal
                                                 /// Más que nada cuando se ingresan sólo espacios en blanco.
 
                 
-=======
-            if (string.IsNullOrEmpty(txtBoxAgregar.Text) || txtBoxAgregar.Text.Trim() == "")
-            {
-                MessageBox.Show("Debe ingresar un nombre!");
-                txtBoxAgregar.Text = "";        /// Después de mostrar cartel deja vacío el Text Box).
-                                                /// Más que nada cuando se ingresan sólo espacios en blanco.
-
-                txtBoxAgregar.BackColor = Color.Red;
->>>>>>> b0ec80c9ebe4d1df394fe92330985018b128500f
             }
             else
             {
@@ -66,7 +56,6 @@ namespace TPN1_Grupal
                     txtBoxAgregar.Text = "";                            /// Vuelve a poner en blanco el Text Box
                 }
 
-<<<<<<< HEAD
                 //txtBoxAgregar.BackColor = System.Drawing.SystemColors.Control;
             }
 
@@ -75,14 +64,6 @@ namespace TPN1_Grupal
         }
 
         /*private void txtBoxAgregar_KeyPress(object sender, KeyPressEventArgs e)
-=======
-                txtBoxAgregar.BackColor = System.Drawing.SystemColors.Control;
-            }
-
-        }
-
-        private void txtBoxAgregar_KeyPress(object sender, KeyPressEventArgs e)
->>>>>>> b0ec80c9ebe4d1df394fe92330985018b128500f
         {
                 if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
                 {
@@ -92,11 +73,7 @@ namespace TPN1_Grupal
                         e.Handled = true;
                     }
                 }
-<<<<<<< HEAD
         }*/
-=======
-        }
->>>>>>> b0ec80c9ebe4d1df394fe92330985018b128500f
 
         private void btnFlechita_Click(object sender, EventArgs e)
         {
@@ -113,13 +90,10 @@ namespace TPN1_Grupal
                     listNombre.Items.RemoveAt(index);
                 }
             }
-<<<<<<< HEAD
             else
             {
                 MessageBox.Show("LA LISTA ESTÁ VACÍA. NO SE PUEDEN TRANSFERIR ELEMENTOS", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-=======
->>>>>>> b0ec80c9ebe4d1df394fe92330985018b128500f
         }
 
         private void btnFechitaTodo_Click(object sender, EventArgs e)
@@ -134,7 +108,6 @@ namespace TPN1_Grupal
                 MessageBox.Show("No hay ningun nombre en la lista izquierda para transferirlo a la derecha, Por favor ingrese un nombre!", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
-<<<<<<< HEAD
 
         
 
@@ -151,7 +124,5 @@ namespace TPN1_Grupal
                 btnAgregar.Enabled = true;
             }
         }
-=======
->>>>>>> b0ec80c9ebe4d1df394fe92330985018b128500f
     }
 }

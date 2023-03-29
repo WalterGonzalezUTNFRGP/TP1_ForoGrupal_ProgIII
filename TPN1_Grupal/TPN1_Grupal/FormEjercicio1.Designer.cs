@@ -29,10 +29,7 @@ namespace TPN1_Grupal
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< HEAD
             this.components = new System.ComponentModel.Container();
-=======
->>>>>>> b0ec80c9ebe4d1df394fe92330985018b128500f
             this.lblAgregarNombre = new System.Windows.Forms.Label();
             this.txtBoxAgregar = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -40,11 +37,8 @@ namespace TPN1_Grupal
             this.listNombreAgregado = new System.Windows.Forms.ListBox();
             this.btnFlechita = new System.Windows.Forms.Button();
             this.btnFechitaTodo = new System.Windows.Forms.Button();
-<<<<<<< HEAD
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-=======
->>>>>>> b0ec80c9ebe4d1df394fe92330985018b128500f
             this.SuspendLayout();
             // 
             // lblAgregarNombre
@@ -63,20 +57,12 @@ namespace TPN1_Grupal
             this.txtBoxAgregar.Name = "txtBoxAgregar";
             this.txtBoxAgregar.Size = new System.Drawing.Size(352, 20);
             this.txtBoxAgregar.TabIndex = 1;
-<<<<<<< HEAD
             this.txtBoxAgregar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBoxAgregar_KeyUp);
-=======
-            this.txtBoxAgregar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxAgregar_KeyPress);
->>>>>>> b0ec80c9ebe4d1df394fe92330985018b128500f
             // 
             // btnAgregar
             // 
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
             this.btnAgregar.Location = new System.Drawing.Point(654, 37);
-=======
-            this.btnAgregar.Location = new System.Drawing.Point(630, 37);
->>>>>>> b0ec80c9ebe4d1df394fe92330985018b128500f
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 27);
             this.btnAgregar.TabIndex = 2;
@@ -120,13 +106,10 @@ namespace TPN1_Grupal
             this.btnFechitaTodo.UseVisualStyleBackColor = true;
             this.btnFechitaTodo.Click += new System.EventHandler(this.btnFechitaTodo_Click);
             // 
-<<<<<<< HEAD
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-=======
->>>>>>> b0ec80c9ebe4d1df394fe92330985018b128500f
             // FormEjercicio1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -158,9 +141,6 @@ namespace TPN1_Grupal
         private System.Windows.Forms.ListBox listNombreAgregado;
         private System.Windows.Forms.Button btnFlechita;
         private System.Windows.Forms.Button btnFechitaTodo;
-<<<<<<< HEAD
         private System.Windows.Forms.ErrorProvider errorProvider1;
-=======
->>>>>>> b0ec80c9ebe4d1df394fe92330985018b128500f
     }
 }
