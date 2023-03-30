@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace TPN1_Grupal
 {
@@ -33,6 +34,34 @@ namespace TPN1_Grupal
             lbNombres.Sorted = true;   // Ordena los elementos del List Box alfabeticamente.
             TxtNombre.Text = "";
             TxtApellido.Text = "";
+        }
+
+        private void TxtNombre_TextChanged(object sender, EventArgs e)
+        {
+            if(Regex.IsMatch(TxtNombre.Text.Trim(), "[^a-zA-ZáéíóúÁÉÍÓÚ]"))
+            {
+                errorProvider1.SetError(TxtNombre, "Debe ingresar un nombre valido");
+                BtnAgregar.Enabled = false;
+            }
+            else
+            {
+                errorProvider1.SetError(TxtNombre, "");
+                BtnAgregar.Enabled = true;
+            }
+        }
+
+        private void TxtApellido_TextChanged(object sender, EventArgs e)
+        {
+            if (Regex.IsMatch(TxtApellido.Text.Trim(), "[^a-zA-ZáéíóúÁÉÍÓÚ]"))
+            {
+                errorProvider2.SetError(TxtApellido, "Debe ingresar un nombre valido");
+                BtnAgregar.Enabled = false;
+            }
+            else
+            {
+                errorProvider2.SetError(TxtApellido, "");
+                BtnAgregar.Enabled = true;
+            }
         }
     }
 }
