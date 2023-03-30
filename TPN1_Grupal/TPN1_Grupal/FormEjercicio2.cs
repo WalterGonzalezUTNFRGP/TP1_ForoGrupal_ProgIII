@@ -30,10 +30,18 @@ namespace TPN1_Grupal
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            lbNombres.Items.Add(TxtNombre.Text.Trim() + " " + TxtApellido.Text.Trim());
-            lbNombres.Sorted = true;   // Ordena los elementos del List Box alfabeticamente.
-            TxtNombre.Text = "";
-            TxtApellido.Text = "";
+            if (string.IsNullOrEmpty(TxtNombre.Text.Trim()) || string.IsNullOrEmpty(TxtApellido.Text.Trim()))
+            {
+                MessageBox.Show("COMPLETE LOS CAMPOS OBLIGATORIOS", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                lbNombres.Items.Add(TxtNombre.Text.Trim() + " " + TxtApellido.Text.Trim());
+                lbNombres.Sorted = true;   // Ordena los elementos del List Box alfabeticamente.
+                TxtNombre.Text = "";
+                TxtApellido.Text = "";
+            }
+            
         }
 
         private void TxtNombre_TextChanged(object sender, EventArgs e)
