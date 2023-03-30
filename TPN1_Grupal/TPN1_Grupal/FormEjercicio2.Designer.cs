@@ -32,14 +32,14 @@ namespace TPN1_Grupal
             this.LblNombreEj2 = new System.Windows.Forms.Label();
             this.LblApellidoEj2 = new System.Windows.Forms.Label();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
+            this.pApellido = new System.Windows.Forms.Panel();
+            this.pNombre = new System.Windows.Forms.Panel();
             this.TxtApellido = new System.Windows.Forms.TextBox();
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.BtnBorrar = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.pNombre = new System.Windows.Forms.Panel();
-            this.pApellido = new System.Windows.Forms.Panel();
+            this.lbNombres = new System.Windows.Forms.ListBox();
             this.GroupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -48,9 +48,10 @@ namespace TPN1_Grupal
             // 
             this.LblNombreEj2.AutoSize = true;
             this.LblNombreEj2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNombreEj2.Location = new System.Drawing.Point(24, 136);
+            this.LblNombreEj2.Location = new System.Drawing.Point(32, 167);
+            this.LblNombreEj2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblNombreEj2.Name = "LblNombreEj2";
-            this.LblNombreEj2.Size = new System.Drawing.Size(91, 24);
+            this.LblNombreEj2.Size = new System.Drawing.Size(114, 29);
             this.LblNombreEj2.TabIndex = 1;
             this.LblNombreEj2.Text = "Nombre:";
             this.LblNombreEj2.Click += new System.EventHandler(this.LblNombreEj2_Click);
@@ -59,9 +60,10 @@ namespace TPN1_Grupal
             // 
             this.LblApellidoEj2.AutoSize = true;
             this.LblApellidoEj2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblApellidoEj2.Location = new System.Drawing.Point(24, 188);
+            this.LblApellidoEj2.Location = new System.Drawing.Point(32, 231);
+            this.LblApellidoEj2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblApellidoEj2.Name = "LblApellidoEj2";
-            this.LblApellidoEj2.Size = new System.Drawing.Size(93, 24);
+            this.LblApellidoEj2.Size = new System.Drawing.Size(117, 29);
             this.LblApellidoEj2.TabIndex = 2;
             this.LblApellidoEj2.Text = "Apellido:";
             this.LblApellidoEj2.Click += new System.EventHandler(this.LblApellidoEj2_Click);
@@ -75,48 +77,76 @@ namespace TPN1_Grupal
             this.GroupBox1.Controls.Add(this.BtnAgregar);
             this.GroupBox1.Controls.Add(this.LblNombreEj2);
             this.GroupBox1.Controls.Add(this.LblApellidoEj2);
-            this.GroupBox1.Location = new System.Drawing.Point(12, 12);
+            this.GroupBox1.Location = new System.Drawing.Point(16, 15);
+            this.GroupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Size = new System.Drawing.Size(384, 426);
+            this.GroupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.GroupBox1.Size = new System.Drawing.Size(512, 524);
             this.GroupBox1.TabIndex = 3;
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "Ingreso De Datos";
             // 
+            // pApellido
+            // 
+            this.pApellido.BackColor = System.Drawing.Color.DarkGray;
+            this.pApellido.Location = new System.Drawing.Point(159, 261);
+            this.pApellido.Margin = new System.Windows.Forms.Padding(4);
+            this.pApellido.Name = "pApellido";
+            this.pApellido.Size = new System.Drawing.Size(337, 4);
+            this.pApellido.TabIndex = 7;
+            // 
+            // pNombre
+            // 
+            this.pNombre.BackColor = System.Drawing.Color.DarkGray;
+            this.pNombre.Location = new System.Drawing.Point(159, 193);
+            this.pNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.pNombre.Name = "pNombre";
+            this.pNombre.Size = new System.Drawing.Size(337, 4);
+            this.pNombre.TabIndex = 6;
+            // 
             // TxtApellido
             // 
-            this.TxtApellido.BackColor = System.Drawing.Color.LightGray;
+            this.TxtApellido.BackColor = System.Drawing.Color.White;
             this.TxtApellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtApellido.Location = new System.Drawing.Point(120, 196);
+            this.TxtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtApellido.Location = new System.Drawing.Point(161, 233);
+            this.TxtApellido.Margin = new System.Windows.Forms.Padding(4);
             this.TxtApellido.Name = "TxtApellido";
-            this.TxtApellido.Size = new System.Drawing.Size(251, 13);
-            this.TxtApellido.TabIndex = 5;
+            this.TxtApellido.Size = new System.Drawing.Size(335, 27);
+            this.TxtApellido.TabIndex = 2;
             // 
             // TxtNombre
             // 
-            this.TxtNombre.BackColor = System.Drawing.Color.LightGray;
+            this.TxtNombre.BackColor = System.Drawing.Color.White;
             this.TxtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtNombre.Location = new System.Drawing.Point(120, 144);
+            this.TxtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNombre.Location = new System.Drawing.Point(161, 166);
+            this.TxtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(251, 13);
-            this.TxtNombre.TabIndex = 4;
+            this.TxtNombre.Size = new System.Drawing.Size(335, 27);
+            this.TxtNombre.TabIndex = 1;
             // 
             // BtnAgregar
             // 
             this.BtnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAgregar.Location = new System.Drawing.Point(119, 283);
+            this.BtnAgregar.Location = new System.Drawing.Point(159, 348);
+            this.BtnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Size = new System.Drawing.Size(147, 49);
+            this.BtnAgregar.Size = new System.Drawing.Size(196, 60);
             this.BtnAgregar.TabIndex = 3;
             this.BtnAgregar.Text = "Agregar";
             this.BtnAgregar.UseVisualStyleBackColor = true;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.BtnBorrar);
-            this.groupBox2.Controls.Add(this.listBox1);
-            this.groupBox2.Location = new System.Drawing.Point(414, 12);
+            this.groupBox2.Controls.Add(this.lbNombres);
+            this.groupBox2.Location = new System.Drawing.Point(552, 15);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(374, 426);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(499, 524);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Elementos";
@@ -124,45 +154,33 @@ namespace TPN1_Grupal
             // BtnBorrar
             // 
             this.BtnBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBorrar.Location = new System.Drawing.Point(119, 356);
+            this.BtnBorrar.Location = new System.Drawing.Point(159, 438);
+            this.BtnBorrar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnBorrar.Name = "BtnBorrar";
-            this.BtnBorrar.Size = new System.Drawing.Size(147, 49);
-            this.BtnBorrar.TabIndex = 1;
+            this.BtnBorrar.Size = new System.Drawing.Size(196, 60);
+            this.BtnBorrar.TabIndex = 5;
             this.BtnBorrar.Text = "Borrar";
             this.BtnBorrar.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // lbNombres
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(64, 29);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(252, 303);
-            this.listBox1.TabIndex = 0;
-            // 
-            // pNombre
-            // 
-            this.pNombre.BackColor = System.Drawing.Color.DarkGray;
-            this.pNombre.Location = new System.Drawing.Point(119, 157);
-            this.pNombre.Name = "pNombre";
-            this.pNombre.Size = new System.Drawing.Size(253, 3);
-            this.pNombre.TabIndex = 6;
-            // 
-            // pApellido
-            // 
-            this.pApellido.BackColor = System.Drawing.Color.DarkGray;
-            this.pApellido.Location = new System.Drawing.Point(119, 212);
-            this.pApellido.Name = "pApellido";
-            this.pApellido.Size = new System.Drawing.Size(253, 3);
-            this.pApellido.TabIndex = 7;
+            this.lbNombres.FormattingEnabled = true;
+            this.lbNombres.ItemHeight = 16;
+            this.lbNombres.Location = new System.Drawing.Point(85, 36);
+            this.lbNombres.Margin = new System.Windows.Forms.Padding(4);
+            this.lbNombres.Name = "lbNombres";
+            this.lbNombres.Size = new System.Drawing.Size(335, 372);
+            this.lbNombres.TabIndex = 4;
             // 
             // FormEjercicio2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.GroupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormEjercicio2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nombre y apellido";
@@ -183,7 +201,7 @@ namespace TPN1_Grupal
         private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.Button BtnAgregar;
         private System.Windows.Forms.Button BtnBorrar;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lbNombres;
         private System.Windows.Forms.Panel pApellido;
         private System.Windows.Forms.Panel pNombre;
     }

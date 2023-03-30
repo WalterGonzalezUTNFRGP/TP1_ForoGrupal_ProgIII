@@ -28,7 +28,7 @@ namespace TPN1_Grupal
                 
                 //MessageBox.Show("¡Debe ingresar un nombre!","ATENCIÓN",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                                                  /// Después de mostrar cartel deja vacío el Text Box).
-                                                /// Más que nada cuando se ingresan sólo espacios en blanco.
+                                                 /// Más que nada cuando se ingresan sólo espacios en blanco.
 
                 
             }
