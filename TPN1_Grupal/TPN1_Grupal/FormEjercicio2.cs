@@ -30,22 +30,27 @@ namespace TPN1_Grupal
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(TxtNombre.Text.Trim()) || string.IsNullOrEmpty(TxtApellido.Text.Trim()))
+            string Nombre = TxtNombre.Text.Trim();
+            string Apellido = TxtApellido.Text.Trim();
+            if (string.IsNullOrEmpty(Nombre))
             {
-                MessageBox.Show("COMPLETE LOS CAMPOS OBLIGATORIOS", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                TxtApellido.Text = "";
-                TxtNombre.Text = "";
+                MessageBox.Show("Debe poner un Nombre!", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 TxtNombre.Focus();
+            }
+            else if (string.IsNullOrEmpty(Apellido))
+            {
+                MessageBox.Show("Debe poner un Apellido!", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                TxtApellido.Focus();
             }
             else
             {
-                string Nombre = TxtNombre.Text.Trim() + " " + TxtApellido.Text.Trim();
+                string NombreCompleto = Nombre + " " + Apellido;
                 int i, cantNombres;
                 bool repetido = false;
                 cantNombres = lbNombres.Items.Count;
                 for (i = 0; i < cantNombres; i++)
                 {
-                    if (Nombre.ToUpper() == lbNombres.Items[i].ToString().ToUpper())
+                    if (NombreCompleto.ToUpper() == lbNombres.Items[i].ToString().ToUpper())
                     {
                         MessageBox.Show("El nombre ingresado ya se encuentra en la lista", "ATENCIÓN");
                         repetido = true;

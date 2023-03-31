@@ -92,7 +92,7 @@ namespace TPN1_Grupal
             this.pApellido.BackColor = System.Drawing.Color.DarkGray;
             this.pApellido.Location = new System.Drawing.Point(119, 212);
             this.pApellido.Name = "pApellido";
-            this.pApellido.Size = new System.Drawing.Size(253, 3);
+            this.pApellido.Size = new System.Drawing.Size(200, 3);
             this.pApellido.TabIndex = 7;
             // 
             // pNombre
@@ -100,7 +100,7 @@ namespace TPN1_Grupal
             this.pNombre.BackColor = System.Drawing.Color.DarkGray;
             this.pNombre.Location = new System.Drawing.Point(119, 157);
             this.pNombre.Name = "pNombre";
-            this.pNombre.Size = new System.Drawing.Size(253, 3);
+            this.pNombre.Size = new System.Drawing.Size(200, 3);
             this.pNombre.TabIndex = 6;
             // 
             // TxtApellido
@@ -110,7 +110,7 @@ namespace TPN1_Grupal
             this.TxtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtApellido.Location = new System.Drawing.Point(121, 189);
             this.TxtApellido.Name = "TxtApellido";
-            this.TxtApellido.Size = new System.Drawing.Size(251, 21);
+            this.TxtApellido.Size = new System.Drawing.Size(200, 21);
             this.TxtApellido.TabIndex = 2;
             this.TxtApellido.TextChanged += new System.EventHandler(this.TxtApellido_TextChanged);
             // 
@@ -119,9 +119,9 @@ namespace TPN1_Grupal
             this.TxtNombre.BackColor = System.Drawing.Color.White;
             this.TxtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNombre.Location = new System.Drawing.Point(121, 135);
+            this.TxtNombre.Location = new System.Drawing.Point(119, 136);
             this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(251, 21);
+            this.TxtNombre.Size = new System.Drawing.Size(200, 21);
             this.TxtNombre.TabIndex = 1;
             this.TxtNombre.TextChanged += new System.EventHandler(this.TxtNombre_TextChanged);
             // 
