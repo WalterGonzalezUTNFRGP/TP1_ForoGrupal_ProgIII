@@ -33,6 +33,9 @@ namespace TPN1_Grupal
             if (string.IsNullOrEmpty(TxtNombre.Text.Trim()) || string.IsNullOrEmpty(TxtApellido.Text.Trim()))
             {
                 MessageBox.Show("COMPLETE LOS CAMPOS OBLIGATORIOS", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                TxtApellido.Text = "";
+                TxtNombre.Text = "";
+                TxtNombre.Focus();
             }
             else
             {
@@ -54,13 +57,14 @@ namespace TPN1_Grupal
                     lbNombres.Sorted = true;   // Ordena los elementos del List Box alfabeticamente.
                     TxtNombre.Text = "";
                     TxtApellido.Text = "";
+                    TxtNombre.Focus();
                 }
             }
         }
 
         private void TxtNombre_TextChanged(object sender, EventArgs e)
         {
-            if(Regex.IsMatch(TxtNombre.Text.Trim(), "[^a-zA-ZáéíóúÁÉÍÓÚ]"))
+            if(Regex.IsMatch(TxtNombre.Text.Trim(), "[^a-zA-ZáéíóúÁÉÍÓÚ ]"))
             {
                 errorProvider1.SetError(TxtNombre, "Debe ingresar un nombre valido");
                 BtnAgregar.Enabled = false;
@@ -74,7 +78,7 @@ namespace TPN1_Grupal
 
         private void TxtApellido_TextChanged(object sender, EventArgs e)
         {
-            if (Regex.IsMatch(TxtApellido.Text.Trim(), "[^a-zA-ZáéíóúÁÉÍÓÚ]"))
+            if (Regex.IsMatch(TxtApellido.Text.Trim(), "[^a-zA-ZáéíóúÁÉÍÓÚ ]"))
             {
                 errorProvider2.SetError(TxtApellido, "Debe ingresar un nombre valido");
                 BtnAgregar.Enabled = false;
