@@ -58,7 +58,7 @@ namespace TPN1_Grupal
                 }
                 if (repetido == false)
                 {
-                    lbNombres.Items.Add(Nombre);
+                    lbNombres.Items.Add(NombreCompleto);
                     lbNombres.Sorted = true;   // Ordena los elementos del List Box alfabeticamente.
                     TxtNombre.Text = "";
                     TxtApellido.Text = "";
