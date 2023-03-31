@@ -32,7 +32,11 @@ namespace TPN1_Grupal
         {
             string Nombre = TxtNombre.Text.Trim();
             string Apellido = TxtApellido.Text.Trim();
-            if (string.IsNullOrEmpty(Nombre))
+            if(string.IsNullOrEmpty(Nombre)&& string.IsNullOrEmpty(Apellido))
+            {
+                MessageBox.Show("Debe ingresar el nombre y apellido!", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (string.IsNullOrEmpty(Nombre))
             {
                 MessageBox.Show("Debe poner un Nombre!", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 TxtNombre.Focus();
@@ -69,7 +73,7 @@ namespace TPN1_Grupal
 
         private void TxtNombre_TextChanged(object sender, EventArgs e)
         {
-            if(Regex.IsMatch(TxtNombre.Text.Trim(), "[^a-zA-ZáéíóúÁÉÍÓÚ ]"))
+            if(Regex.IsMatch(TxtNombre.Text.Trim(), "[^a-zA-ZñÑáéíóúÁÉÍÓÚ ]"))
             {
                 errorProvider1.SetError(TxtNombre, "Debe ingresar un nombre valido");
                 BtnAgregar.Enabled = false;
@@ -83,7 +87,7 @@ namespace TPN1_Grupal
 
         private void TxtApellido_TextChanged(object sender, EventArgs e)
         {
-            if (Regex.IsMatch(TxtApellido.Text.Trim(), "[^a-zA-ZáéíóúÁÉÍÓÚ ]"))
+            if (Regex.IsMatch(TxtApellido.Text.Trim(), "[^a-zA-ZñÑáéíóúÁÉÍÓÚ ]"))
             {
                 errorProvider2.SetError(TxtApellido, "Debe ingresar un nombre valido");
                 BtnAgregar.Enabled = false;
@@ -103,7 +107,7 @@ namespace TPN1_Grupal
             }
             else
             {
-                MessageBox.Show("Debe seleccionar un nombre de la lista!", "ATENCIÓN");
+                MessageBox.Show("Debe seleccionar un nombre de la lista!", "ATENCIÓN",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
     }
