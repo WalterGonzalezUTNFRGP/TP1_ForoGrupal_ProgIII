@@ -36,12 +36,26 @@ namespace TPN1_Grupal
             }
             else
             {
-                lbNombres.Items.Add(TxtNombre.Text.Trim() + " " + TxtApellido.Text.Trim());
-                lbNombres.Sorted = true;   // Ordena los elementos del List Box alfabeticamente.
-                TxtNombre.Text = "";
-                TxtApellido.Text = "";
+                string Nombre = TxtNombre.Text.Trim() + " " + TxtApellido.Text.Trim();
+                int i, cantNombres;
+                bool repetido = false;
+                cantNombres = lbNombres.Items.Count;
+                for (i = 0; i < cantNombres; i++)
+                {
+                    if (Nombre.ToUpper() == lbNombres.Items[i].ToString().ToUpper())
+                    {
+                        MessageBox.Show("El nombre ingresado ya se encuentra en la lista", "ATENCIÓN");
+                        repetido = true;
+                    }
+                }
+                if (repetido == false)
+                {
+                    lbNombres.Items.Add(Nombre);
+                    lbNombres.Sorted = true;   // Ordena los elementos del List Box alfabeticamente.
+                    TxtNombre.Text = "";
+                    TxtApellido.Text = "";
+                }
             }
-            
         }
 
         private void TxtNombre_TextChanged(object sender, EventArgs e)
@@ -69,6 +83,18 @@ namespace TPN1_Grupal
             {
                 errorProvider2.SetError(TxtApellido, "");
                 BtnAgregar.Enabled = true;
+            }
+        }
+
+        private void BtnBorrar_Click(object sender, EventArgs e)
+        {
+           if (lbNombres.SelectedItem != null)
+            {
+                lbNombres.Items.RemoveAt(lbNombres.SelectedIndex);
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un nombre de la lista!", "ATENCIÓN");
             }
         }
     }
