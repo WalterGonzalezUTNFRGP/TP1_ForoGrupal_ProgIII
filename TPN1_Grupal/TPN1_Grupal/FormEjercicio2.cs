@@ -35,6 +35,7 @@ namespace TPN1_Grupal
             if(string.IsNullOrEmpty(Nombre)&& string.IsNullOrEmpty(Apellido))
             {
                 MessageBox.Show("Debe ingresar el nombre y apellido!", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                TxtNombre.Focus();
             }
             else if (string.IsNullOrEmpty(Nombre))
             {
