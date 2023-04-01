@@ -39,6 +39,10 @@ namespace TPN1_Grupal
             this.btnMostrar = new System.Windows.Forms.Button();
             this.lblMostrar = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.LBLtexto = new System.Windows.Forms.Label();
+            this.LBLgenero = new System.Windows.Forms.Label();
+            this.LBLestado = new System.Windows.Forms.Label();
+            this.LBLoficio = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -120,7 +124,7 @@ namespace TPN1_Grupal
             "Reparador de PC",
             "Tester"});
             this.chlOcupacion.Location = new System.Drawing.Point(125, 179);
-            this.chlOcupacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chlOcupacion.Margin = new System.Windows.Forms.Padding(2);
             this.chlOcupacion.Name = "chlOcupacion";
             this.chlOcupacion.Size = new System.Drawing.Size(194, 94);
             this.chlOcupacion.TabIndex = 2;
@@ -129,12 +133,13 @@ namespace TPN1_Grupal
             // btnMostrar
             // 
             this.btnMostrar.Location = new System.Drawing.Point(125, 284);
-            this.btnMostrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMostrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(194, 26);
             this.btnMostrar.TabIndex = 3;
             this.btnMostrar.Text = "Mostrar lo que se seleccionó";
             this.btnMostrar.UseVisualStyleBackColor = true;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
             // lblMostrar
             // 
@@ -150,10 +155,52 @@ namespace TPN1_Grupal
             this.listBox1.BackColor = System.Drawing.Color.LightGray;
             this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(35, 315);
+            this.listBox1.Location = new System.Drawing.Point(35, 411);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(354, 197);
+            this.listBox1.Size = new System.Drawing.Size(328, 106);
             this.listBox1.TabIndex = 5;
+            // 
+            // LBLtexto
+            // 
+            this.LBLtexto.AutoSize = true;
+            this.LBLtexto.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLtexto.Location = new System.Drawing.Point(35, 320);
+            this.LBLtexto.Name = "LBLtexto";
+            this.LBLtexto.Size = new System.Drawing.Size(294, 19);
+            this.LBLtexto.TabIndex = 6;
+            this.LBLtexto.Text = "Usted Seleccionó los siguientes elementos:";
+            // 
+            // LBLgenero
+            // 
+            this.LBLgenero.AutoSize = true;
+            this.LBLgenero.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLgenero.Location = new System.Drawing.Point(35, 339);
+            this.LBLgenero.Name = "LBLgenero";
+            this.LBLgenero.Size = new System.Drawing.Size(49, 19);
+            this.LBLgenero.TabIndex = 7;
+            this.LBLgenero.Text = "label2";
+            this.LBLgenero.Visible = false;
+            // 
+            // LBLestado
+            // 
+            this.LBLestado.AutoSize = true;
+            this.LBLestado.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLestado.Location = new System.Drawing.Point(35, 358);
+            this.LBLestado.Name = "LBLestado";
+            this.LBLestado.Size = new System.Drawing.Size(49, 19);
+            this.LBLestado.TabIndex = 8;
+            this.LBLestado.Text = "label3";
+            this.LBLestado.Visible = false;
+            // 
+            // LBLoficio
+            // 
+            this.LBLoficio.AutoSize = true;
+            this.LBLoficio.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLoficio.Location = new System.Drawing.Point(35, 377);
+            this.LBLoficio.Name = "LBLoficio";
+            this.LBLoficio.Size = new System.Drawing.Size(54, 19);
+            this.LBLoficio.TabIndex = 9;
+            this.LBLoficio.Text = "Oficio:";
             // 
             // FormEjercicio3
             // 
@@ -161,6 +208,10 @@ namespace TPN1_Grupal
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(445, 529);
+            this.Controls.Add(this.LBLoficio);
+            this.Controls.Add(this.LBLestado);
+            this.Controls.Add(this.LBLgenero);
+            this.Controls.Add(this.LBLtexto);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.lblMostrar);
             this.Controls.Add(this.btnMostrar);
@@ -170,6 +221,7 @@ namespace TPN1_Grupal
             this.Name = "FormEjercicio3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ejercicio3";
+            this.Load += new System.EventHandler(this.FormEjercicio3_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -191,5 +243,9 @@ namespace TPN1_Grupal
         private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.Label lblMostrar;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label LBLtexto;
+        private System.Windows.Forms.Label LBLestado;
+        private System.Windows.Forms.Label LBLoficio;
+        private System.Windows.Forms.Label LBLgenero;
     }
 }
