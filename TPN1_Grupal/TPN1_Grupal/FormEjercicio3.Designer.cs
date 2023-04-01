@@ -38,11 +38,10 @@ namespace TPN1_Grupal
             this.chlOcupacion = new System.Windows.Forms.CheckedListBox();
             this.btnMostrar = new System.Windows.Forms.Button();
             this.lblMostrar = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.LBLtexto = new System.Windows.Forms.Label();
-            this.LBLgenero = new System.Windows.Forms.Label();
-            this.LBLestado = new System.Windows.Forms.Label();
             this.LBLoficio = new System.Windows.Forms.Label();
+            this.LBLestado = new System.Windows.Forms.Label();
+            this.LBLgenero = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -150,57 +149,44 @@ namespace TPN1_Grupal
             this.lblMostrar.Size = new System.Drawing.Size(0, 13);
             this.lblMostrar.TabIndex = 4;
             // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.Color.LightGray;
-            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(35, 411);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(328, 106);
-            this.listBox1.TabIndex = 5;
-            // 
             // LBLtexto
             // 
             this.LBLtexto.AutoSize = true;
-            this.LBLtexto.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLtexto.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBLtexto.Location = new System.Drawing.Point(35, 320);
             this.LBLtexto.Name = "LBLtexto";
-            this.LBLtexto.Size = new System.Drawing.Size(294, 19);
+            this.LBLtexto.Size = new System.Drawing.Size(352, 22);
             this.LBLtexto.TabIndex = 6;
             this.LBLtexto.Text = "Usted Seleccionó los siguientes elementos:";
             // 
-            // LBLgenero
+            // LBLoficio
             // 
-            this.LBLgenero.AutoSize = true;
-            this.LBLgenero.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLgenero.Location = new System.Drawing.Point(35, 339);
-            this.LBLgenero.Name = "LBLgenero";
-            this.LBLgenero.Size = new System.Drawing.Size(49, 19);
-            this.LBLgenero.TabIndex = 7;
-            this.LBLgenero.Text = "label2";
-            this.LBLgenero.Visible = false;
+            this.LBLoficio.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLoficio.Location = new System.Drawing.Point(35, 377);
+            this.LBLoficio.Name = "LBLoficio";
+            this.LBLoficio.Size = new System.Drawing.Size(352, 92);
+            this.LBLoficio.TabIndex = 9;
+            this.LBLoficio.Text = "Oficio:";
             // 
             // LBLestado
             // 
             this.LBLestado.AutoSize = true;
-            this.LBLestado.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLestado.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBLestado.Location = new System.Drawing.Point(35, 358);
             this.LBLestado.Name = "LBLestado";
-            this.LBLestado.Size = new System.Drawing.Size(49, 19);
+            this.LBLestado.Size = new System.Drawing.Size(115, 22);
             this.LBLestado.TabIndex = 8;
-            this.LBLestado.Text = "label3";
-            this.LBLestado.Visible = false;
+            this.LBLestado.Text = "Estado Civil:";
             // 
-            // LBLoficio
+            // LBLgenero
             // 
-            this.LBLoficio.AutoSize = true;
-            this.LBLoficio.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLoficio.Location = new System.Drawing.Point(35, 377);
-            this.LBLoficio.Name = "LBLoficio";
-            this.LBLoficio.Size = new System.Drawing.Size(54, 19);
-            this.LBLoficio.TabIndex = 9;
-            this.LBLoficio.Text = "Oficio:";
+            this.LBLgenero.AutoSize = true;
+            this.LBLgenero.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLgenero.Location = new System.Drawing.Point(35, 339);
+            this.LBLgenero.Name = "LBLgenero";
+            this.LBLgenero.Size = new System.Drawing.Size(54, 22);
+            this.LBLgenero.TabIndex = 7;
+            this.LBLgenero.Text = "Sexo:";
             // 
             // FormEjercicio3
             // 
@@ -212,7 +198,6 @@ namespace TPN1_Grupal
             this.Controls.Add(this.LBLestado);
             this.Controls.Add(this.LBLgenero);
             this.Controls.Add(this.LBLtexto);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.lblMostrar);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.chlOcupacion);
@@ -242,10 +227,9 @@ namespace TPN1_Grupal
         private System.Windows.Forms.CheckedListBox chlOcupacion;
         private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.Label lblMostrar;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label LBLtexto;
-        private System.Windows.Forms.Label LBLestado;
         private System.Windows.Forms.Label LBLoficio;
+        private System.Windows.Forms.Label LBLestado;
         private System.Windows.Forms.Label LBLgenero;
     }
 }

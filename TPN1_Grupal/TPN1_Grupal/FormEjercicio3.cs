@@ -25,6 +25,13 @@ namespace TPN1_Grupal
 
         private void btnMostrar_Click(object sender, EventArgs e)
         {
+            
+            if(chlOcupacion.CheckedItems.Count == 0)
+            {
+                MessageBox.Show("NO SELECCIONO NINGUN OFICIO!", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
             LBLgenero.Visible = true;
             LBLestado.Visible = true;
 
@@ -44,6 +51,11 @@ namespace TPN1_Grupal
             {
                 LBLestado.Text = "Estado Civil: Soltero";
             }
+            }
+
+            
+            
+            
         }
 
         private void FormEjercicio3_Load(object sender, EventArgs e)
