@@ -39,9 +39,10 @@ namespace TPN1_Grupal
             this.btnMostrar = new System.Windows.Forms.Button();
             this.lblMostrar = new System.Windows.Forms.Label();
             this.LBLtexto = new System.Windows.Forms.Label();
-            this.LBLoficio = new System.Windows.Forms.Label();
             this.LBLestado = new System.Windows.Forms.Label();
             this.LBLgenero = new System.Windows.Forms.Label();
+            this.lbxOficio = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -158,15 +159,6 @@ namespace TPN1_Grupal
             this.LBLtexto.TabIndex = 6;
             this.LBLtexto.Text = "Usted Seleccionó los siguientes elementos:";
             // 
-            // LBLoficio
-            // 
-            this.LBLoficio.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLoficio.Location = new System.Drawing.Point(35, 377);
-            this.LBLoficio.Name = "LBLoficio";
-            this.LBLoficio.Size = new System.Drawing.Size(352, 92);
-            this.LBLoficio.TabIndex = 9;
-            this.LBLoficio.Text = "Oficio:";
-            // 
             // LBLestado
             // 
             this.LBLestado.AutoSize = true;
@@ -187,13 +179,36 @@ namespace TPN1_Grupal
             this.LBLgenero.TabIndex = 7;
             this.LBLgenero.Text = "Sexo:";
             // 
+            // lbxOficio
+            // 
+            this.lbxOficio.BackColor = System.Drawing.Color.LightGray;
+            this.lbxOficio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbxOficio.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbxOficio.FormattingEnabled = true;
+            this.lbxOficio.ItemHeight = 22;
+            this.lbxOficio.Location = new System.Drawing.Point(35, 407);
+            this.lbxOficio.Name = "lbxOficio";
+            this.lbxOficio.Size = new System.Drawing.Size(352, 110);
+            this.lbxOficio.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(35, 380);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 22);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Oficio:";
+            // 
             // FormEjercicio3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(445, 529);
-            this.Controls.Add(this.LBLoficio);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbxOficio);
             this.Controls.Add(this.LBLestado);
             this.Controls.Add(this.LBLgenero);
             this.Controls.Add(this.LBLtexto);
@@ -227,9 +242,10 @@ namespace TPN1_Grupal
         private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.Label lblMostrar;
         private System.Windows.Forms.Label LBLtexto;
-        private System.Windows.Forms.Label LBLoficio;
         private System.Windows.Forms.Label LBLestado;
         private System.Windows.Forms.Label LBLgenero;
+        private System.Windows.Forms.ListBox lbxOficio;
+        private System.Windows.Forms.Label label1;
     }
         
 }

@@ -33,6 +33,16 @@ namespace TPN1_Grupal
             }
             else
             {
+                lbxOficio.Items.Clear();
+                foreach (string item in chlOcupacion.CheckedItems)
+                {
+                    //Agrego los items seleccionados en la colección
+                    //Al Listbox con el Metodo Add.
+                    lbxOficio.Items.Add("-" + item.ToString());
+
+                }
+                
+
                 LBLgenero.Visible = true;
                 LBLestado.Visible = true;
 
