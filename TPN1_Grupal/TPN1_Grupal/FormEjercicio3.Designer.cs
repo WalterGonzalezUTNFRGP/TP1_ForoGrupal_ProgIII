@@ -127,10 +127,7 @@ namespace TPN1_Grupal
             this.chlOcupacion.Name = "chlOcupacion";
             this.chlOcupacion.Size = new System.Drawing.Size(194, 94);
             this.chlOcupacion.TabIndex = 2;
-<<<<<<< HEAD
-=======
-            this.chlOcupacion.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
->>>>>>> 150028828d866bfc2fd6e472371b010f5f699724
+
             // 
             // btnMostrar
             // 
@@ -141,7 +138,6 @@ namespace TPN1_Grupal
             this.btnMostrar.TabIndex = 3;
             this.btnMostrar.Text = "Mostrar lo que se seleccionó";
             this.btnMostrar.UseVisualStyleBackColor = true;
-            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
             // lblMostrar
             // 
@@ -209,10 +205,8 @@ namespace TPN1_Grupal
             this.Name = "FormEjercicio3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ejercicio3";
-<<<<<<< HEAD
-=======
             this.Load += new System.EventHandler(this.FormEjercicio3_Load);
->>>>>>> 150028828d866bfc2fd6e472371b010f5f699724
+
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -237,10 +231,6 @@ namespace TPN1_Grupal
         private System.Windows.Forms.Label LBLoficio;
         private System.Windows.Forms.Label LBLestado;
         private System.Windows.Forms.Label LBLgenero;
-<<<<<<< HEAD
-
-=======
->>>>>>> 150028828d866bfc2fd6e472371b010f5f699724
     }
         
 }
