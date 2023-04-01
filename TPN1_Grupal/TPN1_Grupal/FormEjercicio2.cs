@@ -18,32 +18,26 @@ namespace TPN1_Grupal
             InitializeComponent();
         }
 
-        private void LblApellidoEj2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LblNombreEj2_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             string Nombre = TxtNombre.Text.Trim();
             string Apellido = TxtApellido.Text.Trim();
-            if(string.IsNullOrEmpty(Nombre)&& string.IsNullOrEmpty(Apellido))
+
+            if (string.IsNullOrEmpty(Nombre) && string.IsNullOrEmpty(Apellido))
             {
-                MessageBox.Show("Debe ingresar el nombre y apellido!", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("¡DEBE INGRESAR NOMBRE Y APELLIDO!", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                TxtNombre.Focus();                
             }
             else if (string.IsNullOrEmpty(Nombre))
             {
-                MessageBox.Show("Debe poner un Nombre!", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("¡DEBE INGRESAR UN NOMBRE!", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 TxtNombre.Focus();
             }
             else if (string.IsNullOrEmpty(Apellido))
             {
-                MessageBox.Show("Debe poner un Apellido!", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("¡DEBE INGRESAR UN APELLIDO!", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 TxtApellido.Focus();
             }
             else
@@ -56,7 +50,7 @@ namespace TPN1_Grupal
                 {
                     if (NombreCompleto.ToUpper() == lbNombres.Items[i].ToString().ToUpper())
                     {
-                        MessageBox.Show("El nombre ingresado ya se encuentra en la lista", "ATENCIÓN");
+                        MessageBox.Show("LOS DATOS INGRESADOS SE ENCUENTRAN EN LA LISTA", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         repetido = true;
                     }
                 }
@@ -73,42 +67,95 @@ namespace TPN1_Grupal
 
         private void TxtNombre_TextChanged(object sender, EventArgs e)
         {
-            if(Regex.IsMatch(TxtNombre.Text.Trim(), "[^a-zA-ZñÑáéíóúÁÉÍÓÚ ]"))
+            bool carInvalido = false;
+            char[] cadenatxt = TxtNombre.Text.Trim().ToCharArray();
+
+            for (int i = 0; i < cadenatxt.Length && !carInvalido; i++)
             {
-                errorProvider1.SetError(TxtNombre, "Debe ingresar un nombre valido");
-                BtnAgregar.Enabled = false;
+                carInvalido = ((char.IsControl(cadenatxt[i]) || char.IsNumber(cadenatxt[i]) || char.IsPunctuation(cadenatxt[i]) ||
+                    char.IsSymbol(cadenatxt[i])) && cadenatxt[i] != 32) ? true : false;
+            }
+
+            if (!carInvalido)
+            {
+                pctbxValidacionNombre.Image = Properties.Resources.cheque;
+                lblValidacionNombre.ForeColor = Color.Green;
+                lblValidacionNombre.Text = "Nombre Válido";
+                BtnAgregar.Enabled = true;
             }
             else
             {
-                errorProvider1.SetError(TxtNombre, "");
-                BtnAgregar.Enabled = true;
+                pctbxValidacionNombre.Image = Properties.Resources.cancelar;
+                lblValidacionNombre.ForeColor = Color.Red;
+                lblValidacionNombre.Text = "Nombre no Válido";
+                BtnAgregar.Enabled = false;
+
+            }
+
+            if (string.IsNullOrEmpty(TxtNombre.Text.Trim()))
+            {
+                pctbxValidacionNombre.Image = null;
+                lblValidacionNombre.Text = "";
             }
         }
 
+
         private void TxtApellido_TextChanged(object sender, EventArgs e)
         {
-            if (Regex.IsMatch(TxtApellido.Text.Trim(), "[^a-zA-ZñÑáéíóúÁÉÍÓÚ ]"))
+            bool carInvalido = false;
+            char[] cadenatxt = TxtApellido.Text.Trim().ToCharArray();
+
+            for (int i = 0; i < cadenatxt.Length && !carInvalido; i++)
             {
-                errorProvider2.SetError(TxtApellido, "Debe ingresar un nombre valido");
-                BtnAgregar.Enabled = false;
+
+                carInvalido = ((char.IsControl(cadenatxt[i]) || char.IsNumber(cadenatxt[i]) || char.IsPunctuation(cadenatxt[i]) ||
+                    char.IsSymbol(cadenatxt[i])) && cadenatxt[i] != 32) ? true : false;
+
+            }
+
+            if (!carInvalido)
+            {
+                pctbxValidacionApellido.Image = Properties.Resources.cheque;
+                lblValidacionApellido.ForeColor = Color.Green;
+                lblValidacionApellido.Text = "Apellido Válido";
+                BtnAgregar.Enabled = true;
             }
             else
             {
-                errorProvider2.SetError(TxtApellido, "");
-                BtnAgregar.Enabled = true;
+                pctbxValidacionApellido.Image = Properties.Resources.cancelar;
+                lblValidacionApellido.ForeColor = Color.Red;
+                lblValidacionApellido.Text = "Apellido no Válido";
+                BtnAgregar.Enabled = false;
+
+            }
+
+            if (string.IsNullOrEmpty(TxtApellido.Text.Trim()))
+            {
+                pctbxValidacionApellido.Image = null;
+                lblValidacionApellido.Text = "";
             }
         }
 
         private void BtnBorrar_Click(object sender, EventArgs e)
         {
-           if (lbNombres.SelectedItem != null)
+            if (lbNombres.SelectedItem != null)
             {
                 lbNombres.Items.RemoveAt(lbNombres.SelectedIndex);
             }
             else
             {
-                MessageBox.Show("Debe seleccionar un nombre de la lista!", "ATENCIÓN",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                if(lbNombres.Items.Count == 0)
+                {
+                    MessageBox.Show("LISTA VACÍA. NO SE PUEDEN BORRAR ELEMENTOS", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+                else
+                {
+                    MessageBox.Show("¡DEBE SELECCIONAR UN NOMBRE DE LA LISTA!", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
+
     }
+    
 }

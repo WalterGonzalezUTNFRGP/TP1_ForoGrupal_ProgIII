@@ -29,10 +29,13 @@ namespace TPN1_Grupal
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.LblNombreEj2 = new System.Windows.Forms.Label();
             this.LblApellidoEj2 = new System.Windows.Forms.Label();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblValidacionApellido = new System.Windows.Forms.Label();
+            this.lblValidacionNombre = new System.Windows.Forms.Label();
+            this.pctbxValidacionApellido = new System.Windows.Forms.PictureBox();
+            this.pctbxValidacionNombre = new System.Windows.Forms.PictureBox();
             this.pApellido = new System.Windows.Forms.Panel();
             this.pNombre = new System.Windows.Forms.Panel();
             this.TxtApellido = new System.Windows.Forms.TextBox();
@@ -41,12 +44,10 @@ namespace TPN1_Grupal
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.BtnBorrar = new System.Windows.Forms.Button();
             this.lbNombres = new System.Windows.Forms.ListBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctbxValidacionApellido)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctbxValidacionNombre)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // LblNombreEj2
@@ -58,7 +59,6 @@ namespace TPN1_Grupal
             this.LblNombreEj2.Size = new System.Drawing.Size(91, 24);
             this.LblNombreEj2.TabIndex = 1;
             this.LblNombreEj2.Text = "Nombre:";
-            this.LblNombreEj2.Click += new System.EventHandler(this.LblNombreEj2_Click);
             // 
             // LblApellidoEj2
             // 
@@ -69,10 +69,13 @@ namespace TPN1_Grupal
             this.LblApellidoEj2.Size = new System.Drawing.Size(93, 24);
             this.LblApellidoEj2.TabIndex = 2;
             this.LblApellidoEj2.Text = "Apellido:";
-            this.LblApellidoEj2.Click += new System.EventHandler(this.LblApellidoEj2_Click);
             // 
             // GroupBox1
             // 
+            this.GroupBox1.Controls.Add(this.lblValidacionApellido);
+            this.GroupBox1.Controls.Add(this.lblValidacionNombre);
+            this.GroupBox1.Controls.Add(this.pctbxValidacionApellido);
+            this.GroupBox1.Controls.Add(this.pctbxValidacionNombre);
             this.GroupBox1.Controls.Add(this.pApellido);
             this.GroupBox1.Controls.Add(this.pNombre);
             this.GroupBox1.Controls.Add(this.TxtApellido);
@@ -86,6 +89,44 @@ namespace TPN1_Grupal
             this.GroupBox1.TabIndex = 3;
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "Ingreso De Datos";
+            // 
+            // lblValidacionApellido
+            // 
+            this.lblValidacionApellido.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValidacionApellido.Location = new System.Drawing.Point(143, 217);
+            this.lblValidacionApellido.Margin = new System.Windows.Forms.Padding(0);
+            this.lblValidacionApellido.Name = "lblValidacionApellido";
+            this.lblValidacionApellido.Size = new System.Drawing.Size(175, 23);
+            this.lblValidacionApellido.TabIndex = 11;
+            this.lblValidacionApellido.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblValidacionNombre
+            // 
+            this.lblValidacionNombre.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValidacionNombre.Location = new System.Drawing.Point(145, 160);
+            this.lblValidacionNombre.Margin = new System.Windows.Forms.Padding(0);
+            this.lblValidacionNombre.Name = "lblValidacionNombre";
+            this.lblValidacionNombre.Size = new System.Drawing.Size(174, 23);
+            this.lblValidacionNombre.TabIndex = 10;
+            this.lblValidacionNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pctbxValidacionApellido
+            // 
+            this.pctbxValidacionApellido.Location = new System.Drawing.Point(119, 221);
+            this.pctbxValidacionApellido.Name = "pctbxValidacionApellido";
+            this.pctbxValidacionApellido.Size = new System.Drawing.Size(21, 19);
+            this.pctbxValidacionApellido.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctbxValidacionApellido.TabIndex = 9;
+            this.pctbxValidacionApellido.TabStop = false;
+            // 
+            // pctbxValidacionNombre
+            // 
+            this.pctbxValidacionNombre.Location = new System.Drawing.Point(119, 164);
+            this.pctbxValidacionNombre.Name = "pctbxValidacionNombre";
+            this.pctbxValidacionNombre.Size = new System.Drawing.Size(21, 19);
+            this.pctbxValidacionNombre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctbxValidacionNombre.TabIndex = 8;
+            this.pctbxValidacionNombre.TabStop = false;
             // 
             // pApellido
             // 
@@ -166,14 +207,6 @@ namespace TPN1_Grupal
             this.lbNombres.Size = new System.Drawing.Size(252, 303);
             this.lbNombres.TabIndex = 4;
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // errorProvider2
-            // 
-            this.errorProvider2.ContainerControl = this;
-            // 
             // FormEjercicio2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,9 +220,9 @@ namespace TPN1_Grupal
             this.Text = "Nombre y apellido";
             this.GroupBox1.ResumeLayout(false);
             this.GroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctbxValidacionApellido)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctbxValidacionNombre)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -207,7 +240,9 @@ namespace TPN1_Grupal
         private System.Windows.Forms.ListBox lbNombres;
         private System.Windows.Forms.Panel pApellido;
         private System.Windows.Forms.Panel pNombre;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.PictureBox pctbxValidacionApellido;
+        private System.Windows.Forms.PictureBox pctbxValidacionNombre;
+        private System.Windows.Forms.Label lblValidacionApellido;
+        private System.Windows.Forms.Label lblValidacionNombre;
     }
 }

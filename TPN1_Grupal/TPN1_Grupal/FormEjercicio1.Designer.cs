@@ -37,8 +37,10 @@ namespace TPN1_Grupal
             this.listNombreAgregado = new System.Windows.Forms.ListBox();
             this.btnFlechita = new System.Windows.Forms.Button();
             this.btnFechitaTodo = new System.Windows.Forms.Button();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.ptbxImagenEstado = new System.Windows.Forms.PictureBox();
+            this.lblMensajeUsuario = new System.Windows.Forms.Label();
+            this.tmrClock1 = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.ptbxImagenEstado)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAgregarNombre
@@ -57,7 +59,7 @@ namespace TPN1_Grupal
             this.txtBoxAgregar.Name = "txtBoxAgregar";
             this.txtBoxAgregar.Size = new System.Drawing.Size(352, 20);
             this.txtBoxAgregar.TabIndex = 1;
-            this.txtBoxAgregar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtBoxAgregar_KeyUp);
+            this.txtBoxAgregar.TextChanged += new System.EventHandler(this.txtBoxAgregar_TextChanged);
             // 
             // btnAgregar
             // 
@@ -106,9 +108,29 @@ namespace TPN1_Grupal
             this.btnFechitaTodo.UseVisualStyleBackColor = true;
             this.btnFechitaTodo.Click += new System.EventHandler(this.btnFechitaTodo_Click);
             // 
-            // errorProvider1
+            // ptbxImagenEstado
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.ptbxImagenEstado.Location = new System.Drawing.Point(272, 64);
+            this.ptbxImagenEstado.Name = "ptbxImagenEstado";
+            this.ptbxImagenEstado.Size = new System.Drawing.Size(24, 20);
+            this.ptbxImagenEstado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbxImagenEstado.TabIndex = 7;
+            this.ptbxImagenEstado.TabStop = false;
+            // 
+            // lblMensajeUsuario
+            // 
+            this.lblMensajeUsuario.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensajeUsuario.Location = new System.Drawing.Point(302, 64);
+            this.lblMensajeUsuario.Margin = new System.Windows.Forms.Padding(0);
+            this.lblMensajeUsuario.Name = "lblMensajeUsuario";
+            this.lblMensajeUsuario.Size = new System.Drawing.Size(251, 23);
+            this.lblMensajeUsuario.TabIndex = 8;
+            this.lblMensajeUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tmrClock1
+            // 
+            this.tmrClock1.Interval = 1500;
+            this.tmrClock1.Tick += new System.EventHandler(this.tmrClock1_Tick);
             // 
             // FormEjercicio1
             // 
@@ -116,6 +138,8 @@ namespace TPN1_Grupal
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblMensajeUsuario);
+            this.Controls.Add(this.ptbxImagenEstado);
             this.Controls.Add(this.btnFechitaTodo);
             this.Controls.Add(this.btnFlechita);
             this.Controls.Add(this.listNombreAgregado);
@@ -126,7 +150,7 @@ namespace TPN1_Grupal
             this.Name = "FormEjercicio1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nombres";
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbxImagenEstado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,6 +165,8 @@ namespace TPN1_Grupal
         private System.Windows.Forms.ListBox listNombreAgregado;
         private System.Windows.Forms.Button btnFlechita;
         private System.Windows.Forms.Button btnFechitaTodo;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label lblMensajeUsuario;
+        private System.Windows.Forms.PictureBox ptbxImagenEstado;
+        private System.Windows.Forms.Timer tmrClock1;
     }
 }

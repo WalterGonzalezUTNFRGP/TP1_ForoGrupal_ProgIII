@@ -22,15 +22,11 @@ namespace TPN1_Grupal
         {
             if (string.IsNullOrEmpty(txtBoxAgregar.Text.Trim()))
             {
-                //txtBoxAgregar.BackColor = Color.Red;
-                errorProvider1.SetError(txtBoxAgregar, "Ingrese un nombre válido");
+                tmrClock1.Start();
+                ptbxImagenEstado.Image = Properties.Resources.cancelar;
+                lblMensajeUsuario.ForeColor = Color.Red;
+                lblMensajeUsuario.Text = "Debe Ingresar un Nombre";
                 btnAgregar.Enabled = false;
-                
-                //MessageBox.Show("¡Debe ingresar un nombre!","ATENCIÓN",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
-                                                 /// Después de mostrar cartel deja vacío el Text Box).
-                                                 /// Más que nada cuando se ingresan sólo espacios en blanco.
-
-                
             }
             else
             {
@@ -43,37 +39,19 @@ namespace TPN1_Grupal
                     // Compara el nombre ingresado en el text box con cada uno de los nombres del list box. Antes pasa toda la cadena de ambos nombres a MAYÚSCULAS.
                     if (txtBoxAgregar.Text.ToUpper().Trim() == listNombre.Items[i].ToString().ToUpper())
                     {
-                        MessageBox.Show("El nombre ingresado ya se encuentra en la lista", "ATENCIÓN");
+                        MessageBox.Show("¡EL NOMBRE INGRESADO YA SE ENCUENTRA EN LA LISTA!", "ATENCIÓN",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                         repetido = true;
                     }
                 }
                 // Si no hay repetido agrega el nombre a la lista.
                 if (repetido == false)
                 {
-                    //txtBoxAgregar.Text.Trim();
                     listNombre.Items.Add(txtBoxAgregar.Text.Trim());    /// Quita los espacios del inicio y final de la cadena
-                                                                        /// al momento de agregar el nombre al List Box.
-                    txtBoxAgregar.Text = "";                            /// Vuelve a poner en blanco el Text Box
-                }
+                    txtBoxAgregar.Text = "";                            /// al momento de agregar el nombre al List Box.
+                }                                                      /// Vuelve a poner en blanco el Text Box
 
-                //txtBoxAgregar.BackColor = System.Drawing.SystemColors.Control;
             }
-
-
-
-        }
-
-        /*private void txtBoxAgregar_KeyPress(object sender, KeyPressEventArgs e)
-        {
-                if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
-                {
-                    if (e.KeyChar != 32)
-                    {
-                        MessageBox.Show("SOLO LETRAS", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        e.Handled = true;
-                    }
-                }
-        }*/
+        }       
 
         private void BtnFlechita_Click(object sender, EventArgs e)
         {
@@ -81,7 +59,7 @@ namespace TPN1_Grupal
             {
                 if (listNombre.SelectedItem == null)
                 {
-                    MessageBox.Show("Seleccione un nombre de la lista izquierda para transferirlo a la derecha!", "ATENCIÓN");
+                    MessageBox.Show("¡Seleccione un nombre de la lista izquierda para transferirlo a la derecha!", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -105,24 +83,51 @@ namespace TPN1_Grupal
             }
             else
             {
-                MessageBox.Show("No hay ningun nombre en la lista izquierda para transferirlo a la derecha, Por favor ingrese un nombre!", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("¡No hay ningun nombre en la lista izquierda para transferirlo a la derecha, Por favor ingrese un nombre!", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
-        
-
-        private void TxtBoxAgregar_KeyUp(object sender, KeyEventArgs e)
+        private void txtBoxAgregar_TextChanged(object sender, EventArgs e)
         {
-            if (Regex.IsMatch(txtBoxAgregar.Text.Trim(), "[^a-zA-ZáéíóúÁÉÍÓÚü ]"))
+            bool carInvalido = false;
+            char[] cadenatxt = txtBoxAgregar.Text.Trim().ToCharArray();
+
+            for (int i = 0; i < cadenatxt.Length && !carInvalido; i++)
             {
-                errorProvider1.SetError(txtBoxAgregar, "Debe ingresar un nombre válido");
-                btnAgregar.Enabled = false;
+
+                carInvalido = ((char.IsControl(cadenatxt[i]) || char.IsNumber(cadenatxt[i]) || char.IsPunctuation(cadenatxt[i]) ||
+                    char.IsSymbol(cadenatxt[i])) && !carInvalido && cadenatxt[i] != 32) ? true : false;
+
+            }
+
+            if (!carInvalido)
+            {
+                ptbxImagenEstado.Image = Properties.Resources.cheque;
+                lblMensajeUsuario.ForeColor = Color.Green;
+                lblMensajeUsuario.Text = "Nombre Válido";
+                btnAgregar.Enabled = true;
             }
             else
             {
-                errorProvider1.SetError(txtBoxAgregar, "");
-                btnAgregar.Enabled = true;
+                ptbxImagenEstado.Image = Properties.Resources.cancelar;
+                lblMensajeUsuario.ForeColor = Color.Red;
+                lblMensajeUsuario.Text = "Nombre no Válido";
+                btnAgregar.Enabled = false;
+
             }
+
+            if (string.IsNullOrEmpty(txtBoxAgregar.Text.Trim()))
+            {
+                ptbxImagenEstado.Image = null;
+                lblMensajeUsuario.Text = "";
+            }
+        }
+
+        private void tmrClock1_Tick(object sender, EventArgs e)
+        {
+            ptbxImagenEstado.Image = null;
+            lblMensajeUsuario.Text = "";
+            tmrClock1.Stop();
         }
     }
 }
