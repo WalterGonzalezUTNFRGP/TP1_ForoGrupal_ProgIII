@@ -127,7 +127,6 @@ namespace TPN1_Grupal
             this.chlOcupacion.Name = "chlOcupacion";
             this.chlOcupacion.Size = new System.Drawing.Size(194, 94);
             this.chlOcupacion.TabIndex = 2;
-
             // 
             // btnMostrar
             // 
@@ -138,6 +137,7 @@ namespace TPN1_Grupal
             this.btnMostrar.TabIndex = 3;
             this.btnMostrar.Text = "Mostrar lo que se seleccionó";
             this.btnMostrar.UseVisualStyleBackColor = true;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
             // lblMostrar
             // 
@@ -206,7 +206,6 @@ namespace TPN1_Grupal
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ejercicio3";
             this.Load += new System.EventHandler(this.FormEjercicio3_Load);
-
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
