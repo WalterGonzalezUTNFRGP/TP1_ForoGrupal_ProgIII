@@ -38,6 +38,7 @@ namespace TPN1_Grupal
             this.chlOcupacion = new System.Windows.Forms.CheckedListBox();
             this.btnMostrar = new System.Windows.Forms.Button();
             this.lblMostrar = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -46,11 +47,9 @@ namespace TPN1_Grupal
             // 
             this.groupBox1.Controls.Add(this.rbMas);
             this.groupBox1.Controls.Add(this.rbFem);
-            this.groupBox1.Location = new System.Drawing.Point(47, 82);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(35, 67);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(185, 110);
+            this.groupBox1.Size = new System.Drawing.Size(139, 89);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sexo";
@@ -58,23 +57,22 @@ namespace TPN1_Grupal
             // rbMas
             // 
             this.rbMas.AutoSize = true;
-            this.rbMas.Location = new System.Drawing.Point(20, 62);
-            this.rbMas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbMas.Location = new System.Drawing.Point(15, 50);
             this.rbMas.Name = "rbMas";
-            this.rbMas.Size = new System.Drawing.Size(92, 21);
+            this.rbMas.Size = new System.Drawing.Size(73, 17);
             this.rbMas.TabIndex = 1;
-            this.rbMas.TabStop = true;
             this.rbMas.Text = "Masculino";
             this.rbMas.UseVisualStyleBackColor = true;
             // 
             // rbFem
             // 
             this.rbFem.AutoSize = true;
-            this.rbFem.Location = new System.Drawing.Point(20, 34);
-            this.rbFem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbFem.Checked = true;
+            this.rbFem.Location = new System.Drawing.Point(15, 28);
             this.rbFem.Name = "rbFem";
-            this.rbFem.Size = new System.Drawing.Size(91, 21);
+            this.rbFem.Size = new System.Drawing.Size(71, 17);
             this.rbFem.TabIndex = 0;
+            this.rbFem.TabStop = true;
             this.rbFem.Text = "Femenino";
             this.rbFem.UseVisualStyleBackColor = true;
             // 
@@ -82,11 +80,9 @@ namespace TPN1_Grupal
             // 
             this.groupBox2.Controls.Add(this.rbSol);
             this.groupBox2.Controls.Add(this.rbCas);
-            this.groupBox2.Location = new System.Drawing.Point(348, 82);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Location = new System.Drawing.Point(261, 67);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(191, 110);
+            this.groupBox2.Size = new System.Drawing.Size(143, 89);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Estado Civil";
@@ -94,10 +90,9 @@ namespace TPN1_Grupal
             // rbSol
             // 
             this.rbSol.AutoSize = true;
-            this.rbSol.Location = new System.Drawing.Point(16, 62);
-            this.rbSol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbSol.Location = new System.Drawing.Point(12, 50);
             this.rbSol.Name = "rbSol";
-            this.rbSol.Size = new System.Drawing.Size(74, 21);
+            this.rbSol.Size = new System.Drawing.Size(58, 17);
             this.rbSol.TabIndex = 3;
             this.rbSol.Text = "Soltero";
             this.rbSol.UseVisualStyleBackColor = true;
@@ -105,11 +100,12 @@ namespace TPN1_Grupal
             // rbCas
             // 
             this.rbCas.AutoSize = true;
-            this.rbCas.Location = new System.Drawing.Point(16, 34);
-            this.rbCas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbCas.Checked = true;
+            this.rbCas.Location = new System.Drawing.Point(12, 28);
             this.rbCas.Name = "rbCas";
-            this.rbCas.Size = new System.Drawing.Size(77, 21);
+            this.rbCas.Size = new System.Drawing.Size(61, 17);
             this.rbCas.TabIndex = 2;
+            this.rbCas.TabStop = true;
             this.rbCas.Text = "Casado";
             this.rbCas.UseVisualStyleBackColor = true;
             // 
@@ -123,17 +119,19 @@ namespace TPN1_Grupal
             "Programador",
             "Reparador de PC",
             "Tester"});
-            this.chlOcupacion.Location = new System.Drawing.Point(167, 220);
+            this.chlOcupacion.Location = new System.Drawing.Point(125, 179);
+            this.chlOcupacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chlOcupacion.Name = "chlOcupacion";
-            this.chlOcupacion.Size = new System.Drawing.Size(258, 123);
+            this.chlOcupacion.Size = new System.Drawing.Size(194, 94);
             this.chlOcupacion.TabIndex = 2;
             this.chlOcupacion.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
             // btnMostrar
             // 
-            this.btnMostrar.Location = new System.Drawing.Point(167, 349);
+            this.btnMostrar.Location = new System.Drawing.Point(125, 284);
+            this.btnMostrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.Size = new System.Drawing.Size(258, 32);
+            this.btnMostrar.Size = new System.Drawing.Size(194, 26);
             this.btnMostrar.TabIndex = 3;
             this.btnMostrar.Text = "Mostrar lo que se seleccionó";
             this.btnMostrar.UseVisualStyleBackColor = true;
@@ -141,23 +139,34 @@ namespace TPN1_Grupal
             // lblMostrar
             // 
             this.lblMostrar.AutoSize = true;
-            this.lblMostrar.Location = new System.Drawing.Point(99, 410);
+            this.lblMostrar.Location = new System.Drawing.Point(74, 333);
+            this.lblMostrar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMostrar.Name = "lblMostrar";
-            this.lblMostrar.Size = new System.Drawing.Size(0, 17);
+            this.lblMostrar.Size = new System.Drawing.Size(0, 13);
             this.lblMostrar.TabIndex = 4;
+            // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.LightGray;
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(35, 315);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(354, 197);
+            this.listBox1.TabIndex = 5;
             // 
             // FormEjercicio3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(593, 651);
+            this.ClientSize = new System.Drawing.Size(445, 529);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.lblMostrar);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.chlOcupacion);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormEjercicio3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ejercicio3";
@@ -181,5 +190,6 @@ namespace TPN1_Grupal
         private System.Windows.Forms.CheckedListBox chlOcupacion;
         private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.Label lblMostrar;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
