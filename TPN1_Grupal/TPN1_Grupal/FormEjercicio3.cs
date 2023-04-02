@@ -16,55 +16,53 @@ namespace TPN1_Grupal
         {
             InitializeComponent();
             
-        }
-
-
-        private void FormEjercicio3_Load(object sender, EventArgs e)
-        {
-
-        }
+        }        
 
         private void btnMostrar_Click(object sender, EventArgs e)
         {
+            String salida;            
 
             if (chlOcupacion.CheckedItems.Count == 0)
             {
-                MessageBox.Show("NO SELECCIONO NINGUN OFICIO!", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("¡NO SELECCIONO NINGÚN OFICIO!", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
-                lbxOficio.Items.Clear();
-                foreach (string item in chlOcupacion.CheckedItems)
-                {
-                    //Agrego los items seleccionados en la colección
-                    //Al Listbox con el Metodo Add.
-                    lbxOficio.Items.Add("-" + item.ToString());
+                lblSalida.Text = "";
+                salida = "Usted seleccionó los siguientes elementos:\n";
 
+                if (rbFem.Checked)
+                {
+                    salida += "Sexo: Femenino\n";
                 }
-                
+                if (rbMas.Checked)
+                {
+                    salida += "Sexo: Masculino\n";
+                }
+                if (rbCas.Checked)
+                {
+                    salida += "Estado Civil: Casado\n";
+                }
+                if (rbSol.Checked)
+                {
+                    salida += "Estado Civil: Soltero\n";
+                }
 
-                LBLgenero.Visible = true;
-                LBLestado.Visible = true;
+                salida += "Oficio:\n\n";
 
-                if (rbFem.Checked == true)
+                for(int i=0; i < chlOcupacion.Items.Count; i++)
                 {
-                    LBLgenero.Text = "Sexo: Femenino";
+                    if (chlOcupacion.GetItemChecked(i))
+                    {
+                        salida += "   -" + chlOcupacion.Items[i].ToString() + "\n";
+                    }
+                                        
                 }
-                if (rbMas.Checked == true)
-                {
-                    LBLgenero.Text = "Sexo: Masculino";
-                }
-                if (rbCas.Checked == true)
-                {
-                    LBLestado.Text = "Estado Civil: Casado";
-                }
-                if (rbSol.Checked == true)
-                {
-                    LBLestado.Text = "Estado Civil: Soltero";
-                }
+
+                lblSalida.Text = salida;                
             }
-        }        
+        }
 
-
+        
     }
 }
