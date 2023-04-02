@@ -89,16 +89,8 @@ namespace TPN1_Grupal
 
         private void txtBoxAgregar_TextChanged(object sender, EventArgs e)
         {
-            bool carInvalido = false;
             char[] cadenatxt = txtBoxAgregar.Text.Trim().ToCharArray();
-
-            for (int i = 0; i < cadenatxt.Length && !carInvalido; i++)
-            {
-
-                carInvalido = ((char.IsControl(cadenatxt[i]) || char.IsNumber(cadenatxt[i]) || char.IsPunctuation(cadenatxt[i]) ||
-                    char.IsSymbol(cadenatxt[i])) && !carInvalido && cadenatxt[i] != 32) ? true : false;
-
-            }
+            bool carInvalido = cadenatxt.Any(c => !char.IsLetter(c) && !char.IsWhiteSpace(c));
 
             if (!carInvalido)
             {

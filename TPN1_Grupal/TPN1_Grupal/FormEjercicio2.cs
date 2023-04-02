@@ -67,14 +67,8 @@ namespace TPN1_Grupal
 
         private void TxtNombre_TextChanged(object sender, EventArgs e)
         {
-            bool carInvalido = false;
             char[] cadenatxt = TxtNombre.Text.Trim().ToCharArray();
-
-            for (int i = 0; i < cadenatxt.Length && !carInvalido; i++)
-            {
-                carInvalido = ((char.IsControl(cadenatxt[i]) || char.IsNumber(cadenatxt[i]) || char.IsPunctuation(cadenatxt[i]) ||
-                    char.IsSymbol(cadenatxt[i])) && cadenatxt[i] != 32) ? true : false;
-            }
+            bool carInvalido = cadenatxt.Any(c => !char.IsLetter(c) && !char.IsWhiteSpace(c));
 
             if (!carInvalido)
             {
@@ -102,16 +96,9 @@ namespace TPN1_Grupal
 
         private void TxtApellido_TextChanged(object sender, EventArgs e)
         {
-            bool carInvalido = false;
+            
             char[] cadenatxt = TxtApellido.Text.Trim().ToCharArray();
-
-            for (int i = 0; i < cadenatxt.Length && !carInvalido; i++)
-            {
-
-                carInvalido = ((char.IsControl(cadenatxt[i]) || char.IsNumber(cadenatxt[i]) || char.IsPunctuation(cadenatxt[i]) ||
-                    char.IsSymbol(cadenatxt[i])) && cadenatxt[i] != 32) ? true : false;
-
-            }
+            bool carInvalido = cadenatxt.Any(c => !char.IsLetter(c) && !char.IsWhiteSpace(c));
 
             if (!carInvalido)
             {
