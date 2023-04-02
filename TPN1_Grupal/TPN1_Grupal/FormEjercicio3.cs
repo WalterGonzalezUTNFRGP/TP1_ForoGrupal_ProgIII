@@ -20,49 +20,27 @@ namespace TPN1_Grupal
 
         private void btnMostrar_Click(object sender, EventArgs e)
         {
-            String salida;            
+                String salida;
 
-            if (chlOcupacion.CheckedItems.Count == 0)
-            {
-                MessageBox.Show("¡NO SELECCIONO NINGÚN OFICIO!", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else
-            {
-                lblSalida.Text = "";
-                salida = "Usted seleccionó los siguientes elementos:\n";
-
-                if (rbFem.Checked)
+                if (chlOcupacion.CheckedItems.Count == 0)
                 {
-                    salida += "Sexo: Femenino\n";
+                    MessageBox.Show("¡NO SELECCIONO NINGÚN OFICIO!", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
-                if (rbMas.Checked)
+                else
                 {
-                    salida += "Sexo: Masculino\n";
-                }
-                if (rbCas.Checked)
-                {
-                    salida += "Estado Civil: Casado\n";
-                }
-                if (rbSol.Checked)
-                {
-                    salida += "Estado Civil: Soltero\n";
-                }
-
-                salida += "Oficio:\n\n";
-
-                for(int i=0; i < chlOcupacion.Items.Count; i++)
-                {
-                    if (chlOcupacion.GetItemChecked(i))
+                    lblSalida.Text = "";
+                    salida = "Usted seleccionó los siguientes elementos:\n" + "Sexo: " + (string)(rbFem.Checked ? "Femenino" : "Masculino") +
+                        "\nEstado Civil: " + (string)(rbCas.Checked ? "Casado" : "Soltero") + "\nOficio:\n";
+                    foreach (string item in chlOcupacion.CheckedItems)
                     {
-                        salida += "   -" + chlOcupacion.Items[i].ToString() + "\n";
+                        salida += " -" + item.ToString() + "\n";
                     }
-                                        
+
+
+                    lblSalida.Text = salida;
                 }
-
-                lblSalida.Text = salida;                
             }
-        }
 
-        
-    }
+
+        }
 }
