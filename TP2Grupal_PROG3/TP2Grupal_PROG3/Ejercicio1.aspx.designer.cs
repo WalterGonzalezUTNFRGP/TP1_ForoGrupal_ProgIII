@@ -42,6 +42,15 @@ namespace TP2Grupal_PROG3
         protected global::System.Web.UI.WebControls.TextBox TXTproducto1;
 
         /// <summary>
+        /// Control imgProducto1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgProducto1;
+
+        /// <summary>
         /// Control LBLcantidad1.
         /// </summary>
         /// <remarks>
@@ -58,6 +67,33 @@ namespace TP2Grupal_PROG3
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TXTcantidad1;
+
+        /// <summary>
+        /// Control imgCantidad1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgCantidad1;
+
+        /// <summary>
+        /// Control lblValidacionProducto1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblValidacionProducto1;
+
+        /// <summary>
+        /// Control lblValidacionCantidad1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblValidacionCantidad1;
 
         /// <summary>
         /// Control LBLproducto2.
@@ -78,6 +114,15 @@ namespace TP2Grupal_PROG3
         protected global::System.Web.UI.WebControls.TextBox TXTproducto2;
 
         /// <summary>
+        /// Control imgProducto2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgProducto2;
+
+        /// <summary>
         /// Control LBLcantidad2.
         /// </summary>
         /// <remarks>
@@ -96,6 +141,33 @@ namespace TP2Grupal_PROG3
         protected global::System.Web.UI.WebControls.TextBox TXTcantidad2;
 
         /// <summary>
+        /// Control imgCantidad2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgCantidad2;
+
+        /// <summary>
+        /// Control lblValidacionProducto2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblValidacionProducto2;
+
+        /// <summary>
+        /// Control lblValidacionCantidad2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblValidacionCantidad2;
+
+        /// <summary>
         /// Control BTNgenerar.
         /// </summary>
         /// <remarks>
@@ -105,15 +177,6 @@ namespace TP2Grupal_PROG3
         protected global::System.Web.UI.WebControls.Button BTNgenerar;
 
         /// <summary>
-        /// Control lblVerificacion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblVerificacion;
-
-        /// <summary>
         /// Control LBLtabla.
         /// </summary>
         /// <remarks>
@@ -121,5 +184,23 @@ namespace TP2Grupal_PROG3
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LBLtabla;
+
+        /// <summary>
+        /// Control lblError.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblError;
+
+        /// <summary>
+        /// Control btnReiniciar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnReiniciar;
     }
 }
