@@ -27,12 +27,7 @@ namespace TP2Grupal_PROG3
             string tabla;
             bool numCantidad1Valido = false;
             bool numCantidad2Valido = false;
-            bool carProducto1Invalidos = false;
-            bool carProducto2Invalidos = false;
-            bool cadenaProducto1Vacia;
-            bool cadenaProducto2Vacia;
-            bool cadenaProducto1Inhabilitada = false;
-            bool cadenaProducto2Inhabilitada = false;
+
 
             if (!string.IsNullOrEmpty(TXTcantidad1.Text.Trim()))
             {
@@ -102,86 +97,69 @@ namespace TP2Grupal_PROG3
             }
 
             string producto2 = TXTproducto2.Text.Trim();
-            char[] cadProducto2 = producto2.ToCharArray();
+            bool cadenaProducto2Vacia = string.IsNullOrEmpty(producto2);
 
-            for (int i = 0; i < cadProducto2.Length && !carProducto2Invalidos; i++)
+            bool carProducto2Invalidos = false;
+            foreach (char c in producto2)
             {
-                carProducto2Invalidos = (!char.IsLetter(cadProducto2[i]) && cadProducto2[i] != 32) ? true : false;
+                if (!char.IsLetter(c) && c != ' ')
+                {
+                    carProducto2Invalidos = true;
+                    break;
+                }
             }
 
-            cadenaProducto2Vacia = (cadProducto2.Length == 0) ? true : false;
-            
+            bool cadenaProducto2Inhabilitada = carProducto2Invalidos || cadenaProducto2Vacia;
 
-            cadenaProducto2Inhabilitada = (carProducto2Invalidos || cadenaProducto2Vacia) ? true : false;
+            imgProducto2.ImageUrl = cadenaProducto2Inhabilitada ? "imagenes/error.png" : "imagenes/marca-de-verificacion.png";
+            imgProducto2.Visible = true;
 
             if (cadenaProducto2Vacia)
             {
-                imgProducto2.Visible = true;
-                imgProducto2.ImageUrl = "imagenes/error.png";
                 lblValidacionProducto2.ForeColor = Color.Red;
                 lblValidacionProducto2.Text = "Este campo no puede estar vacío";
             }
-            else
+            else if (carProducto2Invalidos)
             {
-                imgProducto2.Visible = true;
-                imgProducto2.ImageUrl = "imagenes/marca-de-verificacion.png";
-                lblValidacionProducto2.ForeColor = Color.Green;
-                lblValidacionProducto2.Text = "Caracteres Válidos";
-            }
-
-            if (carProducto2Invalidos)
-            {
-                imgProducto2.Visible = true;
-                imgProducto2.ImageUrl = "imagenes/error.png";
                 lblValidacionProducto2.ForeColor = Color.Red;
                 lblValidacionProducto2.Text = "Caracteres inválidos";
             }
             else
             {
-                imgProducto2.Visible = true;
-                imgProducto2.ImageUrl = "imagenes/marca-de-verificacion.png";
                 lblValidacionProducto2.ForeColor = Color.Green;
                 lblValidacionProducto2.Text = "Caracteres Válidos";
             }
 
             string producto1 = TXTproducto1.Text.Trim();
-            char[] cadProducto1 = producto1.ToCharArray();
+            bool cadenaProducto1Vacia = string.IsNullOrEmpty(producto2);
 
-            for (int i = 0; i < cadProducto1.Length && !carProducto1Invalidos; i++)
+            bool carProducto1Invalidos = false;
+            foreach (char c in producto2)
             {
-                carProducto1Invalidos = (!char.IsLetter(cadProducto1[i]) && cadProducto1[i] != 32) ? true : false;
+                if (!char.IsLetter(c) && c != ' ')
+                {
+                    carProducto1Invalidos = true;
+                    break;
+                }
             }
 
-            cadenaProducto1Vacia = (string.IsNullOrEmpty(producto1)) ? true : false;
+            bool cadenaProducto1Inhabilitada = carProducto1Invalidos || cadenaProducto1Vacia;
 
-            cadenaProducto1Inhabilitada = (carProducto1Invalidos || cadenaProducto1Vacia) ? true : false;
+            imgProducto1.ImageUrl = cadenaProducto1Inhabilitada ? "imagenes/error.png" : "imagenes/marca-de-verificacion.png";
+            imgProducto1.Visible = true;
 
-            if (cadenaProducto1Vacia == true)
+            if (cadenaProducto1Vacia)
             {
-                imgProducto1.Visible = true;
-                imgProducto1.ImageUrl = "imagenes/error.png";
                 lblValidacionProducto1.ForeColor = Color.Red;
                 lblValidacionProducto1.Text = "Este campo no puede estar vacío";
             }
-            else
+            else if (carProducto1Invalidos)
             {
-                imgProducto1.Visible = true;
-                imgProducto1.ImageUrl = "imagenes/marca-de-verificacion.png";
-                lblValidacionProducto1.ForeColor = Color.Green;
-                lblValidacionProducto1.Text = "Caracteres Válidos";
-            }
-
-            if (carProducto1Invalidos == true)
-            {
-                imgProducto1.Visible = true;
-                imgProducto1.ImageUrl = "imagenes/error.png";
                 lblValidacionProducto1.ForeColor = Color.Red;
                 lblValidacionProducto1.Text = "Caracteres inválidos";
             }
             else
             {
-                imgProducto1.Visible = true;
-                imgProducto1.ImageUrl = "imagenes/marca-de-verificacion.png";
                 lblValidacionProducto1.ForeColor = Color.Green;
                 lblValidacionProducto1.Text = "Caracteres Válidos";
             }
@@ -229,13 +207,5 @@ namespace TP2Grupal_PROG3
         
     }
         
-
-        
-
-        
-       
-
-       
-
         
     }
