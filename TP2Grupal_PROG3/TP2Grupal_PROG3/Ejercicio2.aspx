@@ -14,16 +14,20 @@
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="lblNombre" runat="server" Font-Size="Large" Text="Nombre :"></asp:Label>
-            <asp:TextBox ID="txtNombre" runat="server" AutoPostBack="True" BorderStyle="Solid" BorderWidth="1px" Height="16px" style="margin-left: 29px" Width="139px" BorderColor="#999999"></asp:TextBox>
+            <asp:TextBox ID="txtNombre" runat="server" AutoPostBack="True" BorderStyle="Solid" BorderWidth="1px" Height="16px" style="margin-left: 29px" Width="139px" BorderColor="#999999" OnTextChanged="txtNombre_TextChanged"></asp:TextBox>
+            <asp:Image ID="imgNombre" runat="server" Height="18px" Visible="False" Width="18px" />
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="lblValidacionNombre" runat="server"></asp:Label>
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="lblApellido" runat="server" Font-Size="Large" Text="Apellido :"></asp:Label>
-            <asp:TextBox ID="txtApellido" runat="server" AutoPostBack="True" BorderStyle="Solid" BorderWidth="1px" Height="16px" style="margin-left: 29px" Width="139px" BorderColor="#999999"></asp:TextBox>
+            <asp:TextBox ID="txtApellido" runat="server" AutoPostBack="True" BorderStyle="Solid" BorderWidth="1px" Height="16px" style="margin-left: 29px" Width="139px" BorderColor="#999999" OnTextChanged="txtApellido_TextChanged"></asp:TextBox>
+            <asp:Image ID="imgApellido" runat="server" Height="18px" Visible="False" Width="18px" />
             <br />
+            <asp:Label ID="lblValidacionApellido" runat="server"></asp:Label>
             <br />
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
