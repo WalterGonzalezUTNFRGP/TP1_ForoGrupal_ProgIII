@@ -131,10 +131,10 @@ namespace TP2Grupal_PROG3
             }
 
             string producto1 = TXTproducto1.Text.Trim();
-            bool cadenaProducto1Vacia = string.IsNullOrEmpty(producto2);
+            bool cadenaProducto1Vacia = string.IsNullOrEmpty(producto1);
 
             bool carProducto1Invalidos = false;
-            foreach (char c in producto2)
+            foreach (char c in producto1)
             {
                 if (!char.IsLetter(c) && c != ' ')
                 {
