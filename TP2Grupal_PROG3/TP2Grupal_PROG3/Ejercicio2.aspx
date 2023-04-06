@@ -56,7 +56,7 @@
         </div>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <div style="margin-left: 120px">
-            <asp:Button ID="btnResumen" runat="server" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" style="margin-bottom: 0px" Text="Ver Resumen" Width="157px" />
+            <asp:Button ID="btnResumen" runat="server" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" style="margin-bottom: 0px" Text="Ver Resumen" Width="157px" OnClick="btnResumen_Click" />
         </div>
         <br />
     </form>
