@@ -13,12 +13,16 @@
             <asp:Label ID="lblResumen" runat="server" Font-Bold="True" Font-Names="Times New Roman" Font-Overline="False" Font-Size="XX-Large" Font-Underline="False" ForeColor="Black" Text="Resumen"></asp:Label>
         </div>
         <p>
-            <asp:Label ID="lblNombre" runat="server" Text="Nombre:"></asp:Label>
+            <asp:Label ID="lblNombre" runat="server" Text="Nombre :"></asp:Label>
             <asp:Label ID="lblNombreForm" runat="server" Font-Bold="True"></asp:Label>
         </p>
         <p>
-            <asp:Label ID="lblApellido" runat="server" Text="Apellido: "></asp:Label>
+            <asp:Label ID="lblApellido" runat="server" Text="Apellido : "></asp:Label>
             <asp:Label ID="lblApellidoForm" runat="server" Font-Bold="True"></asp:Label>
+        </p>
+        <p>
+            <asp:Label ID="lblZona" runat="server" Text="Zona : "></asp:Label>
+            <asp:Label ID="lblZonamostrar" runat="server" Font-Bold="True"></asp:Label>
         </p>
     </form>
 </body>

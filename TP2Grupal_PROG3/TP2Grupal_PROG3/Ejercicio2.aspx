@@ -34,10 +34,9 @@
             <asp:Label ID="lblCiudad" runat="server" Font-Size="Large" Text="Ciudad :"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:DropDownList ID="ddlCiudades" runat="server" Height="17px" Width="144px">
-                <asp:ListItem Value="Zona Norte">Gral. Pacheco</asp:ListItem>
-                <asp:ListItem Value="Zona Oeste">San Miguel</asp:ListItem>
-                <asp:ListItem Value="Zona Sur">Boedo</asp:ListItem>
-                <asp:ListItem></asp:ListItem>
+                <asp:ListItem Value="Norte">Gral. Pacheco</asp:ListItem>
+                <asp:ListItem Value="Oeste">San Miguel</asp:ListItem>
+                <asp:ListItem Value="Sur">Boedo</asp:ListItem>
             </asp:DropDownList>
 &nbsp;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
