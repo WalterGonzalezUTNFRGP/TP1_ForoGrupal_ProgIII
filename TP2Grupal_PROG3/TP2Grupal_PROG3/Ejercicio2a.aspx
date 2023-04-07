@@ -10,9 +10,11 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <asp:Label ID="lblResumen" runat="server" Font-Bold="True" Font-Names="Times New Roman" Font-Overline="False" Font-Size="XX-Large" Font-Underline="False" ForeColor="Black" Text="Resumen"></asp:Label>
         </div>
         <p>
-            <asp:Label ID="txtResultado" runat="server" Text="Acá se mostrará el resultado"></asp:Label>
+            <asp:Label ID="lblNombre" runat="server" Text="Nombre:"></asp:Label>
+            <asp:Label ID="lblNombreForm" runat="server" Font-Bold="True"></asp:Label>
         </p>
     </form>
 </body>

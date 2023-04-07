@@ -17,7 +17,7 @@ namespace TP2Grupal_PROG3
 
         protected void btnResumen_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Ejercicio2a.aspx");
+            Response.Redirect("Ejercicio2a.aspx?Nom=" + txtNombre.Text);
         }
 
         protected void txtNombre_TextChanged(object sender, EventArgs e)
@@ -38,6 +38,7 @@ namespace TP2Grupal_PROG3
                 lblValidacionNombre.Text = "Caracteres inválidos";
                 imgNombre.Visible = true;
                 imgNombre.ImageUrl = "imagenes/error.png";
+                btnResumen.Enabled = false;
             }
             else
             {
@@ -45,6 +46,7 @@ namespace TP2Grupal_PROG3
                 lblValidacionNombre.Text = "Caracteres Válidos";
                 imgNombre.Visible = true;
                 imgNombre.ImageUrl = "imagenes/marca-de-verificacion.png";
+                btnResumen.Enabled = true;
             }
         }
 
@@ -58,6 +60,7 @@ namespace TP2Grupal_PROG3
                 lblValidacionApellido.Text = "Caracteres Válidos";
                 imgApellido.Visible = true;
                 imgApellido.ImageUrl = "imagenes/marca-de-verificacion.png";
+                btnResumen.Enabled = true;
             }
             else
             {
@@ -65,6 +68,7 @@ namespace TP2Grupal_PROG3
                 lblValidacionApellido.Text = "Caracteres Inválidos";
                 imgApellido.Visible = true;
                 imgApellido.ImageUrl = "imagenes/error.png";
+                btnResumen.Enabled = false;
             }
         }
     }

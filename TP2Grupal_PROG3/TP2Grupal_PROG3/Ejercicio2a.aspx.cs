@@ -11,7 +11,9 @@ namespace TP2Grupal_PROG3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            string nombre;
+            nombre = Request.QueryString["Nom"];
+            lblNombreForm.Text = nombre;
         }
     }
 }
