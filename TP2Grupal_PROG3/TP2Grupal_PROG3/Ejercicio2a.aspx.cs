@@ -12,8 +12,13 @@ namespace TP2Grupal_PROG3
         protected void Page_Load(object sender, EventArgs e)
         {
             string nombre;
-            nombre = Request.QueryString["Nom"];
+            string apellido;
+            //nombre = Request.QueryString["Nom"];
+
+            nombre = Request["txtNombre"];
+            apellido = Request["txtApellido"];
             lblNombreForm.Text = nombre;
+            lblApellidoForm.Text = apellido;
         }
     }
 }

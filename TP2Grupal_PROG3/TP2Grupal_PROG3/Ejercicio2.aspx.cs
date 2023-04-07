@@ -17,7 +17,8 @@ namespace TP2Grupal_PROG3
 
         protected void btnResumen_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Ejercicio2a.aspx?Nom=" + txtNombre.Text);
+            //Response.Redirect("Ejercicio2a.aspx?Nom=" + txtNombre.Text);
+            Server.Transfer("Ejercicio2a.aspx");
         }
 
         protected void txtNombre_TextChanged(object sender, EventArgs e)

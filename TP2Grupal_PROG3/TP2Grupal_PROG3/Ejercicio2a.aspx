@@ -16,6 +16,10 @@
             <asp:Label ID="lblNombre" runat="server" Text="Nombre:"></asp:Label>
             <asp:Label ID="lblNombreForm" runat="server" Font-Bold="True"></asp:Label>
         </p>
+        <p>
+            <asp:Label ID="lblApellido" runat="server" Text="Apellido: "></asp:Label>
+            <asp:Label ID="lblApellidoForm" runat="server" Font-Bold="True"></asp:Label>
+        </p>
     </form>
 </body>
 </html>
