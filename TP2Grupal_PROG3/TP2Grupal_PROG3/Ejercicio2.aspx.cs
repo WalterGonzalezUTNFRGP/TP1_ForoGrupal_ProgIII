@@ -17,7 +17,17 @@ namespace TP2Grupal_PROG3
 
         protected void btnResumen_Click(object sender, EventArgs e)
         {
-            //Response.Redirect("Ejercicio2a.aspx?Nom=" + txtNombre.Text);
+            List<string> temasSeleccionados = new List<string>();
+
+            foreach (ListItem item in cbTemas.Items)
+            {
+                if (item.Selected)
+                {
+                    temasSeleccionados.Add(item.Text);
+                }
+            }
+
+            Session["temasSeleccionados"] = temasSeleccionados;
             Server.Transfer("Ejercicio2a.aspx");
         }
 

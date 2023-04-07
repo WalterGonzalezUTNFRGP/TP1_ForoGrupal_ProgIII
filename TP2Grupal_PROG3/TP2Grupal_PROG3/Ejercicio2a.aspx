@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 </head>
-<body>
+<body style="height: 311px">
     <form id="form1" runat="server">
         <div>
             <asp:Label ID="lblResumen" runat="server" Font-Bold="True" Font-Names="Times New Roman" Font-Overline="False" Font-Size="XX-Large" Font-Underline="False" ForeColor="Black" Text="Resumen"></asp:Label>
@@ -24,6 +24,10 @@
             <asp:Label ID="lblZona" runat="server" Text="Zona : "></asp:Label>
             <asp:Label ID="lblZonamostrar" runat="server" Font-Bold="True"></asp:Label>
         </p>
+        <asp:Label ID="lblTemasForm" runat="server" Text="Los temas elegidos son:"></asp:Label>
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="lblTemas" runat="server" Font-Bold="True" Height="100px" Width="128px"></asp:Label>
     </form>
 </body>
 </html>

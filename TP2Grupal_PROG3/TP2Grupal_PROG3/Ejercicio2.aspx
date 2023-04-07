@@ -49,10 +49,10 @@
             &nbsp;&nbsp;
             <br />
             <br />
-            <asp:CheckBoxList ID="cbCiudades" runat="server" AppendDataBoundItems="True" AutoPostBack="True" BorderStyle="None" CellSpacing="1" EnableViewState="False" Height="99px" Width="114px" CausesValidation="True">
-                <asp:ListItem>Ciencias</asp:ListItem>
-                <asp:ListItem>Literatura</asp:ListItem>
-                <asp:ListItem>Historia</asp:ListItem>
+            <asp:CheckBoxList ID="cbTemas" runat="server" AutoPostBack="True" BorderStyle="None" CellSpacing="1" Height="99px" Width="114px" ViewStateMode="Enabled" EnableTheming="False">
+               <asp:ListItem Text="Ciencias" Value="1" />
+               <asp:ListItem Text="Literatura" Value="2" />
+               <asp:ListItem Text="Historia" Value="3" />
             </asp:CheckBoxList>
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

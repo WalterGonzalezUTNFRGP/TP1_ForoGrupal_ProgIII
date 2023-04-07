@@ -14,14 +14,15 @@ namespace TP2Grupal_PROG3
             string nombre;
             string apellido;
             string ciudad;
+            List<string> temas = (List<string>)Session["temasSeleccionados"];
             //nombre = Request.QueryString["Nom"];
-
             nombre = Request["txtNombre"];
             apellido = Request["txtApellido"];
             ciudad = Request["ddlCiudades"];
             lblNombreForm.Text = nombre;
             lblApellidoForm.Text = apellido;
             lblZonamostrar.Text = ciudad;
+            lblTemas.Text = string.Join("<br />", temas);
         }
     }
 }

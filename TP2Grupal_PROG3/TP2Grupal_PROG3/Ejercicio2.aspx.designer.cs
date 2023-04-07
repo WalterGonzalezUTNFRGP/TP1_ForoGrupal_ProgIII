@@ -123,13 +123,13 @@ namespace TP2Grupal_PROG3
         protected global::System.Web.UI.WebControls.Label lblTema;
 
         /// <summary>
-        /// Control cbCiudades.
+        /// Control cbTemas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList cbCiudades;
+        protected global::System.Web.UI.WebControls.CheckBoxList cbTemas;
 
         /// <summary>
         /// Control btnResumen.
