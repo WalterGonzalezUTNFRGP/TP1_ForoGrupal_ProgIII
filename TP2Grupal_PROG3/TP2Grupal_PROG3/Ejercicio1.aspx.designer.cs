@@ -177,15 +177,6 @@ namespace TP2Grupal_PROG3
         protected global::System.Web.UI.WebControls.Button BTNgenerar;
 
         /// <summary>
-        /// Control LBLtabla.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LBLtabla;
-
-        /// <summary>
         /// Control lblError.
         /// </summary>
         /// <remarks>
@@ -193,6 +184,15 @@ namespace TP2Grupal_PROG3
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblError;
+
+        /// <summary>
+        /// Control LBLtabla.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LBLtabla;
 
         /// <summary>
         /// Control btnReiniciar.
