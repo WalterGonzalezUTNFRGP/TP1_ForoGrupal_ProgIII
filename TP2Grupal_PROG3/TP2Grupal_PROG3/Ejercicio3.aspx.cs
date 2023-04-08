@@ -18,5 +18,10 @@ namespace TP2Grupal_PROG3
         {
             lblTexto.ForeColor = System.Drawing.Color.Red;
         }
+
+        protected void lnkBAzul_Click(object sender, EventArgs e)
+        {
+            lblTexto.ForeColor = System.Drawing.Color.Blue;
+        }
     }
 }

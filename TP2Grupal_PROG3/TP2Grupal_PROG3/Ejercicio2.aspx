@@ -18,7 +18,7 @@
             <asp:Image ID="imgNombre" runat="server" Height="18px" Visible="False" Width="18px" />
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="lblValidacionNombre" runat="server"></asp:Label>
+            <asp:Label ID="lblValidacionNombre" runat="server" ForeColor="Black"></asp:Label>
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br />

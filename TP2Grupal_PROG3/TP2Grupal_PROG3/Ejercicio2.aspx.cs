@@ -17,6 +17,28 @@ namespace TP2Grupal_PROG3
 
         protected void btnResumen_Click(object sender, EventArgs e)
         {
+            int errores = 0;
+            bool nombre;
+            bool apellido;
+
+            nombre = (txtNombre.Text.Trim() != "") ? true : false;
+            apellido = (txtApellido.Text.Trim() != "") ? true : false;
+
+                if (nombre == false)
+                {
+                    lblValidacionNombre.ForeColor = Color.Red;
+                    lblValidacionNombre.Text = "Debe ingresar un nombre";
+                    btnResumen.Enabled = false;
+                    errores++;
+                }
+                if (apellido == false)
+                {
+                    lblValidacionApellido.ForeColor = Color.Red;
+                    lblValidacionApellido.Text = "Debe ingresar un apellido";
+                    btnResumen.Enabled = false;
+                    errores++;
+                }
+
             if (string.IsNullOrEmpty(cbTemas.SelectedValue))
             {
                 btnResumen.Enabled = false;
@@ -24,22 +46,23 @@ namespace TP2Grupal_PROG3
                 lblValidacionChBL.Text = "Debe seleccionar al menos un elemento de la lista de Temas";
                 imgValidacionChBL.Visible = true;
                 imgValidacionChBL.ImageUrl = "imagenes/error.png";
+                errores = errores + 1;
             }
-            else
+            if (errores == 0)
             {
-                List<string> temasSeleccionados = new List<string>();
+                    List<string> temasSeleccionados = new List<string>();
 
-                foreach (ListItem item in cbTemas.Items)
-                {
-                    if (item.Selected)
+                    foreach (ListItem item in cbTemas.Items)
                     {
-                        temasSeleccionados.Add(item.Text);
+                        if (item.Selected)
+                        {
+                            temasSeleccionados.Add(item.Text);
+                        }
                     }
-                }
 
-                Session["temasSeleccionados"] = temasSeleccionados;
-                Server.Transfer("Ejercicio2a.aspx");
-            }            
+                    Session["temasSeleccionados"] = temasSeleccionados;
+                    Server.Transfer("Ejercicio2a.aspx");
+            }     
         }
 
         protected void txtNombre_TextChanged(object sender, EventArgs e)
@@ -52,7 +75,6 @@ namespace TP2Grupal_PROG3
             {
                 carNombreInvalidos = (!char.IsLetter(cadNombre[i]) && cadNombre[i] != 32) ? true : false;
             }
-
 
             if (carNombreInvalidos)
             {
@@ -70,10 +92,20 @@ namespace TP2Grupal_PROG3
                 imgNombre.ImageUrl = "imagenes/marca-de-verificacion.png";
                 btnResumen.Enabled = true;
             }
+
+            if (nombreUsuario == "")
+            {
+                lblValidacionNombre.ForeColor = Color.Red;
+                lblValidacionNombre.Text = "Este campo no puede estar vacío";
+                imgNombre.Visible = true;
+                imgNombre.ImageUrl = "imagenes/error.png";
+                btnResumen.Enabled = false;
+            }
         }
 
         protected void txtApellido_TextChanged(object sender, EventArgs e)
         {
+            string apellido = txtApellido.Text.Trim();
             char[] cadenaTxt = txtApellido.Text.Trim().ToCharArray();
             bool carApellidoInvalidos = cadenaTxt.Any(c => !char.IsLetter(c) && !char.IsWhiteSpace(c));
             if(!carApellidoInvalidos)
@@ -88,6 +120,15 @@ namespace TP2Grupal_PROG3
             {
                 lblValidacionApellido.ForeColor = Color.Red;
                 lblValidacionApellido.Text = "Caracteres Inválidos";
+                imgApellido.Visible = true;
+                imgApellido.ImageUrl = "imagenes/error.png";
+                btnResumen.Enabled = false;
+            }
+
+            if (apellido == "")
+            {
+                lblValidacionApellido.ForeColor = Color.Red;
+                lblValidacionApellido.Text = "Este campo no puede estar vacío";
                 imgApellido.Visible = true;
                 imgApellido.ImageUrl = "imagenes/error.png";
                 btnResumen.Enabled = false;
