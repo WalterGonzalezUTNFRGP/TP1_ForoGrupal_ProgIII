@@ -14,25 +14,26 @@
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="lblNombre" runat="server" Font-Size="Large" Text="Nombre :"></asp:Label>
-            <asp:TextBox ID="txtNombre" runat="server" AutoPostBack="True" BorderStyle="Solid" BorderWidth="1px" Height="16px" style="margin-left: 29px" Width="139px" BorderColor="#999999" OnTextChanged="txtNombre_TextChanged"></asp:TextBox>
+            &nbsp;<asp:TextBox ID="txtNombre" runat="server" AutoPostBack="True" BorderStyle="Solid" BorderWidth="1px" Height="16px" style="margin-left: 29px" Width="139px" BorderColor="#999999" OnTextChanged="txtNombre_TextChanged" AutoCompleteType="Disabled"></asp:TextBox>
             <asp:Image ID="imgNombre" runat="server" Height="18px" Visible="False" Width="18px" />
             <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="lblValidacionNombre" runat="server"></asp:Label>
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="lblApellido" runat="server" Font-Size="Large" Text="Apellido :"></asp:Label>
-            <asp:TextBox ID="txtApellido" runat="server" AutoPostBack="True" BorderStyle="Solid" BorderWidth="1px" Height="16px" style="margin-left: 29px" Width="139px" BorderColor="#999999" OnTextChanged="txtApellido_TextChanged"></asp:TextBox>
+            <asp:TextBox ID="txtApellido" runat="server" AutoPostBack="True" BorderStyle="Solid" BorderWidth="1px" Height="16px" style="margin-left: 29px" Width="139px" BorderColor="#999999" OnTextChanged="txtApellido_TextChanged" AutoCompleteType="Disabled"></asp:TextBox>
             <asp:Image ID="imgApellido" runat="server" Height="18px" Visible="False" Width="18px" />
             <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="lblValidacionApellido" runat="server"></asp:Label>
             <br />
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="lblCiudad" runat="server" Font-Size="Large" Text="Ciudad :"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:DropDownList ID="ddlCiudades" runat="server" Height="17px" Width="144px">
                 <asp:ListItem Value="Norte">Gral. Pacheco</asp:ListItem>
                 <asp:ListItem Value="Oeste">San Miguel</asp:ListItem>
@@ -45,11 +46,15 @@
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="lblTema" runat="server" Font-Size="Large" Text="Temas :"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+            <br />
+&nbsp;<asp:Label ID="lblValidacionChBL" runat="server"></asp:Label>
+            <asp:Image ID="imgValidacionChBL" runat="server" Height="18px" Visible="False" Width="18px" />
+            &nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;
             <br />
             <br />
-            <asp:CheckBoxList ID="cbTemas" runat="server" AutoPostBack="True" BorderStyle="None" CellSpacing="1" Height="99px" Width="114px" ViewStateMode="Enabled" EnableTheming="False">
+            <asp:CheckBoxList ID="cbTemas" runat="server" AutoPostBack="True" BorderStyle="None" CellSpacing="1" Height="99px" Width="114px" ViewStateMode="Enabled" EnableTheming="False" OnSelectedIndexChanged="cbTemas_SelectedIndexChanged">
                <asp:ListItem Text="Ciencias" Value="1" />
                <asp:ListItem Text="Literatura" Value="2" />
                <asp:ListItem Text="Historia" Value="3" />

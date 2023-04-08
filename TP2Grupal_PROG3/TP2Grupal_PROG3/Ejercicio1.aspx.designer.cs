@@ -177,13 +177,13 @@ namespace TP2Grupal_PROG3
         protected global::System.Web.UI.WebControls.Button BTNgenerar;
 
         /// <summary>
-        /// Control lblError.
+        /// Control lblCamposVacios.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblError;
+        protected global::System.Web.UI.WebControls.Label lblCamposVacios;
 
         /// <summary>
         /// Control LBLtabla.
@@ -193,14 +193,5 @@ namespace TP2Grupal_PROG3
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LBLtabla;
-
-        /// <summary>
-        /// Control btnReiniciar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnReiniciar;
     }
 }

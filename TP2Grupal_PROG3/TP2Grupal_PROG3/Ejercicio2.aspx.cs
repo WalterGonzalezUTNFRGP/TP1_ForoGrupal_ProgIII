@@ -17,18 +17,29 @@ namespace TP2Grupal_PROG3
 
         protected void btnResumen_Click(object sender, EventArgs e)
         {
-            List<string> temasSeleccionados = new List<string>();
-
-            foreach (ListItem item in cbTemas.Items)
+            if (string.IsNullOrEmpty(cbTemas.SelectedValue))
             {
-                if (item.Selected)
-                {
-                    temasSeleccionados.Add(item.Text);
-                }
+                btnResumen.Enabled = false;
+                lblValidacionChBL.ForeColor = Color.Red;
+                lblValidacionChBL.Text = "Debe seleccionar al menos un elemento de la lista de Temas";
+                imgValidacionChBL.Visible = true;
+                imgValidacionChBL.ImageUrl = "imagenes/error.png";
             }
+            else
+            {
+                List<string> temasSeleccionados = new List<string>();
 
-            Session["temasSeleccionados"] = temasSeleccionados;
-            Server.Transfer("Ejercicio2a.aspx");
+                foreach (ListItem item in cbTemas.Items)
+                {
+                    if (item.Selected)
+                    {
+                        temasSeleccionados.Add(item.Text);
+                    }
+                }
+
+                Session["temasSeleccionados"] = temasSeleccionados;
+                Server.Transfer("Ejercicio2a.aspx");
+            }            
         }
 
         protected void txtNombre_TextChanged(object sender, EventArgs e)
@@ -81,6 +92,13 @@ namespace TP2Grupal_PROG3
                 imgApellido.ImageUrl = "imagenes/error.png";
                 btnResumen.Enabled = false;
             }
+        }
+
+        protected void cbTemas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btnResumen.Enabled = true;
+            lblValidacionChBL.Text = "";
+            imgValidacionChBL.Visible = false;
         }
     }
 }
