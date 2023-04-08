@@ -13,5 +13,10 @@ namespace TP2Grupal_PROG3
         {
 
         }
+
+        protected void lnkBRojo_Click(object sender, EventArgs e)
+        {
+            lblTexto.ForeColor = System.Drawing.Color.Red;
+        }
     }
 }
