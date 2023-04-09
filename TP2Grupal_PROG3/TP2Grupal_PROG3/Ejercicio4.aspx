@@ -13,13 +13,13 @@
             <br />
             <br />
             <asp:Label ID="lblUsuario" runat="server" Text="Usuario: "></asp:Label>
-&nbsp;<asp:TextBox ID="txtUsuario" runat="server"></asp:TextBox>
+&nbsp;<asp:TextBox ID="txtUsuario" runat="server" AutoCompleteType="Disabled" Width="164px"></asp:TextBox>
             <asp:Label ID="lblPrueba" runat="server"></asp:Label>
             <br />
             <br />
             <asp:Label ID="lblClave" runat="server" Text="Clave: "></asp:Label>
 &nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtClave" runat="server" Width="165px"></asp:TextBox>
+            <asp:TextBox ID="txtClave" runat="server" Width="165px" TextMode="Password"></asp:TextBox>
             <br />
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

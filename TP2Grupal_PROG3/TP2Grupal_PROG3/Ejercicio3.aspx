@@ -9,48 +9,27 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <p>
-            <asp:LinkButton ID="lnkBRojo" runat="server" OnClick="lnkBRojo_Click">Rojo</asp:LinkButton>
-        </p>
-        <p>
-            <asp:LinkButton ID="lnkBAzul" runat="server" OnClick="lnkBAzul_Click">Azul</asp:LinkButton>
-        </p>
-        <p>
-            <asp:LinkButton ID="lnkBVerde" runat="server" OnClick="lnkBVerde_Click">Verde</asp:LinkButton>
-        </p>
-        <p>
-            <asp:Label ID="lblTexto" runat="server" Text="Texto Coloreado"></asp:Label>
-            <br />
-        </p>
-        <p>
-            &nbsp;</p>
-        <p>
-            &nbsp;</p>
-        <p>
-            &nbsp;</p>
-        <p>
-            &nbsp;</p>
-        <p>
-            &nbsp;</p>
-        <p>
-            &nbsp;</p>
-        <p>
-            &nbsp;</p>
-        <p>
-            &nbsp;</p>
-        <p>
-            &nbsp;</p>
-        <p>
-            &nbsp;</p>
-        <p>
-            &nbsp;</p>
-        <p>
-            &nbsp;</p>
-        <p>
-            &nbsp;</p>
-        <p>
-            &nbsp;</p>
         <div>
+            <asp:LinkButton ID="lnkBRojo" runat="server" OnClick="lnkBRojo_Click">Rojo</asp:LinkButton>
+            <br />
+            <asp:LinkButton ID="lnkBAzul" runat="server" OnClick="lnkBAzul_Click">Azul</asp:LinkButton>
+            <br />
+            <asp:LinkButton ID="lnkBVerde" runat="server" OnClick="lnkBVerde_Click">Verde</asp:LinkButton>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <asp:Label ID="lblTexto" runat="server" Text="Texto Coloreado"></asp:Label>
         </div>
     </form>
 </body>

@@ -21,7 +21,8 @@ namespace TP2Grupal_PROG3
             if(txtUsuario.Text.ToLower()==usuario && txtClave.Text.ToLower()==contraseña)
             {
                 lblPrueba.Text = "Datos validos";
-                Server.Transfer("Ejercicio4valido.aspx");
+                //Server.Transfer("Ejercicio4valido.aspx");
+                Response.Redirect("Ejercicio4valido.aspx");
             }
             else
             {
