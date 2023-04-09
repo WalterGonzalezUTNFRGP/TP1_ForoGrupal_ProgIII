@@ -14,6 +14,7 @@
             <br />
             <asp:Label ID="lblUsuario" runat="server" Text="Usuario: "></asp:Label>
 &nbsp;<asp:TextBox ID="txtUsuario" runat="server"></asp:TextBox>
+            <asp:Label ID="lblPrueba" runat="server"></asp:Label>
             <br />
             <br />
             <asp:Label ID="lblClave" runat="server" Text="Clave: "></asp:Label>
@@ -22,7 +23,7 @@
             <br />
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="btnValidar" runat="server" Text="Validar" />
+            <asp:Button ID="btnValidar" runat="server" Text="Validar" OnClick="btnValidar_Click" style="height: 26px" />
         </div>
     </form>
 </body>

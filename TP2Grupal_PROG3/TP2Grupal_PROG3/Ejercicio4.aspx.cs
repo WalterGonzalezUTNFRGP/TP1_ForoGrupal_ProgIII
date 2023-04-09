@@ -13,5 +13,18 @@ namespace TP2Grupal_PROG3
         {
 
         }
+
+        protected void btnValidar_Click(object sender, EventArgs e)
+        {
+            string usuario = "claudio";
+            if(txtUsuario.Text.ToLower()==usuario)
+            {
+                lblPrueba.Text = "Datos validos";
+            }
+            else
+            {
+                lblPrueba.Text = "Datos invalidos";
+            }
+        }
     }
 }
