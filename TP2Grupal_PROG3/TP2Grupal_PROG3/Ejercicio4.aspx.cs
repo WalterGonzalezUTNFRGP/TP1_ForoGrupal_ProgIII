@@ -27,6 +27,8 @@ namespace TP2Grupal_PROG3
             else
             {
                 lblPrueba.Text = "Datos invalidos";
+
+                Response.Redirect("Ejercicio4c.aspx");
             }
         }
     }
