@@ -16,7 +16,7 @@
             <asp:LinkButton ID="lnkBAzul" runat="server" OnClick="lnkBAzul_Click">Azul</asp:LinkButton>
         </p>
         <p>
-            <asp:LinkButton ID="lnkBVerde" runat="server">Verde</asp:LinkButton>
+            <asp:LinkButton ID="lnkBVerde" runat="server" OnClick="lnkBVerde_Click">Verde</asp:LinkButton>
         </p>
         <p>
             <asp:Label ID="lblTexto" runat="server" Text="Texto Coloreado"></asp:Label>

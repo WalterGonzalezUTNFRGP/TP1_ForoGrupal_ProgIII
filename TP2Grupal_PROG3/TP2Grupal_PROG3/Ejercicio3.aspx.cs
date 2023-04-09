@@ -23,5 +23,10 @@ namespace TP2Grupal_PROG3
         {
             lblTexto.ForeColor = System.Drawing.Color.Blue;
         }
+
+        protected void lnkBVerde_Click(object sender, EventArgs e)
+        {
+            lblTexto.ForeColor = System.Drawing.Color.Green;
+        }
     }
 }
