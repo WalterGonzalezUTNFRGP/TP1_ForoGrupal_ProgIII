@@ -71,6 +71,7 @@
     <Content Include="Ejercicio2a.aspx" />
     <Content Include="Ejercicio3.aspx" />
     <Content Include="Ejercicio4.aspx" />
+    <Content Include="Ejercicio4valido.aspx" />
     <Content Include="Web.config" />
     <Content Include="Ejercicio1.aspx" />
   </ItemGroup>
@@ -102,6 +103,13 @@
     </Compile>
     <Compile Include="Ejercicio4.aspx.designer.cs">
       <DependentUpon>Ejercicio4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicio4valido.aspx.cs">
+      <DependentUpon>Ejercicio4valido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ejercicio4valido.aspx.designer.cs">
+      <DependentUpon>Ejercicio4valido.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ejercicio1.aspx.cs">

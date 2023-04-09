@@ -17,9 +17,11 @@ namespace TP2Grupal_PROG3
         protected void btnValidar_Click(object sender, EventArgs e)
         {
             string usuario = "claudio";
-            if(txtUsuario.Text.ToLower()==usuario)
+            string contraseña = "casas";
+            if(txtUsuario.Text.ToLower()==usuario && txtClave.Text.ToLower()==contraseña)
             {
                 lblPrueba.Text = "Datos validos";
+                Server.Transfer("Ejercicio4valido.aspx");
             }
             else
             {
