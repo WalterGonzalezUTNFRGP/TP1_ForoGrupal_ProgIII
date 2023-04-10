@@ -12,7 +12,6 @@ namespace TP2Grupal_PROG3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         protected void btnCalcular_Click(object sender, EventArgs e)
@@ -24,18 +23,30 @@ namespace TP2Grupal_PROG3
                 imgValidacionChBL.Visible = true;
                 imgValidacionChBL.ImageUrl = "imagenes/error.png";
                 btnCalcular.Enabled = false;
+
             }
             else
             {
+                float PrecioFinal = 0;
+                PrecioFinal += float.Parse(ddlMemoria.SelectedValue);
 
+                foreach (ListItem item in cbAccesorios.Items)
+                {
+                    if (item.Selected)
+                    {
+                        PrecioFinal += float.Parse(item.Value);
+                    }
+                }
+
+                lblPrecio.Text = "El Precio Final es: $ " + PrecioFinal.ToString("0.00");
             }
         }
 
         protected void cbAccesorios_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lblValidacionChBL.Text = "";
+          /*  lblValidacionChBL.Text = "";
             imgValidacionChBL.Visible = false;
-            btnCalcular.Enabled = true;
+            btnCalcular.Enabled = true;*/
         }
     }
 }

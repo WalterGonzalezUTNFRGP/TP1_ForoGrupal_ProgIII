@@ -24,9 +24,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </asp:DropDownList>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="ddlMemoria" runat="server" Height="16px" Width="104px">
-            <asp:ListItem Value="200$">2GB</asp:ListItem>
-            <asp:ListItem Value="375$">4GB</asp:ListItem>
-            <asp:ListItem Value="500$">6GB</asp:ListItem>
+            <asp:ListItem Value="200,00">2GB</asp:ListItem>
+            <asp:ListItem Value="375,00">4GB</asp:ListItem>
+            <asp:ListItem Value="500,00">6GB</asp:ListItem>
         </asp:DropDownList>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />
@@ -40,9 +40,9 @@
             <asp:Image ID="imgValidacionChBL" runat="server" Height="18px" Visible="False" Width="18px" />
             <br />
 &nbsp;<asp:CheckBoxList ID="cbAccesorios" runat="server" style="margin-left: 116px; margin-bottom: 0px" Width="133px" AutoPostBack="True" OnSelectedIndexChanged="cbAccesorios_SelectedIndexChanged">
-            <asp:ListItem>Monitor LCD</asp:ListItem>
-            <asp:ListItem>HD 500GB</asp:ListItem>
-            <asp:ListItem>Grabador DVD</asp:ListItem>
+            <asp:ListItem Value="2000,50">Monitor LCD</asp:ListItem>
+            <asp:ListItem Value="550,50">HD 500GB</asp:ListItem>
+            <asp:ListItem Value="1200,00">Grabador DVD</asp:ListItem>
         </asp:CheckBoxList>
         &nbsp;&nbsp;
         <p>
