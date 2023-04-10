@@ -15,7 +15,6 @@ namespace TP2Grupal_PROG3
             string apellido;
             string ciudad;
             List<string> temas = (List<string>)Session["temasSeleccionados"];
-            //nombre = Request.QueryString["Nom"];
             nombre = Request["txtNombre"];
             apellido = Request["txtApellido"];
             ciudad = Request["ddlCiudades"];

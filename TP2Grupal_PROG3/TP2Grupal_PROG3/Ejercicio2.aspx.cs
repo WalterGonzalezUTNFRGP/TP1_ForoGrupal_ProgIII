@@ -73,7 +73,7 @@ namespace TP2Grupal_PROG3
 
             for (int i = 0; i < cadNombre.Length && !carNombreInvalidos; i++)
             {
-                carNombreInvalidos = (!char.IsLetter(cadNombre[i]) && cadNombre[i] != 32) ? true : false;
+                carNombreInvalidos = (!(char.IsLetter(cadNombre[i]) && !(cadNombre[i] == 186 || cadNombre[i] == 170)) && cadNombre[i] != 32) ? true : false;
             }
 
             if (carNombreInvalidos)
@@ -105,10 +105,16 @@ namespace TP2Grupal_PROG3
 
         protected void txtApellido_TextChanged(object sender, EventArgs e)
         {
-            string apellido = txtApellido.Text.Trim();
-            char[] cadenaTxt = txtApellido.Text.Trim().ToCharArray();
-            bool carApellidoInvalidos = cadenaTxt.Any(c => !char.IsLetter(c) && !char.IsWhiteSpace(c));
-            if(!carApellidoInvalidos)
+            string apellidoUsuario = txtApellido.Text.Trim();
+            char[] cadApellido = apellidoUsuario.ToCharArray();
+            bool carApellidoInvalidos = false;
+
+            for (int i = 0; i < cadApellido.Length && !carApellidoInvalidos; i++)
+            {
+                carApellidoInvalidos = (!(char.IsLetter(cadApellido[i]) && !(cadApellido[i] == 186 || cadApellido[i] == 170)) && cadApellido[i] != 32) ? true : false;
+            }
+
+            if (!carApellidoInvalidos)
             {
                 lblValidacionApellido.ForeColor = Color.Green;
                 lblValidacionApellido.Text = "Caracteres Válidos";
@@ -125,7 +131,7 @@ namespace TP2Grupal_PROG3
                 btnResumen.Enabled = false;
             }
 
-            if (apellido == "")
+            if (apellidoUsuario == "")
             {
                 lblValidacionApellido.ForeColor = Color.Red;
                 lblValidacionApellido.Text = "Este campo no puede estar vacío";
