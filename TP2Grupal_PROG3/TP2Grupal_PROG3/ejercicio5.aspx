@@ -35,12 +35,16 @@
             <asp:Label ID="lblSeleccion" runat="server" Font-Bold="True" Text="Seleccione accesorios:"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </p>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:CheckBoxList ID="cbAccesorios" runat="server" style="margin-left: 116px; margin-bottom: 0px" Width="133px">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="lblValidacionChBL" runat="server"></asp:Label>
+            <asp:Image ID="imgValidacionChBL" runat="server" Height="18px" Visible="False" Width="18px" />
+            <br />
+&nbsp;<asp:CheckBoxList ID="cbAccesorios" runat="server" style="margin-left: 116px; margin-bottom: 0px" Width="133px" AutoPostBack="True" OnSelectedIndexChanged="cbAccesorios_SelectedIndexChanged">
             <asp:ListItem>Monitor LCD</asp:ListItem>
             <asp:ListItem>HD 500GB</asp:ListItem>
             <asp:ListItem>Grabador DVD</asp:ListItem>
         </asp:CheckBoxList>
+        &nbsp;&nbsp;
         <p>
 &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Button ID="btnCalcular" runat="server" Text="Calcular Precio" OnClick="btnCalcular_Click" />

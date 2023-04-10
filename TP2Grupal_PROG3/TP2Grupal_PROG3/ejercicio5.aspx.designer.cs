@@ -60,6 +60,24 @@ namespace TP2Grupal_PROG3
         protected global::System.Web.UI.WebControls.Label lblSeleccion;
 
         /// <summary>
+        /// Control lblValidacionChBL.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblValidacionChBL;
+
+        /// <summary>
+        /// Control imgValidacionChBL.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgValidacionChBL;
+
+        /// <summary>
         /// Control cbAccesorios.
         /// </summary>
         /// <remarks>
