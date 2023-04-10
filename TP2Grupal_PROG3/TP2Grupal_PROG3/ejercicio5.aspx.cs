@@ -44,9 +44,9 @@ namespace TP2Grupal_PROG3
 
         protected void cbAccesorios_SelectedIndexChanged(object sender, EventArgs e)
         {
-          /*  lblValidacionChBL.Text = "";
+           lblValidacionChBL.Text = "";
             imgValidacionChBL.Visible = false;
-            btnCalcular.Enabled = true;*/
+            btnCalcular.Enabled = true;
         }
     }
 }
