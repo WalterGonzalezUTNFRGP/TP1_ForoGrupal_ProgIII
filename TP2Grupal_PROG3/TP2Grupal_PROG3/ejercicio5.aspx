@@ -24,9 +24,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </asp:DropDownList>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="ddlMemoria" runat="server" Height="16px" Width="104px">
-            <asp:ListItem>2GB</asp:ListItem>
-            <asp:ListItem>4GB</asp:ListItem>
-            <asp:ListItem>6GB</asp:ListItem>
+            <asp:ListItem Value="200$">2GB</asp:ListItem>
+            <asp:ListItem Value="375$">4GB</asp:ListItem>
+            <asp:ListItem Value="500$">6GB</asp:ListItem>
         </asp:DropDownList>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />
@@ -43,7 +43,7 @@
         </asp:CheckBoxList>
         <p>
 &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="btnCalcular" runat="server" Text="Calcular Precio" />
+            <asp:Button ID="btnCalcular" runat="server" Text="Calcular Precio" OnClick="btnCalcular_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </p>
         <p>

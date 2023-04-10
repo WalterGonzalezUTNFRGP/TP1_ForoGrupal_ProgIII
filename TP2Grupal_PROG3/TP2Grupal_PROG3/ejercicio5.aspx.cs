@@ -13,5 +13,10 @@ namespace TP2Grupal_PROG3
         {
 
         }
+
+        protected void btnCalcular_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
