@@ -18,7 +18,7 @@ namespace TP2Grupal_PROG3
         {
             string usuario = "claudio";
             string contraseña = "casas";
-            if(txtUsuario.Text.ToLower()==usuario && txtClave.Text.ToLower()==contraseña)
+            if(txtUsuario.Text==usuario && txtClave.Text==contraseña)
             {
                 lblPrueba.Text = "Datos validos";
                 //Server.Transfer("Ejercicio4valido.aspx");
