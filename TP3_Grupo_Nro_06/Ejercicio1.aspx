@@ -144,6 +144,8 @@
                     </td>
                     <td class="auto-style39">
                         <asp:TextBox ID="txtNombreLocalidad" runat="server" Width="140px"></asp:TextBox>
+                        <asp:Label ID="lblMensaje" runat="server"></asp:Label>
+                        <asp:Image ID="imgAdvertencia" runat="server" Visible="False" />
                     </td>
                     <td class="auto-style34"></td>
                 </tr>
