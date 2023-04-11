@@ -13,5 +13,17 @@ namespace TP3_Grupo_Nro_06
         {
 
         }
+
+        protected void btnCuardarLocalidad_Click(object sender, EventArgs e)
+        {
+            string localidad = txtNombreLocalidad.Text.Trim();
+            char[] cadNombreLocalidad = localidad.ToCharArray();
+            bool carLocalidadInvalidos = false;
+
+            for (int i = 0; i < cadNombreLocalidad.Length && !carLocalidadInvalidos; i++)
+            {
+                carLocalidadInvalidos = (!(char.IsLetterOrDigit(cadNombreLocalidad[i]) && !(cadNombreLocalidad[i] == 186 || cadNombreLocalidad[i] == 170)) && cadNombreLocalidad[i] != 32) ? true : false;
+            }        
+        }
     }
 }
