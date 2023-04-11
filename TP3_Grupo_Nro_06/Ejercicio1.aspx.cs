@@ -12,7 +12,7 @@ namespace TP3_Grupo_Nro_06
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
         }
 
         protected void btnCuardarLocalidad_Click(object sender, EventArgs e)
@@ -28,23 +28,6 @@ namespace TP3_Grupo_Nro_06
             if(carLocalidadInvalidos==false)
             {
                 ddlLocalidades.Items.Add(localidad);
-                imgAdvertencia.Visible = false;
-                lblMensaje.Text = " ";
-            }
-            else
-            {
-                imgAdvertencia.Visible = true;
-                imgAdvertencia.ImageUrl = "imagenes/error.png";
-                lblMensaje.ForeColor = Color.Red;
-                lblMensaje.Text = "Solo ingrese numeros o letras";
-            }
-            if(string.IsNullOrEmpty(localidad))
-            {
-                imgAdvertencia.Visible = true;
-                imgAdvertencia.ImageUrl = "imagenes/error.png";
-                lblMensaje.ForeColor = Color.Red;
-                lblMensaje.Text = "Ingrese Localidad";
-
             }
         }
     }

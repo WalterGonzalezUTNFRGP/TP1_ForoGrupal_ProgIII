@@ -144,10 +144,10 @@
                     </td>
                     <td class="auto-style39">
                         <asp:TextBox ID="txtNombreLocalidad" runat="server" Width="140px"></asp:TextBox>
-                        <asp:Label ID="lblMensaje" runat="server"></asp:Label>
-                        <asp:Image ID="imgAdvertencia" runat="server" Visible="False" />
                     </td>
-                    <td class="auto-style34"></td>
+                    <td class="auto-style34">
+                        <asp:RequiredFieldValidator ID="rfvValidacion" runat="server" ControlToValidate="txtNombreLocalidad" ErrorMessage="Ingrese Localidad"></asp:RequiredFieldValidator>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style8"></td>
