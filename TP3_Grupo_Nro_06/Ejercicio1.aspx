@@ -93,25 +93,22 @@
         }
         .auto-style32 {
             width: 209px;
-            height: 62px;
+            height: 92px;
         }
         .auto-style34 {
-            height: 62px;
+            height: 92px;
         }
         .auto-style35 {
             width: 209px;
-            height: 39px;
-        }
-        .auto-style37 {
-            height: 39px;
+            height: 42px;
         }
         .auto-style38 {
             width: 167px;
-            height: 39px;
+            height: 42px;
         }
         .auto-style39 {
             width: 167px;
-            height: 62px;
+            height: 92px;
         }
         .auto-style40 {
             width: 167px;
@@ -125,6 +122,9 @@
             width: 212px;
             height: 34px;
         }
+        .auto-style43 {
+            height: 42px;
+        }
     </style>
 </head>
 <body style="height: 619px; width: 634px">
@@ -136,7 +136,7 @@
                     <td class="auto-style38">
                         <asp:Label ID="lblLocalidades" runat="server" Font-Bold="True" Text="Localidades"></asp:Label>
                     </td>
-                    <td class="auto-style37"></td>
+                    <td class="auto-style43"></td>
                 </tr>
                 <tr>
                     <td class="auto-style32">
@@ -146,6 +146,9 @@
                         <asp:TextBox ID="txtNombreLocalidad" runat="server" Width="140px"></asp:TextBox>
                     </td>
                     <td class="auto-style34">
+                        <asp:RegularExpressionValidator ID="revLocalidad" runat="server" ControlToValidate="txtNombreLocalidad" ValidationExpression="^[a-zA-Z0-9\s]*$">Ingrese una Localidad valida</asp:RegularExpressionValidator>
+                        <br />
+                        <br />
                         <asp:RequiredFieldValidator ID="rfvValidacion" runat="server" ControlToValidate="txtNombreLocalidad" ErrorMessage="Ingrese Localidad"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
@@ -154,7 +157,9 @@
                     <td class="auto-style40">
                         <asp:Button ID="btnCuardarLocalidad" runat="server" Text="Guardar Localidad" Width="123px" OnClick="btnCuardarLocalidad_Click" />
                     </td>
-                    <td class="auto-style10"></td>
+                    <td class="auto-style10">
+                        <asp:Label ID="lblLocAgregada" runat="server"></asp:Label>
+                    </td>
                 </tr>
             </table>
             <table class="auto-style7">
