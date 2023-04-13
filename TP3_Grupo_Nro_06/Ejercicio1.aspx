@@ -213,7 +213,9 @@
                     <td class="auto-style42">
                         <asp:TextBox ID="txtContraseña2" runat="server" Width="140px" TextMode="Password"></asp:TextBox>
                     </td>
-                    <td class="auto-style26"></td>
+                    <td class="auto-style26">
+                        <asp:CompareValidator ID="cvContraseñaIncorrecta" runat="server" ControlToCompare="txtContraseña1" ControlToValidate="txtContraseña2" ErrorMessage="Contraseña Incorrecta" ForeColor="Red"></asp:CompareValidator>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style12">
