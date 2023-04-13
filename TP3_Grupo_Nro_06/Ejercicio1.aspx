@@ -171,7 +171,7 @@
                     </td>
                     <td class="auto-style48">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="btnCuardarLocalidad" runat="server" Text="Guardar Localidad" Width="123px" OnClick="btnCuardarLocalidad_Click" ValidationGroup="customValidator1" />
+                        <asp:Button ID="btnCuardarLocalidad" runat="server" Text="Guardar Localidad" Width="123px" OnClick="btnCuardarLocalidad_Click" ValidationGroup="cvLocalidad" />
                     </td>
                     <td class="auto-style45">
                         <asp:Label ID="lblLocAgregada" runat="server"></asp:Label>
