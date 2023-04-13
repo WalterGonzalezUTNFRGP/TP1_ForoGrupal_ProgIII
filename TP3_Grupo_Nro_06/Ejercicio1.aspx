@@ -12,19 +12,12 @@
             width: 612px;
         }
         .auto-style4 {
-            width: 96%;
+            width: 98%;
             height: 185px;
         }
         .auto-style7 {
             width: 96%;
             height: 90px;
-        }
-        .auto-style8 {
-            width: 209px;
-            height: 64px;
-        }
-        .auto-style10 {
-            height: 64px;
         }
         .auto-style11 {
             width: 211px;
@@ -38,10 +31,6 @@
         .auto-style14 {
             width: 96%;
             height: 104px;
-        }
-        .auto-style16 {
-            width: 206px;
-            height: 60px;
         }
         .auto-style19 {
             width: 96%;
@@ -80,39 +69,12 @@
         .auto-style28 {
             height: 60px;
         }
-        .auto-style29 {
-            width: 206px;
-            height: 33px;
-        }
         .auto-style30 {
             width: 211px;
             height: 33px;
         }
         .auto-style31 {
             height: 33px;
-        }
-        .auto-style32 {
-            width: 209px;
-            height: 92px;
-        }
-        .auto-style34 {
-            height: 92px;
-        }
-        .auto-style35 {
-            width: 209px;
-            height: 42px;
-        }
-        .auto-style38 {
-            width: 167px;
-            height: 42px;
-        }
-        .auto-style39 {
-            width: 167px;
-            height: 92px;
-        }
-        .auto-style40 {
-            width: 167px;
-            height: 64px;
         }
         .auto-style41 {
             width: 206px;
@@ -123,7 +85,48 @@
             height: 34px;
         }
         .auto-style43 {
-            height: 42px;
+            width: 303px;
+            height: 50px;
+        }
+        .auto-style44 {
+            width: 303px;
+            height: 92px;
+        }
+        .auto-style45 {
+            width: 303px;
+            height: 64px;
+        }
+        .auto-style46 {
+            width: 504px;
+            height: 50px;
+        }
+        .auto-style47 {
+            width: 504px;
+            height: 92px;
+        }
+        .auto-style48 {
+            width: 504px;
+            height: 64px;
+        }
+        .auto-style49 {
+            width: 396px;
+            height: 50px;
+        }
+        .auto-style50 {
+            width: 396px;
+            height: 92px;
+        }
+        .auto-style51 {
+            width: 396px;
+            height: 64px;
+        }
+        .auto-style52 {
+            width: 207px;
+            height: 60px;
+        }
+        .auto-style53 {
+            width: 207px;
+            height: 33px;
         }
     </style>
 </head>
@@ -132,46 +135,59 @@
         <div class="auto-style1">
             <table class="auto-style4">
                 <tr>
-                    <td class="auto-style35"></td>
-                    <td class="auto-style38">
+                    <td class="auto-style49">
+                        <asp:HiddenField ID="hfLocalidadCorrecta" runat="server" />
+                    </td>
+                    <td class="auto-style46">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Label ID="lblLocalidades" runat="server" Font-Bold="True" Text="Localidades"></asp:Label>
                     </td>
                     <td class="auto-style43"></td>
                 </tr>
                 <tr>
-                    <td class="auto-style32">
+                    <td class="auto-style50">
+                        <br />
+                        <br />
                         <asp:Label ID="lblNomLoc" runat="server" Text="Nombre de la Localidad:"></asp:Label>
-                    </td>
-                    <td class="auto-style39">
-                        <asp:TextBox ID="txtNombreLocalidad" runat="server" Width="140px"></asp:TextBox>
-                    </td>
-                    <td class="auto-style34">
-                        <asp:RegularExpressionValidator ID="revLocalidad" runat="server" ControlToValidate="txtNombreLocalidad" ValidationExpression="^[a-zA-Z0-9\s]*$">Ingrese una Localidad valida</asp:RegularExpressionValidator>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <br />
                         <br />
-                        <asp:RequiredFieldValidator ID="rfvValidacion" runat="server" ControlToValidate="txtNombreLocalidad" ErrorMessage="Ingrese Localidad"></asp:RequiredFieldValidator>
+                    </td>
+                    <td class="auto-style47">
+                        <asp:RequiredFieldValidator ID="rfvValidacion" runat="server" ControlToValidate="txtNombreLocalidad" ErrorMessage="Ingrese Localidad" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <br />
+                        <asp:TextBox ID="txtNombreLocalidad" runat="server" Width="140px" AutoCompleteType="Disabled"></asp:TextBox>
+                        <br />
+                        <asp:CustomValidator ID="cvLocalidadCorrecta" runat="server" ForeColor="Red" OnServerValidate="cvLocalidadCorrecta_ServerValidate">Debe ingresar una localidad válida</asp:CustomValidator>
+                        <br />
+                    </td>
+                    <td class="auto-style44">
+                        <asp:CustomValidator ID="CustomValidator1" runat="server" ControlToValidate="txtNombreLocalidad" ErrorMessage="CustomValidator" ForeColor="Red" OnServerValidate="CustomValidator1_ServerValidate">Localidad ya registrada</asp:CustomValidator>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style8"></td>
-                    <td class="auto-style40">
+                    <td class="auto-style51">
+                        <asp:HiddenField ID="hfRepeticionLocalidad" runat="server" />
+                    </td>
+                    <td class="auto-style48">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Button ID="btnCuardarLocalidad" runat="server" Text="Guardar Localidad" Width="123px" OnClick="btnCuardarLocalidad_Click" />
                     </td>
-                    <td class="auto-style10">
+                    <td class="auto-style45">
                         <asp:Label ID="lblLocAgregada" runat="server"></asp:Label>
                     </td>
                 </tr>
             </table>
             <table class="auto-style7">
                 <tr>
-                    <td class="auto-style16"></td>
+                    <td class="auto-style52"></td>
                     <td class="auto-style27">
                         <asp:Label ID="lblUsuarios" runat="server" Font-Bold="True" Text="Usuarios"></asp:Label>
                     </td>
                     <td class="auto-style28"></td>
                 </tr>
                 <tr>
-                    <td class="auto-style29">
+                    <td class="auto-style53">
                         <asp:Label ID="lblNomUs" runat="server" Text="Nombre de usuario:"></asp:Label>
                     </td>
                     <td class="auto-style30">
@@ -180,7 +196,7 @@
                     <td class="auto-style31"></td>
                 </tr>
                 <tr>
-                    <td class="auto-style12">
+                    <td class="auto-style20">
                         <asp:Label ID="lblCon" runat="server" Text="Contraseña:"></asp:Label>
                     </td>
                     <td class="auto-style11">

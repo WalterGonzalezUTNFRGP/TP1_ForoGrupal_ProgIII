@@ -24,6 +24,15 @@ namespace TP3_Grupo_Nro_06
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// Control hfLocalidadCorrecta.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfLocalidadCorrecta;
+
+        /// <summary>
         /// Control lblLocalidades.
         /// </summary>
         /// <remarks>
@@ -42,6 +51,15 @@ namespace TP3_Grupo_Nro_06
         protected global::System.Web.UI.WebControls.Label lblNomLoc;
 
         /// <summary>
+        /// Control rfvValidacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvValidacion;
+
+        /// <summary>
         /// Control txtNombreLocalidad.
         /// </summary>
         /// <remarks>
@@ -51,22 +69,31 @@ namespace TP3_Grupo_Nro_06
         protected global::System.Web.UI.WebControls.TextBox txtNombreLocalidad;
 
         /// <summary>
-        /// Control revLocalidad.
+        /// Control cvLocalidadCorrecta.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator revLocalidad;
+        protected global::System.Web.UI.WebControls.CustomValidator cvLocalidadCorrecta;
 
         /// <summary>
-        /// Control rfvValidacion.
+        /// Control CustomValidator1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvValidacion;
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator1;
+
+        /// <summary>
+        /// Control hfRepeticionLocalidad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfRepeticionLocalidad;
 
         /// <summary>
         /// Control btnCuardarLocalidad.
