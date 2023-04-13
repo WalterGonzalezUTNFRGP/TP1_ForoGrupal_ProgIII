@@ -154,15 +154,15 @@
                         <br />
                     </td>
                     <td class="auto-style47">
-                        <asp:RequiredFieldValidator ID="rfvValidacion" runat="server" ControlToValidate="txtNombreLocalidad" ErrorMessage="Ingrese Localidad" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvValidacion" runat="server" ControlToValidate="txtNombreLocalidad" ErrorMessage="Ingrese Localidad" ForeColor="Red" ValidationGroup="cvLocalidad"></asp:RequiredFieldValidator>
                         <br />
                         <asp:TextBox ID="txtNombreLocalidad" runat="server" Width="140px" AutoCompleteType="Disabled"></asp:TextBox>
                         <br />
-                        <asp:CustomValidator ID="cvLocalidadCorrecta" runat="server" ForeColor="Red" OnServerValidate="cvLocalidadCorrecta_ServerValidate">Debe ingresar una localidad válida</asp:CustomValidator>
+                        <asp:CustomValidator ID="cvLocalidadCorrecta" runat="server" ForeColor="Red" OnServerValidate="cvLocalidadCorrecta_ServerValidate" ControlToValidate="txtNombreLocalidad" SetFocusOnError="True" ValidationGroup="cvLocalidad">Debe ingresar una localidad válida</asp:CustomValidator>
                         <br />
                     </td>
                     <td class="auto-style44">
-                        <asp:CustomValidator ID="CustomValidator1" runat="server" ControlToValidate="txtNombreLocalidad" ErrorMessage="CustomValidator" ForeColor="Red" OnServerValidate="CustomValidator1_ServerValidate">Localidad ya registrada</asp:CustomValidator>
+                        <asp:CustomValidator ID="CustomValidator1" runat="server" ControlToValidate="txtNombreLocalidad" ErrorMessage="CustomValidator" ForeColor="Red" OnServerValidate="CustomValidator1_ServerValidate" ValidationGroup="cvLocalidad">Localidad ya registrada</asp:CustomValidator>
                     </td>
                 </tr>
                 <tr>
@@ -171,7 +171,7 @@
                     </td>
                     <td class="auto-style48">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="btnCuardarLocalidad" runat="server" Text="Guardar Localidad" Width="123px" OnClick="btnCuardarLocalidad_Click" />
+                        <asp:Button ID="btnCuardarLocalidad" runat="server" Text="Guardar Localidad" Width="123px" OnClick="btnCuardarLocalidad_Click" ValidationGroup="customValidator1" />
                     </td>
                     <td class="auto-style45">
                         <asp:Label ID="lblLocAgregada" runat="server"></asp:Label>
@@ -233,7 +233,9 @@
                     <td class="auto-style13">
                         <asp:TextBox ID="txtCP" runat="server" Width="140px"></asp:TextBox>
                     </td>
-                    <td>&nbsp;</td>
+                    <td>
+                        <asp:RangeValidator ID="rvCodigoPostal" runat="server" ForeColor="Red" ControlToValidate="txtCP" MaximumValue="9999" MinimumValue="1000" Type="Integer">Codigo Postal Invalido</asp:RangeValidator>
+                    </td>
                 </tr>
             </table>
             <table class="auto-style19">
