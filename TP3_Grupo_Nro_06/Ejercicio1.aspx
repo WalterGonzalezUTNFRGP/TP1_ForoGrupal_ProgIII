@@ -224,7 +224,7 @@
                         <asp:Label ID="lblRepCon" runat="server" Text="Repetir Contraseña:"></asp:Label>
                     </td>
                     <td class="auto-style42">
-                        <asp:TextBox ID="txtContraseña2" runat="server" Width="140px" TextMode="Password"></asp:TextBox>
+                        <asp:TextBox ID="txtContraseña2" runat="server" Width="140px" TextMode="Password" ValidationGroup="vgUsuario"></asp:TextBox>
                     </td>
                     <td class="auto-style26">
                         <asp:CompareValidator ID="cvContraseñaIncorrecta" runat="server" ControlToCompare="txtContraseña1" ControlToValidate="txtContraseña2" ErrorMessage="Contraseña Incorrecta" ForeColor="Red" ValidationGroup="vgUsuario"></asp:CompareValidator>
@@ -235,10 +235,10 @@
                         <asp:Label ID="lblCorreo" runat="server" Text="Correo electrónico:"></asp:Label>
                     </td>
                     <td class="auto-style55">
-                        <asp:TextBox ID="txtCorreo" runat="server" Width="140px"></asp:TextBox>
+                        <asp:TextBox ID="txtCorreo" runat="server" Width="140px" ValidationGroup="vgUsuario"></asp:TextBox>
                     </td>
                     <td class="auto-style56">
-                        <asp:RegularExpressionValidator ID="revCorreo" runat="server" ControlToValidate="txtCorreo" ErrorMessage="*" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="vgUsuario"></asp:RegularExpressionValidator>
+                        <asp:RegularExpressionValidator ID="revCorreo" runat="server" ControlToValidate="txtCorreo" ErrorMessage="*" ForeColor="Red" ValidationExpression="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" ValidationGroup="vgUsuario"></asp:RegularExpressionValidator>
                         <asp:RequiredFieldValidator ID="rfvCorreo" runat="server" ControlToValidate="txtCorreo" ErrorMessage="*" ForeColor="Red" ValidationGroup="vgUsuario"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
@@ -247,7 +247,7 @@
                         <asp:Label ID="lblCP" runat="server" Text="CP:"></asp:Label>
                     </td>
                     <td class="auto-style13">
-                        <asp:TextBox ID="txtCP" runat="server" Width="140px"></asp:TextBox>
+                        <asp:TextBox ID="txtCP" runat="server" Width="140px" ValidationGroup="vgUsuario"></asp:TextBox>
                     </td>
                     <td>
                         <asp:RangeValidator ID="rvCodigoPostal" runat="server" ForeColor="Red" ControlToValidate="txtCP" MaximumValue="9999" MinimumValue="1000" Type="Integer" ValidationGroup="vgUsuario">Codigo Postal Inválido</asp:RangeValidator>
@@ -268,7 +268,7 @@
                 <tr>
                     <td class="auto-style21"></td>
                     <td class="auto-style22">
-                        <asp:Button ID="btnGuardarUsuario" runat="server" Text="Guardar Usuario" Width="123px" />
+                        <asp:Button ID="btnGuardarUsuario" runat="server" Text="Guardar Usuario" Width="123px" ValidationGroup="vgUsuario" />
                     </td>
                     <td class="auto-style23"></td>
                 </tr>
