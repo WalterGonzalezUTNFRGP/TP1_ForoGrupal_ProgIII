@@ -204,16 +204,18 @@
                         <asp:Label ID="lblNomUs" runat="server" Text="Nombre de usuario:"></asp:Label>
                     </td>
                     <td class="auto-style30">
-                        <asp:TextBox ID="txtUsuario" runat="server" Width="140px"></asp:TextBox>
+                        <asp:TextBox ID="txtUsuario" runat="server" Width="140px" ValidationGroup="Grupo2"></asp:TextBox>
                     </td>
-                    <td class="auto-style31"></td>
+                    <td class="auto-style31">
+                        <asp:RequiredFieldValidator ID="rfvNombreUsuario" runat="server" ControlToValidate="txtUsuario" ForeColor="Red" ValidationGroup="Grupo2">Debe ingresar un nombre</asp:RequiredFieldValidator>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style20">
                         <asp:Label ID="lblCon" runat="server" Text="Contraseña:"></asp:Label>
                     </td>
                     <td class="auto-style11">
-                        <asp:TextBox ID="txtContraseña1" runat="server" Width="140px" TextMode="Password"></asp:TextBox>
+                        <asp:TextBox ID="txtContraseña1" runat="server" Width="140px" TextMode="Password" ValidationGroup="Grupo2"></asp:TextBox>
                     </td>
                     <td>&nbsp;</td>
                 </tr>
@@ -224,10 +226,10 @@
                         <asp:Label ID="lblRepCon" runat="server" Text="Repetir Contraseña:"></asp:Label>
                     </td>
                     <td class="auto-style42">
-                        <asp:TextBox ID="txtContraseña2" runat="server" Width="140px" TextMode="Password" ValidationGroup="vgUsuario"></asp:TextBox>
+                        <asp:TextBox ID="txtContraseña2" runat="server" Width="140px" TextMode="Password" ValidationGroup="Grupo2"></asp:TextBox>
                     </td>
                     <td class="auto-style26">
-                        <asp:CompareValidator ID="cvContraseñaIncorrecta" runat="server" ControlToCompare="txtContraseña1" ControlToValidate="txtContraseña2" ErrorMessage="Contraseña Incorrecta" ForeColor="Red" ValidationGroup="vgUsuario"></asp:CompareValidator>
+                        <asp:CompareValidator ID="cvContraseñaIncorrecta" runat="server" ControlToCompare="txtContraseña1" ControlToValidate="txtContraseña2" ErrorMessage="Contraseña Incorrecta" ForeColor="Red" ValidationGroup="Grupo2"></asp:CompareValidator>
                     </td>
                 </tr>
                 <tr>
@@ -235,11 +237,11 @@
                         <asp:Label ID="lblCorreo" runat="server" Text="Correo electrónico:"></asp:Label>
                     </td>
                     <td class="auto-style55">
-                        <asp:TextBox ID="txtCorreo" runat="server" Width="140px" ValidationGroup="vgUsuario"></asp:TextBox>
+                        <asp:TextBox ID="txtCorreo" runat="server" Width="140px" ValidationGroup="Grupo2"></asp:TextBox>
                     </td>
                     <td class="auto-style56">
-                        <asp:RegularExpressionValidator ID="revCorreo" runat="server" ControlToValidate="txtCorreo" ErrorMessage="*" ForeColor="Red" ValidationExpression="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" ValidationGroup="vgUsuario"></asp:RegularExpressionValidator>
-                        <asp:RequiredFieldValidator ID="rfvCorreo" runat="server" ControlToValidate="txtCorreo" ErrorMessage="*" ForeColor="Red" ValidationGroup="vgUsuario"></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="revCorreo" runat="server" ControlToValidate="txtCorreo" ErrorMessage="*" ForeColor="Red" ValidationExpression="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" ValidationGroup="Grupo2"></asp:RegularExpressionValidator>
+                        <asp:RequiredFieldValidator ID="rfvCorreo" runat="server" ControlToValidate="txtCorreo" ErrorMessage="*" ForeColor="Red" ValidationGroup="Grupo2"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
@@ -247,10 +249,12 @@
                         <asp:Label ID="lblCP" runat="server" Text="CP:"></asp:Label>
                     </td>
                     <td class="auto-style13">
-                        <asp:TextBox ID="txtCP" runat="server" Width="140px" ValidationGroup="vgUsuario"></asp:TextBox>
+                        <asp:TextBox ID="txtCP" runat="server" Width="140px" ValidationGroup="Grupo2"></asp:TextBox>
                     </td>
                     <td>
-                        <asp:RangeValidator ID="rvCodigoPostal" runat="server" ForeColor="Red" ControlToValidate="txtCP" MaximumValue="9999" MinimumValue="1000" Type="Integer" ValidationGroup="vgUsuario">Codigo Postal Inválido</asp:RangeValidator>
+                        <asp:RangeValidator ID="rvCodigoPostal" runat="server" ForeColor="Red" ControlToValidate="txtCP" MaximumValue="9999" MinimumValue="1000" Type="Integer" ValidationGroup="Grupo2">Codigo Postal Inválido</asp:RangeValidator>
+                        <br />
+                        <asp:RequiredFieldValidator ID="rfvCP" runat="server" ControlToValidate="txtCP" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ValidationGroup="Grupo2">Ingrese un código postal</asp:RequiredFieldValidator>
                     </td>
                 </tr>
             </table>
@@ -260,15 +264,18 @@
                         <asp:Label ID="lblLocalidades2" runat="server" Text="Localidades:"></asp:Label>
                     </td>
                     <td class="auto-style25">
-                        <asp:DropDownList ID="ddlLocalidades" runat="server" Width="147px">
+                        <asp:DropDownList ID="ddlLocalidades" runat="server" Width="147px" ValidationGroup="Grupo2">
+                            <asp:ListItem>-- Elija Localidad --</asp:ListItem>
                         </asp:DropDownList>
                     </td>
-                    <td class="auto-style26"></td>
+                    <td class="auto-style26">
+                        <asp:RequiredFieldValidator ID="rfvDdlLocalidades" runat="server" ControlToValidate="ddlLocalidades" ForeColor="Red" InitialValue="-- Elija Localidad --" ValidationGroup="Grupo2">Seleccione una localidad</asp:RequiredFieldValidator>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style21"></td>
                     <td class="auto-style22">
-                        <asp:Button ID="btnGuardarUsuario" runat="server" Text="Guardar Usuario" Width="123px" ValidationGroup="vgUsuario" />
+                        <asp:Button ID="btnGuardarUsuario" runat="server" Text="Guardar Usuario" Width="123px" ValidationGroup="Grupo2" />
                     </td>
                     <td class="auto-style23"></td>
                 </tr>

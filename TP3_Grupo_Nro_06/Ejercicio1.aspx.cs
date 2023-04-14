@@ -20,6 +20,7 @@ namespace TP3_Grupo_Nro_06
             if(hfRepeticionLocalidad.Value == "NO REPETIDO" && hfLocalidadCorrecta.Value == "LOCALIDAD CORRECTA")
             {
                 ddlLocalidades.Items.Add(txtNombreLocalidad.Text);
+                txtNombreLocalidad.Text = "";
             }
             
             //lblLocAgregada.Text = "Localidad Agregada";            
