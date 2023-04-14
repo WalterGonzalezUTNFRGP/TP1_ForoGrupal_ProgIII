@@ -12,12 +12,13 @@
             width: 612px;
         }
         .auto-style4 {
-            width: 98%;
+            width: 100%;
             height: 185px;
         }
         .auto-style7 {
-            width: 96%;
+            width: 100%;
             height: 90px;
+            margin-right: 25px;
         }
         .auto-style11 {
             width: 211px;
@@ -26,14 +27,15 @@
             width: 206px;
         }
         .auto-style13 {
-            width: 212px;
+            width: 213px;
         }
         .auto-style14 {
-            width: 96%;
+            width: 100%;
             height: 104px;
+            margin-right: 30px;
         }
         .auto-style19 {
-            width: 96%;
+            width: 100%;
             height: 131px;
             margin-top: 0px;
         }
@@ -81,7 +83,7 @@
             height: 34px;
         }
         .auto-style42 {
-            width: 212px;
+            width: 213px;
             height: 34px;
         }
         .auto-style43 {
@@ -128,6 +130,17 @@
             width: 207px;
             height: 33px;
         }
+        .auto-style54 {
+            width: 206px;
+            height: 22px;
+        }
+        .auto-style55 {
+            width: 213px;
+            height: 22px;
+        }
+        .auto-style56 {
+            height: 22px;
+        }
     </style>
 </head>
 <body style="height: 619px; width: 634px">
@@ -156,7 +169,7 @@
                     <td class="auto-style47">
                         <asp:RequiredFieldValidator ID="rfvValidacion" runat="server" ControlToValidate="txtNombreLocalidad" ErrorMessage="Ingrese Localidad" ForeColor="Red" ValidationGroup="cvLocalidad"></asp:RequiredFieldValidator>
                         <br />
-                        <asp:TextBox ID="txtNombreLocalidad" runat="server" Width="140px" AutoCompleteType="Disabled"></asp:TextBox>
+                        <asp:TextBox ID="txtNombreLocalidad" runat="server" Width="140px" AutoCompleteType="Disabled" ValidationGroup="cvLocalidad"></asp:TextBox>
                         <br />
                         <asp:CustomValidator ID="cvLocalidadCorrecta" runat="server" ForeColor="Red" OnServerValidate="cvLocalidadCorrecta_ServerValidate" ControlToValidate="txtNombreLocalidad" SetFocusOnError="True" ValidationGroup="cvLocalidad">Debe ingresar una localidad válida</asp:CustomValidator>
                         <br />
@@ -214,17 +227,20 @@
                         <asp:TextBox ID="txtContraseña2" runat="server" Width="140px" TextMode="Password"></asp:TextBox>
                     </td>
                     <td class="auto-style26">
-                        <asp:CompareValidator ID="cvContraseñaIncorrecta" runat="server" ControlToCompare="txtContraseña1" ControlToValidate="txtContraseña2" ErrorMessage="Contraseña Incorrecta" ForeColor="Red"></asp:CompareValidator>
+                        <asp:CompareValidator ID="cvContraseñaIncorrecta" runat="server" ControlToCompare="txtContraseña1" ControlToValidate="txtContraseña2" ErrorMessage="Contraseña Incorrecta" ForeColor="Red" ValidationGroup="vgUsuario"></asp:CompareValidator>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style12">
+                    <td class="auto-style54">
                         <asp:Label ID="lblCorreo" runat="server" Text="Correo electrónico:"></asp:Label>
                     </td>
-                    <td class="auto-style13">
+                    <td class="auto-style55">
                         <asp:TextBox ID="txtCorreo" runat="server" Width="140px"></asp:TextBox>
                     </td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style56">
+                        <asp:RegularExpressionValidator ID="revCorreo" runat="server" ControlToValidate="txtCorreo" ErrorMessage="*" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="vgUsuario"></asp:RegularExpressionValidator>
+                        <asp:RequiredFieldValidator ID="rfvCorreo" runat="server" ControlToValidate="txtCorreo" ErrorMessage="*" ForeColor="Red" ValidationGroup="vgUsuario"></asp:RequiredFieldValidator>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style12">
@@ -234,7 +250,7 @@
                         <asp:TextBox ID="txtCP" runat="server" Width="140px"></asp:TextBox>
                     </td>
                     <td>
-                        <asp:RangeValidator ID="rvCodigoPostal" runat="server" ForeColor="Red" ControlToValidate="txtCP" MaximumValue="9999" MinimumValue="1000" Type="Integer">Codigo Postal Invalido</asp:RangeValidator>
+                        <asp:RangeValidator ID="rvCodigoPostal" runat="server" ForeColor="Red" ControlToValidate="txtCP" MaximumValue="9999" MinimumValue="1000" Type="Integer" ValidationGroup="vgUsuario">Codigo Postal Inválido</asp:RangeValidator>
                     </td>
                 </tr>
             </table>
