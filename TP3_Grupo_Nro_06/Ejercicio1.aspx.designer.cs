@@ -168,6 +168,15 @@ namespace TP3_Grupo_Nro_06
         protected global::System.Web.UI.WebControls.TextBox txtContraseña1;
 
         /// <summary>
+        /// Control rfvContrasenia1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvContrasenia1;
+
+        /// <summary>
         /// Control lblRepCon.
         /// </summary>
         /// <remarks>
@@ -301,6 +310,15 @@ namespace TP3_Grupo_Nro_06
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnGuardarUsuario;
+
+        /// <summary>
+        /// Control lblUsuarioIngresado.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblUsuarioIngresado;
 
         /// <summary>
         /// Control btnInicio.

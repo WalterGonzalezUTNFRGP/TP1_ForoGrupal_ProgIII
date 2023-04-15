@@ -20,10 +20,8 @@ namespace TP3_Grupo_Nro_06
             if(hfRepeticionLocalidad.Value == "NO REPETIDO" && hfLocalidadCorrecta.Value == "LOCALIDAD CORRECTA")
             {
                 ddlLocalidades.Items.Add(txtNombreLocalidad.Text);
-                txtNombreLocalidad.Text = "";
-            }
-            
-            //lblLocAgregada.Text = "Localidad Agregada";            
+                txtNombreLocalidad.Text = "";                
+            }           
         }
 
         protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
@@ -31,7 +29,7 @@ namespace TP3_Grupo_Nro_06
             bool ENCONTRADO = false;
             for(int i =0; i < ddlLocalidades.Items.Count && !ENCONTRADO; i++)
             {
-                ENCONTRADO = (txtNombreLocalidad.Text.Trim() == ddlLocalidades.Items[i].Text) ? true : false;
+                ENCONTRADO = (txtNombreLocalidad.Text.Trim().ToLower() == ddlLocalidades.Items[i].Text.ToLower()) ? true : false;
             }
 
             if (ENCONTRADO)
@@ -54,7 +52,7 @@ namespace TP3_Grupo_Nro_06
 
             for(int i=0; i < cadenaLocalidad.Length && !carInvalidos; i++)
             {
-                carInvalidos=(!(char.IsLetterOrDigit(cadenaLocalidad[i]) && !(cadenaLocalidad[i] == 186 || cadenaLocalidad[i] == 170)) && cadenaLocalidad[i] != 32) ? true : false;
+                carInvalidos=(!(char.IsLetterOrDigit(cadenaLocalidad[i]) && !(cadenaLocalidad[i] == 186 || cadenaLocalidad[i] == 170)) && cadenaLocalidad[i] != 32 && cadenaLocalidad[i] != 39) ? true : false;
             }
 
             if (carInvalidos)
@@ -67,6 +65,16 @@ namespace TP3_Grupo_Nro_06
                 args.IsValid = true;
                 hfLocalidadCorrecta.Value = "LOCALIDAD CORRECTA";    
             }
+        }
+
+        protected void btnInicio_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Ejercicio1b.aspx");
+        }
+
+        protected void btnGuardarUsuario_Click(object sender, EventArgs e)
+        {
+            lblUsuarioIngresado.Text = "Bienvenido/a " + txtUsuario.Text;
         }
     }
 }
