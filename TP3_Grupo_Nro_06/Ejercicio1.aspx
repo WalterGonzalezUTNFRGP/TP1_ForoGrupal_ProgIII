@@ -71,13 +71,6 @@
         .auto-style28 {
             height: 60px;
         }
-        .auto-style30 {
-            width: 211px;
-            height: 33px;
-        }
-        .auto-style31 {
-            height: 33px;
-        }
         .auto-style41 {
             width: 206px;
             height: 34px;
@@ -126,10 +119,6 @@
             width: 207px;
             height: 60px;
         }
-        .auto-style53 {
-            width: 207px;
-            height: 33px;
-        }
         .auto-style54 {
             width: 206px;
             height: 22px;
@@ -140,6 +129,17 @@
         }
         .auto-style56 {
             height: 22px;
+        }
+        .auto-style57 {
+            width: 207px;
+            height: 40px;
+        }
+        .auto-style58 {
+            width: 211px;
+            height: 40px;
+        }
+        .auto-style59 {
+            height: 40px;
         }
     </style>
 </head>
@@ -204,13 +204,13 @@
                     <td class="auto-style28"></td>
                 </tr>
                 <tr>
-                    <td class="auto-style53">
+                    <td class="auto-style57">
                         <asp:Label ID="lblNomUs" runat="server" Text="Nombre de usuario:"></asp:Label>
                     </td>
-                    <td class="auto-style30">
+                    <td class="auto-style58">
                         <asp:TextBox ID="txtUsuario" runat="server" Width="140px" ValidationGroup="GrupoUsuarios" AutoCompleteType="Disabled"></asp:TextBox>
                     </td>
-                    <td class="auto-style31">
+                    <td class="auto-style59">
                         <asp:RequiredFieldValidator ID="rfvNombreUsuario" runat="server" ControlToValidate="txtUsuario" ForeColor="Red" ValidationGroup="GrupoUsuarios" ErrorMessage="Debe ingresar un nombre">*</asp:RequiredFieldValidator>
                     </td>
                 </tr>
@@ -236,6 +236,8 @@
                     </td>
                     <td class="auto-style26">
                         <asp:CompareValidator ID="cvContraseñaIncorrecta" runat="server" ControlToCompare="txtContraseña1" ControlToValidate="txtContraseña2" ErrorMessage="Contraseña Incorrecta" ForeColor="Red" ValidationGroup="GrupoUsuarios">*</asp:CompareValidator>
+                        <br />
+                        <asp:RequiredFieldValidator ID="revRepetir" runat="server" ControlToValidate="txtContraseña2" ErrorMessage="Repita la Contraseña" ForeColor="Red" ValidationGroup="GrupoUsuarios">*</asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
@@ -247,6 +249,7 @@
                     </td>
                     <td class="auto-style56">
                         <asp:RegularExpressionValidator ID="revCorreo" runat="server" ControlToValidate="txtCorreo" ErrorMessage="Correo electronico invalido" ForeColor="Red" ValidationExpression="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" ValidationGroup="GrupoUsuarios">*</asp:RegularExpressionValidator>
+                        <br />
                         <asp:RequiredFieldValidator ID="rfvCorreo" runat="server" ControlToValidate="txtCorreo" ErrorMessage="Debe ingresar un correo electronico" ForeColor="Red" ValidationGroup="GrupoUsuarios">*</asp:RequiredFieldValidator>
                     </td>
                 </tr>

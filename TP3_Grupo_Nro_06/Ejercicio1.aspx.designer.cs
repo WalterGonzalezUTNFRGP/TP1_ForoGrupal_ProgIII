@@ -204,6 +204,15 @@ namespace TP3_Grupo_Nro_06
         protected global::System.Web.UI.WebControls.CompareValidator cvContraseñaIncorrecta;
 
         /// <summary>
+        /// Control revRepetir.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revRepetir;
+
+        /// <summary>
         /// Control lblCorreo.
         /// </summary>
         /// <remarks>
