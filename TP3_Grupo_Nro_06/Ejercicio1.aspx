@@ -211,7 +211,7 @@
                         <asp:TextBox ID="txtUsuario" runat="server" Width="140px" ValidationGroup="GrupoUsuarios" AutoCompleteType="Disabled"></asp:TextBox>
                     </td>
                     <td class="auto-style31">
-                        <asp:RequiredFieldValidator ID="rfvNombreUsuario" runat="server" ControlToValidate="txtUsuario" ForeColor="Red" ValidationGroup="GrupoUsuarios">Debe ingresar un nombre</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvNombreUsuario" runat="server" ControlToValidate="txtUsuario" ForeColor="Red" ValidationGroup="GrupoUsuarios" ErrorMessage="Debe ingresar un nombre">*</asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
@@ -222,7 +222,7 @@
                         <asp:TextBox ID="txtContraseña1" runat="server" Width="140px" TextMode="Password" ValidationGroup="GrupoUsuarios" AutoCompleteType="Disabled"></asp:TextBox>
                     </td>
                     <td>
-                        <asp:RequiredFieldValidator ID="rfvContrasenia1" runat="server" ControlToValidate="txtContraseña1" ForeColor="Red" ValidationGroup="GrupoUsuarios">Debe ingresar una contraseña</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvContrasenia1" runat="server" ControlToValidate="txtContraseña1" ForeColor="Red" ValidationGroup="GrupoUsuarios" ErrorMessage="Debe ingresar una contraseña">*</asp:RequiredFieldValidator>
                     </td>
                 </tr>
             </table>
@@ -235,7 +235,7 @@
                         <asp:TextBox ID="txtContraseña2" runat="server" Width="140px" TextMode="Password" ValidationGroup="GrupoUsuarios" AutoCompleteType="Disabled"></asp:TextBox>
                     </td>
                     <td class="auto-style26">
-                        <asp:CompareValidator ID="cvContraseñaIncorrecta" runat="server" ControlToCompare="txtContraseña1" ControlToValidate="txtContraseña2" ErrorMessage="Contraseña Incorrecta" ForeColor="Red" ValidationGroup="GrupoUsuarios"></asp:CompareValidator>
+                        <asp:CompareValidator ID="cvContraseñaIncorrecta" runat="server" ControlToCompare="txtContraseña1" ControlToValidate="txtContraseña2" ErrorMessage="Contraseña Incorrecta" ForeColor="Red" ValidationGroup="GrupoUsuarios">*</asp:CompareValidator>
                     </td>
                 </tr>
                 <tr>
@@ -246,8 +246,8 @@
                         <asp:TextBox ID="txtCorreo" runat="server" Width="140px" ValidationGroup="GrupoUsuarios" AutoCompleteType="Disabled"></asp:TextBox>
                     </td>
                     <td class="auto-style56">
-                        <asp:RegularExpressionValidator ID="revCorreo" runat="server" ControlToValidate="txtCorreo" ErrorMessage="*" ForeColor="Red" ValidationExpression="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" ValidationGroup="GrupoUsuarios"></asp:RegularExpressionValidator>
-                        <asp:RequiredFieldValidator ID="rfvCorreo" runat="server" ControlToValidate="txtCorreo" ErrorMessage="*" ForeColor="Red" ValidationGroup="GrupoUsuarios"></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="revCorreo" runat="server" ControlToValidate="txtCorreo" ErrorMessage="Correo electronico invalido" ForeColor="Red" ValidationExpression="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" ValidationGroup="GrupoUsuarios">*</asp:RegularExpressionValidator>
+                        <asp:RequiredFieldValidator ID="rfvCorreo" runat="server" ControlToValidate="txtCorreo" ErrorMessage="Debe ingresar un correo electronico" ForeColor="Red" ValidationGroup="GrupoUsuarios">*</asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
@@ -258,9 +258,9 @@
                         <asp:TextBox ID="txtCP" runat="server" Width="140px" ValidationGroup="GrupoUsuarios" AutoCompleteType="Disabled"></asp:TextBox>
                     </td>
                     <td>
-                        <asp:RangeValidator ID="rvCodigoPostal" runat="server" ForeColor="Red" ControlToValidate="txtCP" MaximumValue="9999" MinimumValue="1000" Type="Integer" ValidationGroup="GrupoUsuarios">Código Postal Inválido</asp:RangeValidator>
+                        <asp:RangeValidator ID="rvCodigoPostal" runat="server" ForeColor="Red" ControlToValidate="txtCP" MaximumValue="9999" MinimumValue="1000" Type="Integer" ValidationGroup="GrupoUsuarios" ErrorMessage="Código Postal Invalido">*</asp:RangeValidator>
                         <br />
-                        <asp:RequiredFieldValidator ID="rfvCP" runat="server" ControlToValidate="txtCP" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ValidationGroup="GrupoUsuarios">Ingrese un código postal</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvCP" runat="server" ControlToValidate="txtCP" ErrorMessage="Ingrese un código postal" ForeColor="Red" ValidationGroup="GrupoUsuarios">*</asp:RequiredFieldValidator>
                     </td>
                 </tr>
             </table>
@@ -275,7 +275,7 @@
                         </asp:DropDownList>
                     </td>
                     <td class="auto-style26">
-                        <asp:RequiredFieldValidator ID="rfvDdlLocalidades" runat="server" ControlToValidate="ddlLocalidades" ForeColor="Red" InitialValue="-- Elija Localidad --" ValidationGroup="GrupoUsuarios">Seleccione una localidad</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvDdlLocalidades" runat="server" ControlToValidate="ddlLocalidades" ForeColor="Red" InitialValue="-- Elija Localidad --" ValidationGroup="GrupoUsuarios" ErrorMessage="Debe seleccionar una localidad">*</asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
@@ -284,6 +284,7 @@
                         <asp:Button ID="btnGuardarUsuario" runat="server" Text="Guardar Usuario" Width="123px" ValidationGroup="GrupoUsuarios" OnClick="btnGuardarUsuario_Click" />
                     </td>
                     <td class="auto-style23">
+                        <asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="GrupoUsuarios" />
                         <asp:Label ID="lblUsuarioIngresado" runat="server" Font-Bold="True"></asp:Label>
                     </td>
                 </tr>
