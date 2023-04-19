@@ -11,7 +11,7 @@ namespace TPN4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            string rutaViajesBD = "Data Source = localhost\\sqlexpress; Initial Catalog = Viajes; Integrated Security = True";
         }
     }
 }
