@@ -25,9 +25,19 @@ namespace TPN4
                 ddlProvincias.DataTextField = "NombreProvincia";
                 ddlProvincias.DataValueField = "IdProvincia";
                 ddlProvincias.DataBind();
-
-
                 cn.Close();
+
+                cn.Open();
+                SqlCommand cmd2 = new SqlCommand("Select * from Localidades", cn);
+                SqlDataReader dr2 = cmd2.ExecuteReader();
+                ddlLocalidades.DataSource = dr2;
+                ddlLocalidades.DataTextField = "NombreLocalidad";
+                ddlLocalidades.DataValueField = "IdProvincia";
+                ddlLocalidades.DataBind();
+                cn.Close();
+
+
+                
             }
         }
     }
