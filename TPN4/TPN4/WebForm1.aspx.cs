@@ -21,10 +21,11 @@ namespace TPN4
                 SqlCommand cmd = new SqlCommand("Select * from Provincias", cn);
 
                 SqlDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    ddlProvincias.Items.Add(dr["NombreProvincia"].ToString());
-                }
+                ddlProvincias.DataSource = dr;
+                ddlProvincias.DataTextField = "NombreProvincia";
+                ddlProvincias.DataValueField = "IdProvincia";
+                ddlProvincias.DataBind();
+
 
                 cn.Close();
             }
