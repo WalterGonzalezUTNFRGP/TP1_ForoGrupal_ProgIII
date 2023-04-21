@@ -42,13 +42,13 @@ namespace TPN4
         protected global::System.Web.UI.WebControls.Label lblProvInicio;
 
         /// <summary>
-        /// Control ddlProvincias.
+        /// Control ddlProvinciasDestInicio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlProvincias;
+        protected global::System.Web.UI.WebControls.DropDownList ddlProvinciasDestInicio;
 
         /// <summary>
         /// Control lblLocalidadInicio.
@@ -60,13 +60,13 @@ namespace TPN4
         protected global::System.Web.UI.WebControls.Label lblLocalidadInicio;
 
         /// <summary>
-        /// Control ddlLocalidades.
+        /// Control ddlLocalidadesDestInicio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlLocalidades;
+        protected global::System.Web.UI.WebControls.DropDownList ddlLocalidadesDestInicio;
 
         /// <summary>
         /// Control lblDestinoFinal.
@@ -87,13 +87,13 @@ namespace TPN4
         protected global::System.Web.UI.WebControls.Label lblProvFinal;
 
         /// <summary>
-        /// Control ddlProvinciasFinal.
+        /// Control ddlProvinciasDestFinal.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlProvinciasFinal;
+        protected global::System.Web.UI.WebControls.DropDownList ddlProvinciasDestFinal;
 
         /// <summary>
         /// Control lblLocalidadFinal.
@@ -105,12 +105,12 @@ namespace TPN4
         protected global::System.Web.UI.WebControls.Label lblLocalidadFinal;
 
         /// <summary>
-        /// Control ddlLocalidadFinal.
+        /// Control ddlLocalidadDestFinal.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlLocalidadFinal;
+        protected global::System.Web.UI.WebControls.DropDownList ddlLocalidadDestFinal;
     }
 }
