@@ -92,16 +92,16 @@ namespace TPN4
 
             if (listaProvincia.SelectedIndex > 0)
             {
-                SqlConnection conexion = new SqlConnection("Data Source=localhost\\sqlexpress;Initial Catalog=Viajes;Integrated Security=True");
-                conexion.Open();
+                SqlConnection cn = new SqlConnection("Data Source=localhost\\sqlexpress;Initial Catalog=Viajes;Integrated Security=True");
+                cn.Open();
 
                 int identificadorProv;
                 identificadorProv = listaProvincia.SelectedIndex;
 
-                SqlDataAdapter consultaAdpt = new SqlDataAdapter("SELECT * FROM Provincias WHERE IdProvincia !=" + identificadorProv, conexion);
+                SqlDataAdapter consulta = new SqlDataAdapter("SELECT * FROM Provincias WHERE IdProvincia !=" + identificadorProv, cn);
                 DataTable tabla = new DataTable();
 
-                consultaAdpt.Fill(tabla);
+                consulta.Fill(tabla);
 
                 ddlProvinciasDestInicio.DataSource = tabla;
 
@@ -111,7 +111,7 @@ namespace TPN4
                 ddlProvinciasDestInicio.DataBind();
                 ddlProvinciasDestInicio.Items.Insert(0, new ListItem("-- Seleccionar --", "0"));
 
-                conexion.Close();
+                cn.Close();
             }
 
 
