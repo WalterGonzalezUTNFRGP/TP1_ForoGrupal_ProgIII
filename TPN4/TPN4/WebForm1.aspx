@@ -13,14 +13,22 @@
         .auto-style2 {
             margin-top: 0px;
         }
-        .auto-style3 {
-            width: 206px;
-        }
         .auto-style4 {
             width: 597px;
         }
         .auto-style5 {
             width: 322px;
+        }
+        .auto-style6 {
+            width: 126px;
+        }
+        .auto-style7 {
+            width: 126px;
+            height: 39px;
+        }
+        .auto-style8 {
+            width: 597px;
+            height: 39px;
         }
     </style>
 </head>
@@ -34,17 +42,17 @@
             <br />
             <table class="auto-style1">
                 <tr>
-                    <td class="auto-style3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <td class="auto-style7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="lblProvInicio" runat="server" Font-Bold="True" Text="PROVINCIA:"></asp:Label>
                     </td>
-                    <td class="auto-style4">
+                    <td class="auto-style8">
             <asp:DropDownList ID="ddlProvinciasDestInicio" runat="server" AutoPostBack="True" CssClass="auto-style2" OnSelectedIndexChanged="ddlProvinciasDestInicio_SelectedIndexChanged">
                 <asp:ListItem>-- Seleccionar --</asp:ListItem>
             </asp:DropDownList>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <td class="auto-style6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="lblLocalidadInicio" runat="server" Font-Bold="True" Font-Underline="False" Text="LOCALIDAD:"></asp:Label>
                     </td>
                     <td class="auto-style4">
@@ -69,7 +77,7 @@
             <asp:Label ID="lblProvFinal" runat="server" Font-Bold="True" Text="PROVINCIA:"></asp:Label>
                     </td>
                     <td>
-            <asp:DropDownList ID="ddlProvinciasDestFinal" runat="server" AutoPostBack="True">
+            <asp:DropDownList ID="ddlProvinciasDestFinal" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlProvinciasDestFinal_SelectedIndexChanged">
                 <asp:ListItem>-- Seleccionar --</asp:ListItem>
             </asp:DropDownList>
                     </td>

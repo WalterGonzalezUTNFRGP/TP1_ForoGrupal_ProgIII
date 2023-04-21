@@ -85,5 +85,36 @@ namespace TPN4
                 conexion.Close();
             }
         }
+
+        protected void ddlProvinciasDestFinal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DropDownList listaProvincia = (DropDownList)sender;
+
+            if (listaProvincia.SelectedIndex > 0)
+            {
+                SqlConnection conexion = new SqlConnection("Data Source=localhost\\sqlexpress;Initial Catalog=Viajes;Integrated Security=True");
+                conexion.Open();
+
+                int identificadorProv;
+                identificadorProv = listaProvincia.SelectedIndex;
+
+                SqlDataAdapter consultaAdpt = new SqlDataAdapter("SELECT * FROM Provincias WHERE IdProvincia !=" + identificadorProv, conexion);
+                DataTable tabla = new DataTable();
+
+                consultaAdpt.Fill(tabla);
+
+                ddlProvinciasDestInicio.DataSource = tabla;
+
+                ddlProvinciasDestInicio.DataTextField = "NombreProvincia";
+                ddlProvinciasDestInicio.DataValueField = "IdProvincia";
+
+                ddlProvinciasDestInicio.DataBind();
+                ddlProvinciasDestInicio.Items.Insert(0, new ListItem("-- Seleccionar --", "0"));
+
+                conexion.Close();
+            }
+
+
+        }
     }
 }
