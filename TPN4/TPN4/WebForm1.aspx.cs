@@ -14,6 +14,7 @@ namespace TPN4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (IsPostBack == false)
             {
                 SqlConnection cn = new SqlConnection(@"Data Source=localhost\sqlexpress;Initial Catalog=Viajes;Integrated Security=True");
@@ -41,6 +42,48 @@ namespace TPN4
                 ddlProvinciasDestFinal.Items.Insert(0, new ListItem("-- Seleccionar --", "0"));
 
                 cn.Close();                
+            }
+            else 
+            {
+                SqlConnection cn = new SqlConnection(@"Data Source=localhost\sqlexpress;Initial Catalog=Viajes;Integrated Security=True");
+
+                cn.Open();
+
+                SqlDataAdapter consultaDataAdapter = new SqlDataAdapter("SELECT * FROM Provincias", cn);
+
+                DataTable tabla = new DataTable();
+
+                consultaDataAdapter.Fill(tabla);
+
+                if (ddlProvinciasDestInicio.SelectedIndex == 0)
+                {
+
+                    ddlProvinciasDestInicio.DataSource = tabla;
+                    ddlProvinciasDestInicio.DataTextField = "NombreProvincia";
+                    ddlProvinciasDestInicio.DataValueField = "IdProvincia";
+                    ddlProvinciasDestInicio.DataBind();
+                    ddlProvinciasDestInicio.Items.Insert(0, new ListItem("-- Seleccionar --", "0"));
+
+                    ddlLocalidadesDestInicio.Items.Clear();
+                    ddlLocalidadesDestInicio.Items.Insert(0, new ListItem("-- Seleccionar --", "0"));
+
+                }
+
+                if (ddlProvinciasDestFinal.SelectedIndex == 0)
+                {
+                    ddlProvinciasDestFinal.DataSource = tabla;
+                    ddlProvinciasDestFinal.DataTextField = "NombreProvincia";
+                    ddlProvinciasDestFinal.DataValueField = "IdProvincia";
+                    ddlProvinciasDestFinal.DataBind();
+                    ddlProvinciasDestFinal.Items.Insert(0, new ListItem("-- Seleccionar --", "0"));
+
+                    ddlLocalidadDestFinal.Items.Clear();
+                    ddlLocalidadDestFinal.Items.Insert(0, new ListItem("-- Seleccionar --", "0"));
+
+                }
+
+                cn.Close();
+
             }
         }
 
@@ -84,6 +127,7 @@ namespace TPN4
 
                 conexion.Close();
             }
+
         }
 
         protected void ddlProvinciasDestFinal_SelectedIndexChanged(object sender, EventArgs e)
@@ -110,6 +154,19 @@ namespace TPN4
 
                 ddlProvinciasDestInicio.DataBind();
                 ddlProvinciasDestInicio.Items.Insert(0, new ListItem("-- Seleccionar --", "0"));
+
+
+                SqlCommand cmd = new SqlCommand("SELECT IdLocalidad,NombreLocalidad FROM Localidades WHERE idProvincia =" + identificadorProv, cn);
+
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                ddlLocalidadDestFinal.DataSource = dr;
+
+                ddlLocalidadDestFinal.DataTextField = "NombreLocalidad";
+                ddlLocalidadDestFinal.DataValueField = "IdLocalidad";
+
+                ddlLocalidadDestFinal.DataBind();
+                ddlLocalidadDestFinal.Items.Insert(0, new ListItem("-- Seleccionar --", "0"));
 
                 cn.Close();
             }
