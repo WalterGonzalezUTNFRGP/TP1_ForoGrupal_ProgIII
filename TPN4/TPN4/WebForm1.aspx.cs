@@ -18,11 +18,11 @@ namespace TPN4
             if (IsPostBack == false)
             {
                 SqlConnection cn = new SqlConnection(@"Data Source=localhost\sqlexpress;Initial Catalog=Viajes;Integrated Security=True");
-                
+
                 cn.Open();
 
-                SqlDataAdapter consultaDataAdapter = new SqlDataAdapter("SELECT * FROM Provincias",cn);
-                
+                SqlDataAdapter consultaDataAdapter = new SqlDataAdapter("SELECT * FROM Provincias", cn);
+
                 DataTable tabla = new DataTable();
 
                 consultaDataAdapter.Fill(tabla);
@@ -41,9 +41,9 @@ namespace TPN4
                 ddlProvinciasDestFinal.DataBind();
                 ddlProvinciasDestFinal.Items.Insert(0, new ListItem("-- Seleccionar --", "0"));
 
-                cn.Close();                
+                cn.Close();
             }
-            else 
+            else
             {
                 SqlConnection cn = new SqlConnection(@"Data Source=localhost\sqlexpress;Initial Catalog=Viajes;Integrated Security=True");
 
@@ -57,39 +57,40 @@ namespace TPN4
 
                 if (ddlProvinciasDestInicio.SelectedIndex == 0)
                 {
-
                     ddlProvinciasDestInicio.DataSource = tabla;
+
                     ddlProvinciasDestInicio.DataTextField = "NombreProvincia";
                     ddlProvinciasDestInicio.DataValueField = "IdProvincia";
                     ddlProvinciasDestInicio.DataBind();
                     ddlProvinciasDestInicio.Items.Insert(0, new ListItem("-- Seleccionar --", "0"));
 
-                    ddlLocalidadesDestInicio.Items.Clear();
-                    ddlLocalidadesDestInicio.Items.Insert(0, new ListItem("-- Seleccionar --", "0"));
-
                 }
 
-                if (ddlProvinciasDestFinal.SelectedIndex == 0)
+                /*if (ddlProvinciasDestFinal.SelectedIndex == 0)
                 {
                     ddlProvinciasDestFinal.DataSource = tabla;
+
                     ddlProvinciasDestFinal.DataTextField = "NombreProvincia";
                     ddlProvinciasDestFinal.DataValueField = "IdProvincia";
                     ddlProvinciasDestFinal.DataBind();
                     ddlProvinciasDestFinal.Items.Insert(0, new ListItem("-- Seleccionar --", "0"));
-
-                    ddlLocalidadDestFinal.Items.Clear();
-                    ddlLocalidadDestFinal.Items.Insert(0, new ListItem("-- Seleccionar --", "0"));
-
-                }
+                }*/
 
                 cn.Close();
-
             }
+
         }
 
         protected void ddlProvinciasDestInicio_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DropDownList listaProvincia = (DropDownList) sender;
+            ddlLocalidadesDestInicio.Items.Clear();
+            ddlLocalidadesDestInicio.Items.Insert(0, new ListItem("-- Seleccionar --", "0"));
+
+            ddlLocalidadDestFinal.Items.Clear();
+            ddlLocalidadDestFinal.Items.Insert(0, new ListItem("-- Seleccionar --", "0"));
+
+            DropDownList listaProvincia = (DropDownList)sender;
+
 
             if (listaProvincia.SelectedIndex > 0)
             {
@@ -111,7 +112,6 @@ namespace TPN4
 
                 ddlProvinciasDestFinal.DataBind();
                 ddlProvinciasDestFinal.Items.Insert(0, new ListItem("-- Seleccionar --", "0"));
-                
 
                 SqlCommand consultacmd = new SqlCommand("SELECT IdLocalidad,NombreLocalidad FROM Localidades WHERE idProvincia =" + identificadorProv, conexion);
 
@@ -125,38 +125,67 @@ namespace TPN4
                 ddlLocalidadesDestInicio.DataBind();
                 ddlLocalidadesDestInicio.Items.Insert(0, new ListItem("-- Seleccionar --", "0"));
 
+                //ddlLocalidadDestFinal.Items.Clear();
+                //ddlLocalidadDestFinal.Items.Insert(0, new ListItem("-- Seleccionar --", "0"));
+
                 conexion.Close();
             }
+            else
+            {
+                SqlConnection cn = new SqlConnection(@"Data Source=localhost\sqlexpress;Initial Catalog=Viajes;Integrated Security=True");
+
+                cn.Open();
+
+                SqlDataAdapter consultaDataAdapter = new SqlDataAdapter("SELECT * FROM Provincias", cn);
+
+                DataTable tabla = new DataTable();
+
+                consultaDataAdapter.Fill(tabla);
+
+                ddlProvinciasDestFinal.DataSource = tabla;
+
+                ddlProvinciasDestFinal.DataTextField = "NombreProvincia";
+                ddlProvinciasDestFinal.DataValueField = "IdProvincia";
+                ddlProvinciasDestFinal.DataBind();
+                ddlProvinciasDestFinal.Items.Insert(0, new ListItem("-- Seleccionar --", "0"));
+
+                //ddlProvinciasDestFinal.Items.Clear();
+                //ddlProvinciasDestFinal.Items.Insert(0, new ListItem("-- Seleccionar --", "0"));
+            }
+
 
         }
 
         protected void ddlProvinciasDestFinal_SelectedIndexChanged(object sender, EventArgs e)
         {
             DropDownList listaProvincia = (DropDownList)sender;
+            int identificadorProv;
+
+            identificadorProv = listaProvincia.SelectedIndex;
+
+            SqlConnection cn = new SqlConnection("Data Source=localhost\\sqlexpress;Initial Catalog=Viajes;Integrated Security=True");
+            cn.Open();
+
 
             if (listaProvincia.SelectedIndex > 0)
             {
-                SqlConnection cn = new SqlConnection("Data Source=localhost\\sqlexpress;Initial Catalog=Viajes;Integrated Security=True");
-                cn.Open();
+                if (ddlProvinciasDestInicio.SelectedIndex == 0)
+                {
+                    SqlDataAdapter consulta = new SqlDataAdapter("SELECT * FROM Provincias WHERE IdProvincia !=" + identificadorProv, cn);
+                    DataTable tabla = new DataTable();
 
-                int identificadorProv;
-                identificadorProv = listaProvincia.SelectedIndex;
+                    consulta.Fill(tabla);
 
-                SqlDataAdapter consulta = new SqlDataAdapter("SELECT * FROM Provincias WHERE IdProvincia !=" + identificadorProv, cn);
-                DataTable tabla = new DataTable();
+                    ddlProvinciasDestInicio.DataSource = tabla;
 
-                consulta.Fill(tabla);
+                    ddlProvinciasDestInicio.DataTextField = "NombreProvincia";
+                    ddlProvinciasDestInicio.DataValueField = "IdProvincia";
 
-                ddlProvinciasDestInicio.DataSource = tabla;
+                    ddlProvinciasDestInicio.DataBind();
+                    ddlProvinciasDestInicio.Items.Insert(0, new ListItem("-- Seleccionar --", "0"));
+                }
 
-                ddlProvinciasDestInicio.DataTextField = "NombreProvincia";
-                ddlProvinciasDestInicio.DataValueField = "IdProvincia";
-
-                ddlProvinciasDestInicio.DataBind();
-                ddlProvinciasDestInicio.Items.Insert(0, new ListItem("-- Seleccionar --", "0"));
-
-
-                SqlCommand cmd = new SqlCommand("SELECT IdLocalidad,NombreLocalidad FROM Localidades WHERE idProvincia =" + identificadorProv, cn);
+                SqlCommand cmd = new SqlCommand("SELECT IdLocalidad,NombreLocalidad FROM Localidades WHERE IdProvincia =" + ddlProvinciasDestFinal.Text, cn);
 
                 SqlDataReader dr = cmd.ExecuteReader();
 
@@ -168,10 +197,15 @@ namespace TPN4
                 ddlLocalidadDestFinal.DataBind();
                 ddlLocalidadDestFinal.Items.Insert(0, new ListItem("-- Seleccionar --", "0"));
 
-                cn.Close();
             }
 
+            else
+            {
+                ddlLocalidadDestFinal.Items.Clear();
+                ddlLocalidadDestFinal.Items.Insert(0, new ListItem("-- Seleccionar --", "0"));
+            }
 
+            cn.Close();
         }
     }
 }
