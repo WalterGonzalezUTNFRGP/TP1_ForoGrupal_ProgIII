@@ -29,7 +29,7 @@
             <asp:ListItem Value="&gt;">Mayor a:</asp:ListItem>
             <asp:ListItem Value="&lt;">Menor a:</asp:ListItem>
         </asp:DropDownList>
-&nbsp;<asp:TextBox ID="txtIdProducto" runat="server" CssClass="auto-style1" Width="304px"></asp:TextBox>
+&nbsp;<asp:TextBox ID="txtIdProducto" runat="server" CssClass="auto-style1" Width="304px" TextMode="Number"></asp:TextBox>
         <p>
             <asp:Label ID="lblCategoria" runat="server" Text="IdCategoria:"></asp:Label>
 &nbsp;&nbsp;&nbsp;
@@ -38,7 +38,7 @@
                 <asp:ListItem>Mayor a:</asp:ListItem>
                 <asp:ListItem>Menor a:</asp:ListItem>
             </asp:DropDownList>
-            <asp:TextBox ID="TxtIdCategoria" runat="server" CssClass="auto-style2" Width="304px"></asp:TextBox>
+            <asp:TextBox ID="TxtIdCategoria" runat="server" CssClass="auto-style2" Width="304px" TextMode="Number"></asp:TextBox>
         </p>
         <p>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
