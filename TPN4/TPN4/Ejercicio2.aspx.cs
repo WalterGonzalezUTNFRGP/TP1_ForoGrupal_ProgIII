@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace TPN4
 {
@@ -11,7 +13,27 @@ namespace TPN4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                SqlConnection conexion = new SqlConnection("Data Source=localhost\\sqlexpress;Initial Catalog=Neptuno;Integrated Security=True");
 
+                conexion.Open();
+
+                string consulta;
+
+                consulta = "SELECT * FROM Productos";
+                SqlCommand cmd = new SqlCommand(consulta, conexion);
+
+                SqlDataReader rdr = cmd.ExecuteReader();
+
+                if (rdr.HasRows)
+                {
+                    grdProductos.DataSource = rdr;
+                    grdProductos.DataBind();
+                }
+
+                conexion.Close();
+            }            
         }
 
         protected void Button1_Click(object sender, EventArgs e)
