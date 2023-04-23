@@ -33,12 +33,31 @@ namespace TPN4
                 }
 
                 conexion.Close();
-            }            
+            }   
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            SqlConnection conexion = new SqlConnection("Data Source=localhost\\sqlexpress;Initial Catalog=Neptuno;Integrated Security=True");
+            string txtBox = txtIdProducto.Text.ToString();
+            string consulta;
+            conexion.Open();
 
+            consulta = "SELECT * FROM Productos WHERE IdProducto= " + txtBox;
+
+
+
+            SqlCommand cmd = new SqlCommand(consulta, conexion);
+
+            SqlDataReader rdr = cmd.ExecuteReader();
+
+            if (rdr.HasRows)
+            {
+                grdProductos.DataSource = rdr;
+                grdProductos.DataBind();
+            }
+
+            conexion.Close();
 
         }
     }
