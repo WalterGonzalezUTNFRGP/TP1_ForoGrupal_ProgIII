@@ -36,7 +36,7 @@ namespace TPN4
             }   
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void btnFiltrar_Click(object sender, EventArgs e)
         {
             SqlConnection conexion = new SqlConnection();
             conexion.ConnectionString = "Data Source=localhost\\sqlexpress;Initial Catalog=Neptuno;Integrated Security=True";
@@ -85,6 +85,11 @@ namespace TPN4
             TxtIdCategoria.Text = "";
             
             conexion.Close();
+
+        }
+
+        protected void btnQuitarTodo_Click(object sender, EventArgs e)
+        {
 
         }
     }
