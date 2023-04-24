@@ -41,6 +41,7 @@ namespace TPN4
             SqlConnection conexion = new SqlConnection();
             conexion.ConnectionString = "Data Source=localhost\\sqlexpress;Initial Catalog=Neptuno;Integrated Security=True";
             string Producto = txtIdProducto.Text;
+            string categoria = TxtIdCategoria.Text;
             string comp = ddlProductos.SelectedValue;
             string consulta = "SELECT * FROM Productos WHERE 1=1";
 
@@ -56,6 +57,21 @@ namespace TPN4
                         break;
                 }
             }
+            if(!string.IsNullOrEmpty(categoria))
+            {
+                if(ddlCategoria.SelectedValue == "=")
+                {
+                    consulta += "and IdCategoría =" + categoria;
+                }
+                else if (ddlCategoria.SelectedValue == ">")
+                {
+                    consulta += "and IdCategoría >" + categoria;
+                }
+                else if (ddlCategoria.SelectedValue == "<")
+                {
+                    consulta += "and IdCategoría <" + categoria;
+                }
+            }
 
             SqlCommand cmd = new SqlCommand(consulta, conexion);
             conexion.Open();
@@ -64,7 +80,9 @@ namespace TPN4
             {
             grdProductos.DataSource = rdr;
             grdProductos.DataBind();
-            }            
+            }
+            txtIdProducto.Text = "";
+            TxtIdCategoria.Text = "";
             
             conexion.Close();
 

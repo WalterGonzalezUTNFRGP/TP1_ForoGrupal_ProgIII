@@ -34,9 +34,9 @@
             <asp:Label ID="lblCategoria" runat="server" Text="IdCategoria:"></asp:Label>
 &nbsp;&nbsp;&nbsp;
             <asp:DropDownList ID="ddlCategoria" runat="server">
-                <asp:ListItem>Igual a:</asp:ListItem>
-                <asp:ListItem>Mayor a:</asp:ListItem>
-                <asp:ListItem>Menor a:</asp:ListItem>
+                <asp:ListItem Value="=">Igual a:</asp:ListItem>
+                <asp:ListItem Value="&gt;">Mayor a:</asp:ListItem>
+                <asp:ListItem Value="&lt;">Menor a:</asp:ListItem>
             </asp:DropDownList>
             <asp:TextBox ID="TxtIdCategoria" runat="server" CssClass="auto-style2" Width="304px" TextMode="Number"></asp:TextBox>
         </p>
