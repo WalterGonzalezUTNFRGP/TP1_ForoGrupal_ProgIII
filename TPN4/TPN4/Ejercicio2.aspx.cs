@@ -13,6 +13,8 @@ namespace TPN4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
+
             if (!IsPostBack)
             {
                 SqlConnection conexion = new SqlConnection("Data Source=localhost\\sqlexpress;Initial Catalog=Neptuno;Integrated Security=True");
@@ -47,6 +49,7 @@ namespace TPN4
 
             grdProductos.Visible = true;
             lblMensaje.Text = "";
+
             if (!string.IsNullOrEmpty(Producto))
             {
                 switch (comp)
@@ -62,6 +65,7 @@ namespace TPN4
                         break;
                 }
             }
+            
             if (!string.IsNullOrEmpty(categoria))
             {
                 if (ddlCategoria.SelectedValue == "=")
@@ -81,6 +85,7 @@ namespace TPN4
             SqlCommand cmd = new SqlCommand(consulta, conexion);
             conexion.Open();
             SqlDataReader rdr = cmd.ExecuteReader();
+
             if (rdr.HasRows)
             {
                 grdProductos.DataSource = rdr;
@@ -91,6 +96,7 @@ namespace TPN4
                 grdProductos.Visible = false;
                 lblMensaje.Text = "No se encontraron productos con los valores ingresados";
             }
+
             txtIdProducto.Text = "";
             TxtIdCategoria.Text = "";
 
@@ -100,14 +106,11 @@ namespace TPN4
         protected void btnQuitarTodo_Click(object sender, EventArgs e)
         {
             txtIdProducto.Text = "";
-            TxtIdCategoria.Text = "";
-            lblValidacionIDProducto.Text = "";
-            lblValidacionIDCategoria.Text = "";
-            btnFiltrar.Enabled = true;
-            lblMensaje.Text = "";
-            grdProductos.Visible = true;
+            TxtIdCategoria.Text = "";  
+            lblMensaje.Text = "";            
 
             SqlConnection cn = new SqlConnection("Data Source=localhost\\sqlexpress;Initial Catalog=Neptuno;Integrated Security=True");
+            
             cn.Open();
 
             SqlCommand cmd = new SqlCommand("SELECT * FROM Productos", cn);
@@ -117,66 +120,6 @@ namespace TPN4
             grdProductos.DataBind();
 
             cn.Close();
-        }
-
-        protected void txtIdProducto_TextChanged1(object sender, EventArgs e)
-        {
-            int idProducto;
-            if (txtIdProducto.Text.Trim() != "")
-            {
-                idProducto = Convert.ToInt32(txtIdProducto.Text);
-                if (idProducto < 0)
-                {
-                    btnFiltrar.Enabled = false;
-                    lblValidacionIDProducto.Text = "No se pueden ingresar números negativos";
-                }
-                else
-                {
-                    lblValidacionIDProducto.Text = "";
-                    if (lblValidacionIDCategoria.Text == "")
-                    {
-                        btnFiltrar.Enabled = true;
-                    }
-                }
-            }
-            else
-            {
-                lblValidacionIDProducto.Text = "";
-                if (lblValidacionIDCategoria.Text == "")
-                {
-                    btnFiltrar.Enabled = true;
-                }
-            }
-        }
-
-        protected void TxtIdCategoria_TextChanged1(object sender, EventArgs e)
-        {
-            int idCategoria;
-            if (TxtIdCategoria.Text.Trim() != "")
-            {
-                idCategoria = Convert.ToInt32(TxtIdCategoria.Text);
-                if (idCategoria < 0)
-                {
-                    btnFiltrar.Enabled = false;
-                    lblValidacionIDCategoria.Text = "No se pueden ingresar números negativos";
-                }
-                else
-                {
-                    lblValidacionIDCategoria.Text = "";
-                    if (lblValidacionIDProducto.Text == "")
-                    {
-                        btnFiltrar.Enabled = true;
-                    }
-                }
-            }
-            else
-            {
-                lblValidacionIDCategoria.Text = "";
-                if (lblValidacionIDProducto.Text == "")
-                {
-                    btnFiltrar.Enabled = true;
-                }
-            }
-        }
+        }       
     }
 }

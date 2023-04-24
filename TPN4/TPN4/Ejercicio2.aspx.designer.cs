@@ -51,13 +51,13 @@ namespace TPN4
         protected global::System.Web.UI.WebControls.TextBox txtIdProducto;
 
         /// <summary>
-        /// Control lblValidacionIDProducto.
+        /// Control cmpVIdProducto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblValidacionIDProducto;
+        protected global::System.Web.UI.WebControls.CompareValidator cmpVIdProducto;
 
         /// <summary>
         /// Control lblCategoria.
@@ -87,13 +87,13 @@ namespace TPN4
         protected global::System.Web.UI.WebControls.TextBox TxtIdCategoria;
 
         /// <summary>
-        /// Control lblValidacionIDCategoria.
+        /// Control cmpVIdCategoria.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblValidacionIDCategoria;
+        protected global::System.Web.UI.WebControls.CompareValidator cmpVIdCategoria;
 
         /// <summary>
         /// Control btnFiltrar.

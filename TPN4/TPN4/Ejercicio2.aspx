@@ -29,10 +29,10 @@
             <asp:ListItem Value="&gt;">Mayor a:</asp:ListItem>
             <asp:ListItem Value="&lt;">Menor a:</asp:ListItem>
         </asp:DropDownList>
-&nbsp;<asp:TextBox ID="txtIdProducto" runat="server" CssClass="auto-style1" Width="304px" TextMode="Number" AutoPostBack="True" OnTextChanged="txtIdProducto_TextChanged1"></asp:TextBox>
+&nbsp;<asp:TextBox ID="txtIdProducto" runat="server" CssClass="auto-style1" Width="304px" TextMode="Number" AutoCompleteType="Disabled"></asp:TextBox>
         &nbsp;&nbsp;
-        <asp:Label ID="lblValidacionIDProducto" runat="server" ForeColor="Red"></asp:Label>
-&nbsp;<p>
+        &nbsp;<asp:CompareValidator ID="cmpVIdProducto" runat="server" ControlToValidate="txtIdProducto" ForeColor="Red" Operator="GreaterThan" Type="Integer" ValueToCompare="0">No se pueden ingresar números negativos o nulos</asp:CompareValidator>
+        <p>
             <asp:Label ID="lblCategoria" runat="server" Text="IdCategoria:"></asp:Label>
 &nbsp;&nbsp;&nbsp;
             <asp:DropDownList ID="ddlCategoria" runat="server">
@@ -40,9 +40,9 @@
                 <asp:ListItem Value="&gt;">Mayor a:</asp:ListItem>
                 <asp:ListItem Value="&lt;">Menor a:</asp:ListItem>
             </asp:DropDownList>
-            <asp:TextBox ID="TxtIdCategoria" runat="server" CssClass="auto-style2" Width="304px" TextMode="Number" AutoPostBack="True" OnTextChanged="TxtIdCategoria_TextChanged1"></asp:TextBox>
+            <asp:TextBox ID="TxtIdCategoria" runat="server" CssClass="auto-style2" Width="304px" TextMode="Number" AutoCompleteType="Disabled"></asp:TextBox>
         &nbsp;&nbsp;
-            <asp:Label ID="lblValidacionIDCategoria" runat="server" ForeColor="Red"></asp:Label>
+            <asp:CompareValidator ID="cmpVIdCategoria" runat="server" ControlToValidate="TxtIdCategoria" ForeColor="Red" Operator="GreaterThan" Type="Integer" ValueToCompare="0">No se pueden ingresar números negativos o nulos</asp:CompareValidator>
         </p>
         <p>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

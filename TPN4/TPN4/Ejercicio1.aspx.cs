@@ -198,7 +198,6 @@ namespace TPN4
                 ddlLocalidadDestFinal.Items.Insert(0, new ListItem("-- Seleccionar --", "0"));
 
             }
-
             else
             {
                 ddlLocalidadDestFinal.Items.Clear();
