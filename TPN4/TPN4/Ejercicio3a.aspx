@@ -15,13 +15,13 @@
             <asp:Label ID="lblSeleccionar" runat="server" Text="Seleccionar Tema:"></asp:Label>
 &nbsp;
             <asp:DropDownList ID="ddlTemas" runat="server">
-                <asp:ListItem>Tema 1</asp:ListItem>
-                <asp:ListItem>Tema 2</asp:ListItem>
-                <asp:ListItem>Tema 3</asp:ListItem>
+                <asp:ListItem Value="1">Tema 1</asp:ListItem>
+                <asp:ListItem Value="2">Tema 2</asp:ListItem>
+                <asp:ListItem Value="3">Tema 3</asp:ListItem>
             </asp:DropDownList>
             <br />
             <br />
-            <asp:LinkButton ID="lbVerLibros" runat="server">Ver Libros</asp:LinkButton>
+            <asp:LinkButton ID="lbVerLibros" runat="server" OnClick="lbVerLibros_Click">Ver Libros</asp:LinkButton>
         </div>
     </form>
 </body>

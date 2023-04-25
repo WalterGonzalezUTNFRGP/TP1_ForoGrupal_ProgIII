@@ -17,12 +17,12 @@ namespace TPN4
             {
                 SqlConnection cn = new SqlConnection("Data Source = localhost\\sqlexpress; Initial Catalog = Libreria; Integrated Security = True");
 
+                
+
+                string valor = Request.QueryString["Tema"];
+                string consultaTemas = "select * from Libros where IdTema =" + valor;
+                SqlCommand cmd = new SqlCommand(consultaTemas, cn);
                 cn.Open();
-
-                string consulta;
-
-                consulta = "SELECT * FROM Libros";
-                SqlCommand cmd = new SqlCommand(consulta, cn);
 
                 SqlDataReader rdr = cmd.ExecuteReader();
 

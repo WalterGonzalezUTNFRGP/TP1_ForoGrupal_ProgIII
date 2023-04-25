@@ -13,5 +13,10 @@ namespace TPN4
         {
 
         }
+
+        protected void lbVerLibros_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ejercicio3b.aspx?Tema=" + ddlTemas.SelectedValue);
+        }
     }
 }
