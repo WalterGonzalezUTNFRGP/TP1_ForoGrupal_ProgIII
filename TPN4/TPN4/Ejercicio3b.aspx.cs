@@ -35,5 +35,11 @@ namespace TPN4
                 cn.Close();
             }
         }
+
+        protected void lnkBOtraConsulta_Click(object sender, EventArgs e)
+        {
+
+            Response.Redirect("ejercicio3a.aspx");
+        }
     }
 }

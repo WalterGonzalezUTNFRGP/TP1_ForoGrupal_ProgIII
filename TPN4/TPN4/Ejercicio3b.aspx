@@ -18,7 +18,7 @@
             <br />
             <br />
             <br />
-            <asp:LinkButton ID="lnkBOtraConsulta" runat="server">Consuitar otro tema</asp:LinkButton>
+            <asp:LinkButton ID="lnkBOtraConsulta" runat="server" OnClick="lnkBOtraConsulta_Click">Consultar Otro Tema</asp:LinkButton>
             <br />
             <br />
         </div>

@@ -115,7 +115,7 @@ namespace TPN4
 
             SqlCommand cmd = new SqlCommand("SELECT * FROM Productos", cn);
             SqlDataReader dr = cmd.ExecuteReader();
-
+            grdProductos.Visible = true;
             grdProductos.DataSource = dr;
             grdProductos.DataBind();
 
