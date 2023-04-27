@@ -16,9 +16,7 @@ namespace TPN4
             if (!IsPostBack)
             {
                 SqlConnection cn = new SqlConnection("Data Source = localhost\\sqlexpress; Initial Catalog = Libreria; Integrated Security = True");
-
                 
-
                 string valor = Request.QueryString["Tema"];
                 string consultaTemas = "select * from Libros where IdTema =" + valor;
                 SqlCommand cmd = new SqlCommand(consultaTemas, cn);

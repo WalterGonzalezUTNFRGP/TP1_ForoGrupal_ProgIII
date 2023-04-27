@@ -21,6 +21,8 @@
             </asp:DropDownList>
             <br />
             <br />
+            <br />
+            <br />
             <asp:LinkButton ID="lbVerLibros" runat="server" OnClick="lbVerLibros_Click">Ver Libros</asp:LinkButton>
         </div>
     </form>

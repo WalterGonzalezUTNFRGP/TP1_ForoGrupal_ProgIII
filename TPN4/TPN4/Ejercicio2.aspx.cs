@@ -23,7 +23,7 @@ namespace TPN4
 
                 string consulta;
 
-                consulta = "SELECT * FROM Productos";
+                consulta = "SELECT IdProducto,NombreProducto,IdCategoría,CantidadPorUnidad,PrecioUnidad FROM Productos";
                 SqlCommand cmd = new SqlCommand(consulta, conexion);
 
                 SqlDataReader rdr = cmd.ExecuteReader();
@@ -45,7 +45,7 @@ namespace TPN4
             string Producto = txtIdProducto.Text;
             string categoria = TxtIdCategoria.Text;
             string comp = ddlProductos.SelectedValue;
-            string consulta = "SELECT * FROM Productos WHERE 1=1";
+            string consulta = "SELECT IdProducto,NombreProducto,IdCategoría,CantidadPorUnidad,PrecioUnidad FROM Productos WHERE 1=1";
 
             grdProductos.Visible = true;
             lblMensaje.Text = "";
@@ -113,11 +113,15 @@ namespace TPN4
             
             cn.Open();
 
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Productos", cn);
+            SqlCommand cmd = new SqlCommand("SELECT IdProducto,NombreProducto,IdCategoría,CantidadPorUnidad,PrecioUnidad FROM Productos", cn);
             SqlDataReader dr = cmd.ExecuteReader();
-            grdProductos.Visible = true;
-            grdProductos.DataSource = dr;
-            grdProductos.DataBind();
+
+            if (dr.HasRows)
+            {
+                grdProductos.Visible = true;
+                grdProductos.DataSource = dr;
+                grdProductos.DataBind();
+            }            
 
             cn.Close();
         }       
